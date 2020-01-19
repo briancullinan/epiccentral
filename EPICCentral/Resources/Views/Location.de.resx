@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Edit_Title" xml:space="preserve">
+    <value>Location Information</value>
+  </data>
+<data name="Edit_Organization" xml:space="preserve">
+    <value>Organisation</value>
+  </data>
+<data name="Edit_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+<data name="Edit_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+<data name="Edit_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+<data name="Edit_State">
+  <value xml:space="preserve">Zustand</value>
+</data>
+<data name="Edit_Country">
+  <value xml:space="preserve">Land</value>
+</data>
+<data name="Edit_PostalCode">
+  <value xml:space="preserve">Postleitzahl</value>
+</data>
+<data name="Edit_Telephone">
+  <value xml:space="preserve">Telefon</value>
+</data>
+<data name="Edit_Latitude">
+  <value xml:space="preserve">Breite</value>
+</data>
+<data name="Edit_Longitude">
+  <value xml:space="preserve">Länge</value>
+</data>
+<data name="Edit_Active">
+  <value xml:space="preserve">Aktiv?</value>
+</data>
+<data name="List_LocationName">
+  <value xml:space="preserve">Ort Name</value>
+</data>
+<data name="List_Address">
+  <value xml:space="preserve">Adresse</value>
+</data>
+<data name="List_City">
+  <value xml:space="preserve">City</value>
+</data>
+<data name="List_State">
+  <value xml:space="preserve">Zustand</value>
+</data>
+<data name="List_FormatUsers">
+  <value xml:space="preserve">Benutzer ( {0})</value>
+</data>
+<data name="List_Telephone">
+  <value xml:space="preserve">Telefon</value>
+</data>
+<data name="List_Organization">
+  <value xml:space="preserve">Organisation</value>
+</data>
+<data name="List_LocationDetails">
+  <value xml:space="preserve">Standort-Details</value>
+</data>
+<data name="List_View">
+  <value xml:space="preserve">sehen</value>
+</data>
+<data name="List_Edit">
+  <value xml:space="preserve">bearbeiten</value>
+</data>
+<data name="List_EditLocation">
+  <value xml:space="preserve">bearbeiten Location</value>
+</data>
+<data name="List_AddLocation">
+  <value xml:space="preserve">Standort hinzufügen</value>
+</data>
+<data name="List_Title">
+  <value xml:space="preserve">Standorte</value>
+</data>
+<data name="View_Name">
+  <value xml:space="preserve">Name</value>
+</data>
+<data name="View_Organization">
+  <value xml:space="preserve">Organisation</value>
+</data>
+<data name="View_Address">
+  <value xml:space="preserve">Adresse</value>
+</data>
+<data name="View_City">
+  <value xml:space="preserve">City</value>
+</data>
+<data name="View_State">
+  <value xml:space="preserve">Zustand</value>
+</data>
+<data name="View_Country">
+  <value xml:space="preserve">Land</value>
+</data>
+<data name="View_PostalCode">
+  <value xml:space="preserve">Postleitzahl</value>
+</data>
+<data name="View_Telephone">
+  <value xml:space="preserve">Telefon</value>
+</data>
+<data name="View_Latitude">
+  <value xml:space="preserve">Breite</value>
+</data>
+<data name="View_Longitude">
+  <value xml:space="preserve">Länge</value>
+</data>
+<data name="View_UniqueID">
+  <value xml:space="preserve">Unique Identifier</value>
+</data>
+<data name="Edit_Lookup">
+  <value xml:space="preserve">Lookup</value>
+</data>
+</root>

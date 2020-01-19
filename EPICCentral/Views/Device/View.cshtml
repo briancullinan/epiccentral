@@ -1,0 +1,36 @@
+﻿@using System.Globalization
+@using EPICCentral.Utilities.Membership
+@using ViewRes
+
+@model EPICCentral.Models.DeviceModel
+@{
+    ViewBag.Title = Device.View_Title;
+}
+
+<div class="display-details">
+	<div class="display-label">@Html.LabelFor(m => m.OrganizationName, Device.View_OrganizationName)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.OrganizationName)</div>
+	<div class="display-label">@Html.LabelFor(m => m.LocationName, Device.View_LocationName)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.LocationName)</div>
+	<div class="display-label">@Html.LabelFor(m => m.DeviceState, Device.View_DeviceState)</div>
+	<div class="display-field">@Model.DeviceState.ToString()</div>
+	<div class="display-label">@Html.LabelFor(m => m.SerialNumber, Device.View_SerialNumber)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.SerialNumber)</div>
+	<div class="display-label">@Html.LabelFor(m => m.RevisionLevel, Device.View_RevisionLevel)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.RevisionLevel)</div>
+	<div class="display-label">@Html.LabelFor(m => m.ScansAvailable, Device.View_ScansAvailable)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.ScansAvailable)</div>
+	<div class="display-label">@Html.LabelFor(m => m.ScansCompleted, Device.View_ScansCompleted)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.ScansCompleted)</div>
+	<div class="display-label">@Html.LabelFor(m => m.IssuedTime, Device.View_IssuedTime)</div>
+	<div class="display-field">@TimeZoneInfo.ConvertTime(Model.IssuedTime, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture)</div>
+	<div class="display-label">@Html.LabelFor(m => m.LastReportTime, Device.View_LastReport)</div>
+	<div class="display-field">@if (@Model.LastReportTime.HasValue)
+                            {
+                                   @TimeZoneInfo.ConvertTime(Model.LastReportTime.Value, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture)
+                            }</div>
+	<div class="display-label">@Html.LabelFor(m => m.UniqueIdentifier, Device.View_UniqueIdentifier)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.UniqueIdentifier)</div>
+	<div class="display-label">@Html.LabelFor(m => m.UidQualifier, Device.View_UidQualifier)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.UidQualifier)</div>
+</div>

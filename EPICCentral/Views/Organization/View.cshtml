@@ -1,0 +1,29 @@
+﻿@using EPICCentral.Utilities.Membership
+@using ViewRes
+@model EPICCentralDL.EntityClasses.OrganizationEntity
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<h2>@Model.Name</h2>
+
+<div>
+    <fieldset>
+        <legend>@Organization.View_OrganizationInformation</legend>
+            
+        <div class="display-label">
+            @Html.LabelFor(m => m.Name, Organization.View_Name)
+        </div>
+        <div class="display-field">
+            @Html.DisplayTextFor(m => m.Name)
+        </div>
+        
+    @if (RoleUtils.IsUserAdmin())
+	{
+		<p>
+			<input type="button" value="@Organization.View_Edit" onclick=" location.href='@Url.Action("Edit", new { organizationId = Model.OrganizationId })'"/>
+		</p>
+	}
+	</fieldset>
+</div>

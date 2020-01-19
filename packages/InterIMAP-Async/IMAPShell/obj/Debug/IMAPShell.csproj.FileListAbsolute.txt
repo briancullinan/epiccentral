@@ -1,0 +1,9 @@
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\IMAPShell.exe.config
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\IMAPShell.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\IMAPShell.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\InterIMAP.dll
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\InterIMAP.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\bin\Debug\InterIMAP.xml
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\obj\Debug\IMAPShell.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP-Async\IMAPShell\obj\Debug\IMAPShell.pdb

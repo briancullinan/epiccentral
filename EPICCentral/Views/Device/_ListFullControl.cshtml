@@ -1,0 +1,29 @@
+﻿@using System.Globalization
+@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using EPICCentralDL.Linq
+@using ViewRes
+
+@model IQueryable<DeviceEntity>
+
+@Html.DataTableFor(new LinqMetaData().Device, new ColumnCollection<DeviceEntity>
+{
+    { "Location.Organization.Name", Device.ListFull_Organization },
+    { "Location.Name", Device.ListFull_Location },
+    { "SerialNumber", Device.ListFull_Serial },
+    { "RevisionLevel", Device.ListFull_Revision },
+    { "DeviceState", Device.ListFull_State },
+    { "ScansAvailable", Device.ListFull_ScansLeft },
+    { "ScansUsed", Device.ListFullControl_ScansDone },
+    { "LastReportTime", Device.ListFull_LastReport, m => m.LastReportTime.HasValue 
+        ? TimeZoneInfo.ConvertTime(m.LastReportTime.Value, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture) 
+        : "" },
+    { "View", "", m => Html.ActionLink(Device.ListFull_View, "View", new { m.DeviceId }, null) },
+    { "Edit", "", m => Html.ActionLink(Device.ListFull_Edit, "Edit", new { m.DeviceId }, null) }
+},
+new DataTablesDialogModelCollection
+{
+    new DataTablesDialogModel { ColumnName = "View", Title = Device.ListFullControl_DeviceDetails, Width = 660, Edit = false },
+    new DataTablesDialogModel { ColumnName = "Edit", Title = Device.ListFull_EditDevice, Width = 600, Edit = true }
+},
+add: new DataTablesAddModel { Action = m => Html.ActionLink(Device.ListFull_AddDevice, "Edit"), Width = 600 })

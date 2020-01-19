@@ -1,0 +1,6 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\bin\x64\Debug\AuthorizeNet.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\bin\x64\Debug\AuthorizeNet.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\bin\x64\Debug\AuthorizeNet.XML
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\obj\x64\Debug\ResolveAssemblyReference.cache
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\obj\x64\Debug\AuthorizeNet.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\Authorize.NET\obj\x64\Debug\AuthorizeNet.pdb

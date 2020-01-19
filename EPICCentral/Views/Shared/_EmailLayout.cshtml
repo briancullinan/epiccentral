@@ -1,0 +1,143 @@
+﻿@using ViewRes
+@{
+	var spacer = Url.AbsoluteContent("~/Content/spacer.gif");
+}
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>@ViewBag.Title</title>
+	</head>
+	<body>
+		<div id="page" style="background-color: #FFFFFF;">
+			<table style="width: 640px; border: 0;">
+				<tr>
+					<td style="padding: 0; border-spacing: 0; width: 600px; height: 20px;">
+						<img height="20" width="600" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+            </table>
+			<table style="width: 640px; border: 0;">
+				<tr>
+					<td rowspan="3" style="padding: 0; border-spacing: 0; width: 20px; height: 60px;">
+						<img height="60" width="20" alt="spacer" src="@spacer" />
+					</td>
+					<td rowspan="3" style="padding: 0; border-spacing: 0;">
+						<a href="@Url.AbsoluteAction("Index", "Home")"><img alt="@Shared.EmailLayout_EPICResearch" src="@Url.AbsoluteContent("~/Content/logo-epic-200.png")" /></a>
+					</td>
+					<td rowspan="3" style="padding: 0; border-spacing: 0; width: 30px; height: 60px;">
+						<img height="60" width="30" alt="spacer" src="@spacer" />
+					</td>
+					<td style="padding: 0; border-spacing: 0; width: 380px; height: 10px;">
+						<img height="10" width="380" alt="spacer" src="@spacer" />
+					</td>
+					<td rowspan="3" style="padding: 0; border-spacing: 0; width: 50px; height: 60px;">
+						<img height="60" width="50" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 0; border-spacing: 0;">
+						<span style="color: #666666; font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; font-size: 32px; font-weight: bold; text-shadow: 1px 1px 2px #999999; white-space: nowrap;">
+                            @Shared.EmailLayout_Title
+                        </span>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 0; border-spacing: 0; width: 380px; height: 10px;">
+						<img height="10" width="380" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+			</table>
+			<table style="width: 640px; border: 0;">
+				<tr>
+					<td colspan="3" style="padding: 0; border-spacing: 0; width: 600px; height: 20px;">
+						<img height="20" width="600" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+				<tr>
+					<td style="padding: 0; border-spacing: 0; width: 20px; height: 250px;">
+						<img height="250" width="20" alt="spacer" src="@spacer" />
+					</td>
+					<td style="padding: 0; border-spacing: 0; vertical-align: top;">
+						<div style="color: #666666; font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; font-size: 14px;">
+							@RenderBody()
+						</div>
+					</td>
+					<td style="padding: 0; border-spacing: 0; width: 20px; height: 250px;">
+						<img height="250" width="20" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="padding: 0; border-spacing: 0; width: 600px; height: 20px;">
+						<img height="20" width="600" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+			</table>
+			<table style="width: 640px; border: 0;">
+				<tr>
+					<td style="padding: 0; border-spacing: 0; width: 20px; height: 40px;">
+						<img height="40" width="20" alt="spacer" src="@spacer" />
+					</td>
+					<td style="padding: 0; border-spacing: 0;">
+			            <table style="width: 100%; border: 0; background-color: #666677;">
+				            <tr>
+					            <td colspan="4" style="padding: 0; border-spacing: 0; width: 600px; height: 5px;">
+						            <img height="5" width="600" alt="spacer" src="@spacer" />
+					            </td>
+				            </tr>
+				            <tr>
+					            <td style="padding: 0; border-spacing: 0; width: 5px; height: 10px;">
+						            <img height="10" width="5" alt="spacer" src="@spacer" />
+					            </td>
+					            <td style="padding: 0; border-spacing: 0;">
+						            <span style="color: #AAAA99; font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; font-size: 12px;">
+                                        @Shared.EmailLayout_EPICResearch<br />
+                                        @Shared.EmailLayout_Address<br />
+                                        @Shared.EmailLayout_CityStateZip
+                                    </span>
+					            </td>
+					            <td style="padding: 0; border-spacing: 0; text-align: right; vertical-align: top;">
+						            <span style="color: #AAAA99; font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; font-size: 12px;">
+                                        @Shared.EmailLayout_Phone<br />
+                                        @MvcHtmlString.Create(String.Format(Shared.EmailLayout_EmailLabel, "<a href='mailto:" + Shared.EmailLayout_Email + "' style='color: #AAAA99;'>" + Shared.EmailLayout_Email + "</a>"))
+						            </span>
+					            </td>
+					            <td style="padding: 0; border-spacing: 0; width: 5px; height: 10px;">
+						            <img height="10" width="5" alt="spacer" src="@spacer" />
+					            </td>
+				            </tr>
+				            <tr>
+					            <td colspan="4" style="padding: 0; border-spacing: 0; width: 600px; height: 10px;">
+						            <img height="10" width="600" alt="spacer" src="@spacer" />
+					            </td>
+				            </tr>
+				            <tr>
+					            <td colspan="4" style="padding: 0; border-spacing: 0; text-align: center;">
+						            <span style="color: #AAAA99; font-family: Trebuchet MS, Verdana, Helvetica, sans-serif; font-size: 12px;">
+                                        @String.Format(Shared.EmailLayout_Copyright, DateTime.Now.Year)
+                                    </span>
+					            </td>
+				            </tr>
+				            <tr>
+					            <td colspan="4" style="padding: 0; border-spacing: 0; width: 600px; height: 5px;">
+						            <img height="5" width="600" alt="spacer" src="@spacer" />
+					            </td>
+				            </tr>
+			            </table>
+					</td>
+					<td style="padding: 0; border-spacing: 0; width: 20px; height: 40px;">
+						<img height="40" width="20" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+			</table>
+			<table style="width: 640px; border: 0;">
+				<tr>
+					<td style="padding: 0; border-spacing: 0; width: 600px; height: 20px;">
+						<img height="20" width="600" alt="spacer" src="@spacer" />
+					</td>
+				</tr>
+            </table>
+		</div>
+	</body>
+</html>

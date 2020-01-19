@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="ResetEmailPartial_Title" xml:space="preserve">
+    <value>EPIC Central: Passwort zurücksetzen E-Mail</value>
+  </data>
+<data name="ResetEmailPartial_Greeting" xml:space="preserve">
+    <value>Hallo {0},</value>
+  </data>
+<data name="ResetEmailPartial_GreetingGeneric" xml:space="preserve">
+    <value>Hallo EPIC Zentrale Benutzerverwaltung ,</value>
+  </data>
+<data name="ResetEmailPartial_Message" xml:space="preserve">
+    <value>Ihr Passwort wurde zurückgesetzt.
+</value>
+  </data>
+<data name="ResetEmailPartial_CompleteLink" xml:space="preserve">
+    <value>Komplette Passwort zurücksetzen</value>
+  </data>
+<data name="ResetEmailPartial_Instructions" xml:space="preserve">
+    <value>Sie müssen ein neues Passwort zu setzen, bevor Sie sich anmelden können in.
+</value>
+  </data>
+<data name="ResetEmailPartial_Instruction2" xml:space="preserve">
+    <value>Wenn Sie nicht Ihr Kennwort zurücksetzen auf dem EPIC- Central-Site , wenden Sie sich bitte
+    </value>
+  </data>
+<data name="ResetEmailPartial_Salutation" xml:space="preserve">
+    <value>Mit freundlichen Grüßen,</value>
+  </data>
+<data name="ResetEmailPartial_SalutationName" xml:space="preserve">
+    <value>Die EPIC Central Team</value>
+  </data>
+<data name="ChangePassword_Title" xml:space="preserve">
+    <value>Kennwort ändern</value>
+  </data>
+<data name="ChangePassword_Errors" xml:space="preserve">
+    <value>Passwort-Änderung war nicht erfolgreich. </value>
+  </data>
+<data name="ChangePassword_ChangePasswordFor" xml:space="preserve">
+    <value>Kennwort ändern für {0}</value>
+  </data>
+<data name="ChangePassword_MinimumLength" xml:space="preserve">
+    <value>Neue Passwörter sind erforderlich, um ein Minimum von {0} Zeichen lang sein .</value>
+  </data>
+<data name="ChangePassword_CurrentPassword" xml:space="preserve">
+    <value>Aktuelle / New Password</value>
+  </data>
+<data name="ChangePassword_Save" xml:space="preserve">
+    <value>sparen</value>
+  </data>
+<data name="ChangePassword_Cancel" xml:space="preserve">
+    <value>stornieren</value>
+  </data>
+<data name="ChangePasswordSuccess_Continue" xml:space="preserve">
+    <value>fortsetzen</value>
+  </data>
+<data name="ChangePasswordSuccess_Message" xml:space="preserve">
+    <value>Ihr Passwort wurde erfolgreich geändert.</value>
+  </data>
+<data name="ChangePasswordSuccess_Title" xml:space="preserve">
+    <value>Kennwort ändern</value>
+  </data>
+<data name="LogOn_Title" xml:space="preserve">
+    <value>anmelden</value>
+  </data>
+<data name="LogOn_Message" xml:space="preserve">
+    <value>Bitte geben Sie Ihren Benutzernamen und Passwort eingeloggt sein</value>
+  </data>
+<data name="LogOn_Errors" xml:space="preserve">
+    <value>Anmeldung war nicht erfolgreich. </value>
+  </data>
+<data name="LogOn_AccountInformation" xml:space="preserve">
+    <value>Account-Informationen</value>
+  </data>
+<data name="LogOn_IForgot" xml:space="preserve">
+    <value>Ich vergaß !</value>
+  </data>
+<data name="LogOn_Reset" xml:space="preserve">
+    <value>Setzen Sie ...</value>
+  </data>
+<data name="LogOn_Submit" xml:space="preserve">
+    <value>anmelden</value>
+  </data>
+<data name="Register_Heading" xml:space="preserve">
+    <value>Komplett Neues Benutzerkonto registrieren</value>
+  </data>
+<data name="Register_Title" xml:space="preserve">
+    <value>registrieren</value>
+  </data>
+<data name="Register_Message" xml:space="preserve">
+    <value>Verwenden Sie das untenstehende Formular, um Ihr Konto Anmeldung abzuschließen.</value>
+  </data>
+<data name="Register_MinimumLength" xml:space="preserve">
+    <value>Passwörter sind erforderlich, um ein Minimum von {0} Zeichen lang sein .</value>
+  </data>
+<data name="Register_Errors" xml:space="preserve">
+    <value>Account-Erstellung war nicht erfolgreich. </value>
+  </data>
+<data name="Register_AccountInformation" xml:space="preserve">
+    <value>Account-Informationen</value>
+  </data>
+<data name="Register_Submit" xml:space="preserve">
+    <value>registrieren</value>
+  </data>
+<data name="Reset_Remembered" xml:space="preserve">
+    <value>Ich erinnerte mich an !</value>
+  </data>
+<data name="Reset_LogOn" xml:space="preserve">
+    <value>Melden Sie sich ...</value>
+  </data>
+<data name="ResetCompletion_Title" xml:space="preserve">
+    <value>Konto zurücksetzen Fertigstellung</value>
+  </data>
+<data name="ResetCompletion_Message">
+  <value xml:space="preserve">Bitte setzen Sie das Kennwort auf Ihrem Konto.</value>
+</data>
+<data name="ResetCompletion_Errors">
+  <value xml:space="preserve">Zurücksetzen war nicht erfolgreich. </value>
+</data>
+<data name="ResetCompletion_MultipleAccounts">
+  <value xml:space="preserve">Sie haben mehrere Konten mit derselben E-Mail -Adresse. </value>
+</data>
+<data name="ResetCompletion_SelectAccount">
+  <value xml:space="preserve">Wählen Sie Account</value>
+</data>
+<data name="ResetCompletion_CreateNew">
+  <value xml:space="preserve">Neues Passwort erzeugen</value>
+</data>
+<data name="ResetCompletion_Next">
+  <value xml:space="preserve">nächste</value>
+</data>
+<data name="ResetCompletion_Reset">
+  <value xml:space="preserve">Zurücksetzen</value>
+</data>
+<data name="ResetCompletionSuccess_Title">
+  <value xml:space="preserve">Komplette Konto zurücksetzen</value>
+</data>
+<data name="ResetCompletionSuccess_Message">
+  <value xml:space="preserve">Ihr Passwort wurde erfolgreich zurückgesetzt. </value>
+</data>
+<data name="ResetSuccess_Title">
+  <value xml:space="preserve">Konto zurücksetzen</value>
+</data>
+<data name="ResetSuccess_Message">
+  <value xml:space="preserve">Ihr Konto wurde zurückgesetzt.
+</value>
+</data>
+</root>

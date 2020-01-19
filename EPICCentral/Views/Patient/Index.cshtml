@@ -1,0 +1,37 @@
+﻿@model IQueryable<PatientEntity>
+@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using ViewRes
+@{
+    ViewBag.Title = Patient.Search_Title;
+}
+
+<h2>@Patient.Search_Title</h2>
+
+@Html.DataTableFor(Model, new ColumnCollection<PatientEntity>
+{
+    {x => x.PatientId, null, null, true, null, false},
+    {x => x.FirstName, Patient.Search_FirstName},
+    {x => x.LastName, Patient.Search_LastName}, 
+    {x => x.Gender, Patient.Search_Gender}, 
+    {x => x.BirthDate, Patient.Search_BirthDate, m => m.BirthDate.ToShortDateString()},
+    {x => x.ReceivedTime, null, null, true, null, false, null, false}, // column is just used for sorting, no searching or viewing
+    {"View", "", x => Html.ActionLink(Patient.Index_View, "View", "Patient", new {patientId = x.PatientId}, null)},
+    {"ListTreatments", "", m => Html.ActionLink(String.Format(Patient.Search_FormatTreatments, m.Treatments.Count), "Index", "Treatment", new {m.PatientId}, null)}
+}, new DataTablesDialogModelCollection
+{
+new DataTablesDialogModel
+{
+ColumnName = "View",
+Title = Patient.Index_ViewPatient
+}
+},
+htmlAttributes: new {@id = "Patients"},
+defaultSort: new List<DataTablesRequestModel.Sort>
+                 {
+                     new DataTablesRequestModel.Sort
+                         {
+                             iSortCol = 5,
+                             sSortDir = "desc"
+                         }
+                 })

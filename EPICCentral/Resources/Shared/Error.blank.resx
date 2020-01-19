@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="NotFound_Device" xml:space="preserve">
+    <value>----NotFound_Device----</value>
+  </data>
+<data name="NotFound_Exception" xml:space="preserve">
+    <value>----NotFound_Exception----</value>
+  </data>
+<data name="NotFound_Image" xml:space="preserve">
+    <value>----NotFound_Image----</value>
+  </data>
+<data name="NotFound_Location" xml:space="preserve">
+    <value>----NotFound_Location----</value>
+  </data>
+<data name="NotFound_Organization" xml:space="preserve">
+    <value>----NotFound_Organization----</value>
+  </data>
+<data name="NotFound_Patient" xml:space="preserve">
+    <value>----NotFound_Patient----</value>
+  </data>
+<data name="NotFound_Treatment" xml:space="preserve">
+    <value>----NotFound_Treatment----</value>
+  </data>
+<data name="Unauthorized" xml:space="preserve">
+    <value>----Unauthorized----</value>
+  </data>
+<data name="Unauthorized_Device" xml:space="preserve">
+    <value>----Unauthorized_Device----</value>
+  </data>
+<data name="Unauthorized_Location" xml:space="preserve">
+    <value>----Unauthorized_Location----</value>
+  </data>
+<data name="Unauthorized_Organization" xml:space="preserve">
+    <value>----Unauthorized_Organization----</value>
+  </data>
+<data name="Unauthorized_Patient" xml:space="preserve">
+    <value>----Unauthorized_Patient----</value>
+  </data>
+<data name="Unauthorized_Treatment" xml:space="preserve">
+    <value>----Unauthorized_Treatment----</value>
+  </data>
+<data name="Error_Unspecified" xml:space="preserve">
+    <value>----Error_Unspecified----</value>
+  </data>
+<data name="Unauthorized_OrganizationAdd" xml:space="preserve">
+    <value>----Unauthorized_OrganizationAdd----</value>
+  </data>
+<data name="Unauthorized_OrganizationEdit" xml:space="preserve">
+    <value>----Unauthorized_OrganizationEdit----</value>
+  </data>
+<data name="Unauthorized_OrganizationHost" xml:space="preserve">
+    <value>----Unauthorized_OrganizationHost----</value>
+  </data>
+<data name="Error_DatabaseUnknown" xml:space="preserve">
+    <value>----Error_DatabaseUnknown----</value>
+  </data>
+<data name="NotFound_User" xml:space="preserve">
+    <value>----NotFound_User----</value>
+  </data>
+<data name="Unauthorized_User" xml:space="preserve">
+    <value>----Unauthorized_User----</value>
+  </data>
+<data name="Unauthorized_UserEdit" xml:space="preserve">
+    <value>----Unauthorized_UserEdit----</value>
+  </data>
+<data name="Error_Length" xml:space="preserve">
+    <value>----Error_Length----</value>
+  </data>
+<data name="Error_Required" xml:space="preserve">
+    <value>----Error_Required----</value>
+  </data>
+<data name="Error_Email" xml:space="preserve">
+    <value>----Error_Email----</value>
+  </data>
+<data name="Error_Message">
+  <value xml:space="preserve">----Error_Message----</value>
+</data>
+<data name="Error_Title">
+  <value xml:space="preserve">----Error_Title----</value>
+</data>
+</root>

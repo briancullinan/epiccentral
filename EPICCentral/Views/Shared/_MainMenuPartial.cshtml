@@ -1,0 +1,11 @@
+﻿@model IEnumerable<EPICCentral.Utilities.Attributes.ActionMenuAttribute>
+<ul id="Menu">
+    @foreach(var menu in Model.Where(x => x.Visible || x.Selected))
+    {
+        <li class="@(menu.Selected ? "selected" : "")">@menu.ToHtmlString()</li>
+        if (menu.Selected && menu.SubMenu.Any())
+        {
+            Html.RenderPartial("_MainMenuPartial", menu.SubMenu);
+        }
+    }
+</ul>

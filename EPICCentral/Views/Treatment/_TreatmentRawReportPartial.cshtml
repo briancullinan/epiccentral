@@ -1,0 +1,70 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using Treatment = ViewRes.Treatment
+@model EPICCentral.Models.Treatment
+
+<h2>NB Scores</h2>
+@Html.DataTableFor(Model.NBScores, new ColumnCollection<NBAnalysisResultEntity>
+    {
+        {x => x.OrganSystem.Description, Treatment.RawReport_AnalysisGroup},
+        {x => x.ResultScoreFiltered, Treatment.RawReport_PhysicalScore},
+        {x => x.ResultScoreUnfiltered, Treatment.RawReport_AutonomicScore},
+        {x => x.ProbabilityFiltered, Treatment.RawReport_PhysicalOddsRatio},
+        {x => x.ProbabilityUnfiltered, Treatment.RawReport_AutonomicOddsRatio},
+    },
+    defaultCount: -1
+)
+
+<h2>Calculation Data</h2>
+@Html.DataTableFor(Model.Debug, 
+    new ColumnCollection<RawReportFull>
+        {
+            {x => x.Organ, Treatment.RawReport_Organ},
+            {x => x.OrganSystemOrgan.LicenseOrganSystem.OrganSystem.Description, Treatment.RawReport_OrganSystem},
+            {x => x.OrganSystemOrgan.LicenseOrganSystem.ReportOrder, null, null, true, null, false},
+            {x => x.OrganSystemOrgan.ReportOrder, null, null, true, null, false},
+            {x => x.FingerSector, Treatment.RawReport_FingerSector},
+    
+            {x => x.LFilteredLRRank, Treatment.RawReport_LRRankL},
+            {x => x.RFilteredLRRank, Treatment.RawReport_LRRankR},
+            {x => x.LFilteredLRScaledScore, Treatment.RawReport_LRScoreL},
+            {x => x.RFilteredLRScaledScore, Treatment.RawReport_LRScoreR},
+            {x => x.LFilteredEPICRank, Treatment.RawReport_EPICRankL},
+            {x => x.RFilteredEPICRank, Treatment.RawReport_EPICRankR},
+            {x => x.LFilteredEPICScaledScore, Treatment.RawReport_EPICScoreL},
+            {x => x.RFilteredEPICScaledScore, Treatment.RawReport_EPICScoreR},
+            {x => x.PhysicalLeft, Treatment.RawReport_ReportScoreL},
+            {x => x.PhysicalRight, Treatment.RawReport_ReportScoreR},
+            {x => x.LFilteredEPICBaseScore, Treatment.RawReport_EPICBaseScoreL},
+            {x => x.RFilteredEPICBaseScore, Treatment.RawReport_EPICBaseScoreR},
+            {x => x.LFilteredEPICBonusScore, Treatment.RawReport_EPICBonusScoreL},
+            {x => x.RFilteredEPICBonusScore, Treatment.RawReport_EPICBonusScoreR},
+            {x => x.LFilteredEPICScore, Treatment.RawReport_EPICTotalScoreL},
+            {x => x.RFilteredEPICScore, Treatment.RawReport_EPICTotalScoreR, null, true, "filteredlast"},
+    
+            {x => x.LUnfilteredLRRank, Treatment.RawReport_LRRankL},
+            {x => x.RUnfilteredLRRank, Treatment.RawReport_LRRankR},
+            {x => x.LUnfilteredLRScaledScore, Treatment.RawReport_LRScoreL},
+            {x => x.RUnfilteredLRScaledScore, Treatment.RawReport_LRScoreR},
+            {x => x.LUnfilteredEPICRank, Treatment.RawReport_EPICRankL},
+            {x => x.RUnfilteredEPICRank, Treatment.RawReport_EPICRankR},
+            {x => x.LUnfilteredEPICScaledScore, Treatment.RawReport_EPICScoreL},
+            {x => x.RUnfilteredEPICScaledScore, Treatment.RawReport_EPICScoreR},
+            {x => x.MentalLeft, Treatment.RawReport_ReportScoreL},
+            {x => x.MentalRight, Treatment.RawReport_ReportScoreR},
+            {x => x.LUnfilteredEPICBaseScore, Treatment.RawReport_EPICBaseScoreL},
+            {x => x.RUnfilteredEPICBaseScore, Treatment.RawReport_EPICBaseScoreR},
+            {x => x.LUnfilteredEPICBonusScore, Treatment.RawReport_EPICBonusScoreL},
+            {x => x.RUnfilteredEPICBonusScore, Treatment.RawReport_EPICBonusScoreR},
+            {x => x.LUnfilteredEPICScore, Treatment.RawReport_EPICTotalScoreL},
+            {x => x.RUnfilteredEPICScore, Treatment.RawReport_EPICTotalScoreR}
+        },
+    defaultCount: -1,
+    defaultSort: new List<DataTablesRequestModel.Sort>
+                        {
+                            new DataTablesRequestModel.Sort { iSortCol = 3, sSortDir = "asc" },
+                            new DataTablesRequestModel.Sort { iSortCol = 2, sSortDir = "asc" },
+                        },
+    htmlAttributes: new {@id = "rawreporttable"}
+)
+

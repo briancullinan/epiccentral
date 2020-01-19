@@ -1,0 +1,33 @@
+﻿@using ViewRes
+@model EPICCentralDL.EntityClasses.LocationEntity
+
+@{
+	ViewBag.Title = Model.Name + " Location";
+}
+
+<div class="display-details">
+	<div class="display-label">@Html.LabelFor(m => m.Name, Location.View_Name)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.Name)</div>
+	<div class="display-label">@Html.LabelFor(m => m.Organization.Name, Location.View_Organization)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.Organization.Name)</div>
+	<div class="display-label">@Html.LabelFor(m => m.AddressLine1, Location.View_Address)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.AddressLine1)</div>
+	<div class="display-label"><label for="AddressLine2" class="empty-label"></label></div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.AddressLine2)</div>
+	<div class="display-label">@Html.LabelFor(m => m.City, Location.View_City)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.City)</div>
+	<div class="display-label">@Html.LabelFor(m => m.State, Location.View_State)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.State)</div>
+    <div class="display-label">@Html.LabelFor(m => m.Country, Location.View_Country)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.Country)</div>
+    <div class="display-label">@Html.LabelFor(m => m.PostalCode, Location.View_PostalCode)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.PostalCode)</div>
+    <div class="display-label">@Html.LabelFor(m => m.PhoneNumber, Location.View_Telephone)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.PhoneNumber)</div>
+    <div class="display-label">@Html.LabelFor(m => m.Latitude, Location.View_Latitude)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.Latitude)</div>
+    <div class="display-label">@Html.LabelFor(m => m.Longitude, Location.View_Longitude)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.Longitude)</div>
+    <div class="display-label">@Html.LabelFor(m => m.UniqueIdentifier, Location.View_UniqueID)</div>
+	<div class="display-field">@Html.DisplayTextFor(m => m.UniqueIdentifier)</div>
+</div>

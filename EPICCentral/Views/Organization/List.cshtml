@@ -1,0 +1,30 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using ViewRes
+@model IQueryable<OrganizationEntity>
+
+@{
+    ViewBag.Title = Organization.List_Title;
+}
+
+<h2>@Organization.List_Title</h2>
+
+@Html.DataTableFor(Model, 
+new ColumnCollection<OrganizationEntity>
+    {
+        { "Name", Organization.List_Name },
+        { "OrganizationType", Organization.List_Type, x => x.OrganizationType.GetDisplayText() },
+        { "UniqueIdentifier", Organization.List_UniqueID },
+        {"Edit", "", o => Html.ActionLink(Organization.List_Edit, "Edit", "Organization", new { organizationId = o.OrganizationId }, null)},
+        /*{"ListLocations", "", o => Html.ActionLink(String.Format(Organization.List_FormatLocations, o.Locations.Count), "List", "Location", new { organizationId = o.OrganizationId }, null)},
+        {"ListUsers", "", o => Html.ActionLink(String.Format(Organization.List_FormatUsers, o.Users
+            .Union(o.Locations
+                .SelectMany(x => x.UserAssignedLocations
+                    .Select(y => y.User)))
+                        .DistinctBy(x => x.UserId).Count()), "List", "User", new { organizationId = o.OrganizationId }, null)}*/
+    },
+new DataTablesDialogModelCollection
+    {
+        new DataTablesDialogModel { ColumnName = "Edit", Title = Organization.List_EditOrganization, Width = 620, Edit = true }
+    },
+add: new DataTablesAddModel { Action = m => Html.ActionLink(Organization.List_AddOrganization, "Edit"), Width = 620 })

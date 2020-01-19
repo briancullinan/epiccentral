@@ -1,0 +1,6 @@
+﻿@if(Request.IsAuthenticated) {
+    foreach(var role in Roles.GetRolesForUser(User.Identity.Name))
+    {
+        <br /><span>(@role)</span>
+    }
+}

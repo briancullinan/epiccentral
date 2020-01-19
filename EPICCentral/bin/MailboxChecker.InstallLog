@@ -1,0 +1,13 @@
+﻿Installing assembly 'C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.InstallLog
+   assemblypath = C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe
+Installing service EPICMailboxChecker...
+Service EPICMailboxChecker has been successfully installed.
+Creating EventLog source EPICMailboxChecker in log Application...
+Committing assembly 'C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.InstallLog
+   assemblypath = C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe

@@ -1,0 +1,75 @@
+﻿@using EPICCentral.Models
+@using Treatment = ViewRes.Treatment
+@model EPICCentral.Models.Treatment
+@{
+    ViewBag.Title = Treatment.Treatment_Title;
+}
+
+@section Head{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.mousewheel.js")"></script>
+    <link type="text/css" rel="stylesheet" href="@Url.Content("~/Content/jquery.lightbox-0.5.css")" />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.lightbox-0.5.js")"></script>
+}
+
+@section BodyClass
+{@Model.Page.ToString().ToLower()}
+
+<div id="treatment-banner">
+    <h2>@Treatment.Treatment_Title</h2>
+    <div id="treatment-heading" style="display:inline-block;">
+        <div><span class="label">@Treatment.Treatment_Name</span><span>@Model.Name</span></div>
+        <div><span class="label">@Treatment.Treatment_DateOfBirth</span><span>@Model.DateOfBirth.ToShortDateString()</span></div>
+        <div><span class="label">@Treatment.Treatment_Age</span><span>@Model.Age</span></div>
+        <div><span class="label">@Treatment.Treatment_Gender</span><span>@Model.Gender</span></div>
+        <div><span class="label">@Treatment.Treatment_VisitDate</span><span>@Model.VisitDate.ToShortDateString()</span></div>
+    </div>
+    @if(Model.Page == TreatmentPage.Summary)
+    {
+        @Html.Partial("_TreatmentSummaryImagesPartial")
+    }
+    <div id="treatment-nav-wrapper">
+        <ul id="treatment-nav">
+            <li class="@(Model.Page == TreatmentPage.Summary ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new {Model.TreatmentId, page = TreatmentPage.Summary}, null)">@ControllerRes.Menu.PatientTreatment_Overview</a>
+            </li>
+            <li class="@(Model.Page == TreatmentPage.System ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new { Model.TreatmentId, page = TreatmentPage.System }, null)">@ControllerRes.Menu.PatientTreatment_SystemComparison</a>
+            </li>
+            <li class="@(Model.Page == TreatmentPage.Definitions ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new { Model.TreatmentId, page = TreatmentPage.Definitions }, null)">@ControllerRes.Menu.PatientTreatment_Definitions</a>
+            </li>
+            <li class="@(Model.Page == TreatmentPage.Raw ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new { Model.TreatmentId, page = TreatmentPage.Raw }, null)">@ControllerRes.Menu.PatientTreatment_RawData</a>
+            </li>
+            <li class="@(Model.Page == TreatmentPage.RawReport ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new { Model.TreatmentId, page = TreatmentPage.RawReport }, null)">@ControllerRes.Menu.PatientTreatment_RawReport</a>
+            </li>
+            <li class="@(Model.Page == TreatmentPage.Images ? "selected" : "")">
+                <a href="@Url.Action("View", "Treatment", new { Model.TreatmentId, page = TreatmentPage.Images }, null)">@ControllerRes.Menu.PatientTreatment_Images</a>
+            </li>
+        </ul>
+        <br class="clear"/>
+    </div>
+</div>
+<div id="submain">
+@switch (Model.Page)
+{
+    case TreatmentPage.Summary:
+        @Html.Partial("_TreatmentSummaryPartial")
+        break;
+    case TreatmentPage.System:
+        @Html.Partial("_TreatmentSystemPartial")
+        break;
+    case TreatmentPage.Raw:
+        @Html.Partial("_TreatmentRawPartial")
+        break;
+    case TreatmentPage.RawReport:
+        @Html.Partial("_TreatmentRawReportPartial")
+        break;
+    case TreatmentPage.Images:
+        @Html.Partial("_TreatmentImagesPartial")
+        break;
+}
+</div>
+<br class="clear"/>
+

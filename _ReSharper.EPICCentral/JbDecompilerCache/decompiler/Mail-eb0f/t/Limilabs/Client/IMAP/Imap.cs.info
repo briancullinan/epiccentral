@@ -1,0 +1,14 @@
+﻿Code version: 6.1.37.86
+Assembly name Mail, Version=3.0.12207.2035, Culture=neutral, PublicKeyToken=6dc438ab78a525b3 mvid {7e644988-9616-4020-adc4-6abef6174f1c}
+* ref mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {8d72cd66-3505-496d-9c29-6f5111d4d831}
+* ref System.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+  mvid {a209523e-90cf-4d02-beeb-2c9c51695393}
+* ref System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {d1040fd5-9f42-4337-b765-5edcb47725cf}
+* ref System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {046ca903-f7dc-492a-a665-b2946aeaf79a}
+* ref System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {fe33b146-7b17-4c0a-ad71-ac6debff2fed}
+* ref System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+  mvid {000ae25b-ad76-4607-8d5f-e0d95743c26d}

@@ -1,0 +1,30 @@
+﻿@using EPICCentral.Utilities.Membership
+@using SharedRes
+@model HandleErrorInfo
+
+@{
+    ViewBag.Title = Error.Error_Title;
+}
+
+<h2>@Error.Error_Message</h2>
+@if (@Model != null && RoleUtils.IsUserServiceAdmin())
+{
+    <p>
+      Controller: @Model.ControllerName
+    </p>
+    <p>
+      Action: @Model.ActionName
+    </p>
+    <p>
+      Message: @Model.Exception.Message
+    </p>
+    <pre>
+      Stack Trace: @Model.Exception.StackTrace
+    </pre>
+}
+else
+{
+    <p>
+      @Model.Exception.Message
+    </p>
+}

@@ -1,0 +1,34 @@
+﻿@using ViewRes
+@model EPICCentral.Models.Purchase
+
+@using (Html.BeginForm())
+{
+
+    @Html.ValidationSummary(false, Purchase.Add_Error)
+
+    <fieldset>
+        <legend>@Purchase.Add_Title</legend>
+		
+		<div class="editor-label">
+            @Html.LabelFor(m => m.DeviceId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.DeviceId, Model.Devices.ToSelectList())
+        </div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.ScanRateId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.ScanRateId, Model.ScanTypes)
+        </div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Quantity)
+        </div>
+        
+    </fieldset>
+}

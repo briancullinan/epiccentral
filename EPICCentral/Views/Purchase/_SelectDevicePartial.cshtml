@@ -1,0 +1,25 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@model IQueryable<DeviceEntity>
+
+@{
+    var columns = new ColumnCollection<DeviceEntity>
+                      {
+                          {"SerialNumber", "Serial Number"},
+                          {"RevisionLevel", "Revision Level"},
+                          {"DeviceState", "State"},
+                          {"ScansAvailable", "Scans Left"},
+                          {"ScansUsed", "Scans Done"},
+                          {"DateIssued", "Issued", m => m.DateIssued.ToLocalTime().ToShortDateString()}, // TODO: Localize to user's time
+                          {"LastReportTime", "Last Report", m => m.LastReportTime.HasValue ? m.LastReportTime.Value.ToLocalTime().ToString() : ""}, // TODO: Localize to user's time
+                          {"Select", "Select Device", m => "<a class='select' id='device_" + ((DeviceEntity)m).DeviceId + "' href='#' onclick='if(selectClick)selectClick(this);return false;'>Select</a>"}
+                      };
+
+    if (Model.Select(d => d.LocationId).Distinct().Count() > 1)
+    {
+        columns.Insert(0, new DataTableColumn<DeviceEntity> { ColumnName = "Location.Name", Header = "Location" });
+    }
+}
+
+@Html.DataTableFor(Model, @columns)
+

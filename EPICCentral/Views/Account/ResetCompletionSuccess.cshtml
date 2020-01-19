@@ -1,0 +1,9 @@
+﻿@using ViewRes
+@{
+    ViewBag.Title = Account.ResetCompletionSuccess_Title;
+}
+
+<h2>@Account.ResetCompletionSuccess_Title</h2>
+<p>
+    @Html.Raw(String.Format(Account.ResetCompletionSuccess_Message, @Html.ActionLink("log in", "LogOn")))
+</p>

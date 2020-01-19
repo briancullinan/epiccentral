@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Images_EnergizedImagesWOFilter" xml:space="preserve">
+    <value>----Images_EnergizedImagesWOFilter----</value>
+  </data>
+<data name="Images_EnergizedImagesWFilter" xml:space="preserve">
+    <value>----Images_EnergizedImagesWFilter----</value>
+  </data>
+<data name="Images_Right" xml:space="preserve">
+    <value>----Images_Right----</value>
+  </data>
+<data name="Images_Left" xml:space="preserve">
+    <value>----Images_Left----</value>
+  </data>
+<data name="Images_CalibrationImages" xml:space="preserve">
+    <value>----Images_CalibrationImages----</value>
+  </data>
+<data name="RawReport_Organ" xml:space="preserve">
+    <value>----RawReport_Organ----</value>
+  </data>
+<data name="RawReport_OrganSystem" xml:space="preserve">
+    <value>----RawReport_OrganSystem----</value>
+  </data>
+<data name="RawReport_FingerSector" xml:space="preserve">
+    <value>----RawReport_FingerSector----</value>
+  </data>
+<data name="RawReport_LRRankL" xml:space="preserve">
+    <value>----RawReport_LRRankL----</value>
+  </data>
+<data name="RawReport_LRRankR" xml:space="preserve">
+    <value>----RawReport_LRRankR----</value>
+  </data>
+<data name="RawReport_LRScoreL" xml:space="preserve">
+    <value>----RawReport_LRScoreL----</value>
+  </data>
+<data name="RawReport_LRScoreR" xml:space="preserve">
+    <value>----RawReport_LRScoreR----</value>
+  </data>
+<data name="RawReport_EPICRankL" xml:space="preserve">
+    <value>----RawReport_EPICRankL----</value>
+  </data>
+<data name="RawReport_EPICRankR" xml:space="preserve">
+    <value>----RawReport_EPICRankR----</value>
+  </data>
+<data name="RawReport_EPICScoreL" xml:space="preserve">
+    <value>----RawReport_EPICScoreL----</value>
+  </data>
+<data name="RawReport_EPICScoreR" xml:space="preserve">
+    <value>----RawReport_EPICScoreR----</value>
+  </data>
+<data name="RawReport_ReportScoreL" xml:space="preserve">
+    <value>----RawReport_ReportScoreL----</value>
+  </data>
+<data name="RawReport_ReportScoreR" xml:space="preserve">
+    <value>----RawReport_ReportScoreR----</value>
+  </data>
+<data name="RawReport_EPICBaseScoreL" xml:space="preserve">
+    <value>----RawReport_EPICBaseScoreL----</value>
+  </data>
+<data name="RawReport_EPICBaseScoreR" xml:space="preserve">
+    <value>----RawReport_EPICBaseScoreR----</value>
+  </data>
+<data name="RawReport_EPICBonusScoreL" xml:space="preserve">
+    <value>----RawReport_EPICBonusScoreL----</value>
+  </data>
+<data name="RawReport_EPICBonusScoreR" xml:space="preserve">
+    <value>----RawReport_EPICBonusScoreR----</value>
+  </data>
+<data name="RawReport_EPICTotalScoreL" xml:space="preserve">
+    <value>----RawReport_EPICTotalScoreL----</value>
+  </data>
+<data name="RawReport_EPICTotalScoreR" xml:space="preserve">
+    <value>----RawReport_EPICTotalScoreR----</value>
+  </data>
+<data name="RawReport_AnalysisGroup" xml:space="preserve">
+    <value>----RawReport_AnalysisGroup----</value>
+  </data>
+<data name="RawReport_PhysicalScore" xml:space="preserve">
+    <value>----RawReport_PhysicalScore----</value>
+  </data>
+<data name="RawReport_AutonomicScore" xml:space="preserve">
+    <value>----RawReport_AutonomicScore----</value>
+  </data>
+<data name="RawReport_PhysicalOddsRatio" xml:space="preserve">
+    <value>----RawReport_PhysicalOddsRatio----</value>
+  </data>
+<data name="RawReport_AutonomicOddsRatio" xml:space="preserve">
+    <value>----RawReport_AutonomicOddsRatio----</value>
+  </data>
+<data name="SummaryImages_PhysicalLeft" xml:space="preserve">
+    <value>----SummaryImages_PhysicalLeft----</value>
+  </data>
+<data name="SummaryImages_PhysicalRight" xml:space="preserve">
+    <value>----SummaryImages_PhysicalRight----</value>
+  </data>
+<data name="SummaryImages_AutonomicLeft" xml:space="preserve">
+    <value>----SummaryImages_AutonomicLeft----</value>
+  </data>
+<data name="SummaryImages_AutonomicRight" xml:space="preserve">
+    <value>----SummaryImages_AutonomicRight----</value>
+  </data>
+<data name="SummaryImages_AdministratorOptions" xml:space="preserve">
+    <value>----SummaryImages_AdministratorOptions----</value>
+  </data>
+<data name="SummaryImages_BlackAndWhite" xml:space="preserve">
+    <value>----SummaryImages_BlackAndWhite----</value>
+  </data>
+<data name="SummaryImages_ColorBiofield" xml:space="preserve">
+    <value>----SummaryImages_ColorBiofield----</value>
+  </data>
+<data name="Treatment_Age" xml:space="preserve">
+    <value>----Treatment_Age----</value>
+  </data>
+<data name="Treatment_DateOfBirth" xml:space="preserve">
+    <value>----Treatment_DateOfBirth----</value>
+  </data>
+<data name="Search_Gender" xml:space="preserve">
+    <value>----Search_Gender----</value>
+  </data>
+<data name="Treatment_Name" xml:space="preserve">
+    <value>----Treatment_Name----</value>
+  </data>
+<data name="Treatment_VisitDate" xml:space="preserve">
+    <value>----Treatment_VisitDate----</value>
+  </data>
+<data name="Summary_Physical" xml:space="preserve">
+    <value>----Summary_Physical----</value>
+  </data>
+<data name="Summary_Autonomic" xml:space="preserve">
+    <value>----Summary_Autonomic----</value>
+  </data>
+<data name="Summary_L" xml:space="preserve">
+    <value>----Summary_L----</value>
+  </data>
+<data name="Summary_R" xml:space="preserve">
+    <value>----Summary_R----</value>
+  </data>
+<data name="Search_FirstName" xml:space="preserve">
+    <value>----Search_FirstName----</value>
+  </data>
+<data name="Search_LastName" xml:space="preserve">
+    <value>----Search_LastName----</value>
+  </data>
+<data name="Search_BirthDate" xml:space="preserve">
+    <value>----Search_BirthDate----</value>
+  </data>
+<data name="Search_FormatTreatments" xml:space="preserve">
+    <value>----Search_FormatTreatments----</value>
+  </data>
+<data name="Treatment_Title" xml:space="preserve">
+    <value>----Treatment_Title----</value>
+  </data>
+<data name="Treatments_Type" xml:space="preserve">
+    <value>----Treatments_Type----</value>
+  </data>
+<data name="Treatments_Time" xml:space="preserve">
+    <value>----Treatments_Time----</value>
+  </data>
+<data name="Treatments_View" xml:space="preserve">
+    <value>----Treatments_View----</value>
+  </data>
+<data name="Treatments_FirstName" xml:space="preserve">
+    <value>----Treatments_FirstName----</value>
+  </data>
+<data name="Treatments_LastName" xml:space="preserve">
+    <value>----Treatments_LastName----</value>
+  </data>
+<data name="Treatments_Title" xml:space="preserve">
+    <value>----Treatments_Title----</value>
+  </data>
+<data name="Treatment_Gender" xml:space="preserve">
+    <value>----Treatment_Gender----</value>
+  </data>
+<data name="Search_Title">
+  <value xml:space="preserve">----Search_Title----</value>
+</data>
+</root>

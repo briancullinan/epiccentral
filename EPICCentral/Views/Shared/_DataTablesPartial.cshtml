@@ -1,0 +1,161 @@
+@using System.Globalization
+@using System.Xml.Linq
+@using ViewRes
+@model EPICCentral.Models.IDataTablesInitializationModel
+
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/DataTables/media/js/jquery.dataTables.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.dataTables.fnSearchHighlighting.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/epic.dataTables.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.autoGrowInput.js")"></script>)
+
+<script type="text/javascript" id="script_@(Model.ID)">
+    //<![CDATA[
+    $(document).ready(function() {
+        var defaultCount = @(Model.DefaultCount.HasValue ? Model.DefaultCount.Value : 25);
+        window['@Model.ID'] = initDataTable('@Model.ID', '@Html.Raw(@Model.Url)', defaultCount, @Model.GetColumnsJson(), @Model.GetSortsJson(), @Model.GetLanguageJson());
+        $(window).trigger("hashchange");
+        $('script_@(Model.ID)').remove();
+    });
+    //]]>
+</script>
+
+@if (Model.Dialogs != null)
+{
+    foreach (var dialog in Model.Dialogs)
+    {
+        var saveText = String.IsNullOrEmpty(dialog.SaveText) ? Shared.DataTablesPartial_Save : dialog.SaveText;
+        var columnIndex = Model.GetColumnIndex(dialog.ColumnName) + 1;
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function() {
+                $('#@Model.ID').off('click', 'tr td:nth-child(@columnIndex) a');
+                $('#@Model.ID').on('click', 'tr td:nth-child(@columnIndex) a',
+                    {
+                        modelId: '@Model.ID',
+                        title: '@dialog.Title',
+                        width: @dialog.Width,
+                        height: @dialog.Height,
+                        editable: @dialog.Edit.ToString(CultureInfo.InvariantCulture).ToLower(),
+                        saveText: '@saveText',
+                        cancelText: '@Shared.DataTablesPartial_Cancel',
+                        closeText: '@Shared.DataTablesPartial_Close',
+                        bbqKey: '#@(Model.ID)_dialog@(columnIndex)'
+                    },
+                    popDialogClickHandler);
+
+                var dialogHashChange = function() {
+                    var dialog = $.bbq.getState('#@(Model.ID)_dialog@(columnIndex)');
+                    if (typeof(dialog) != 'undefined') {
+                        $('#@(Model.ID) tr td:nth-child(@(columnIndex)) a[href="' + dialog + '"]').trigger('click');
+                    }
+                };
+                $(window).bind("hashchange", dialogHashChange);
+                $('#@Model.ID').bind('draw', dialogHashChange);
+            });
+            //]]>
+        </script>
+    }
+}
+
+@if (Model.DirectActions != null)
+{
+    foreach (var action in Model.DirectActions)
+    {
+        var columnIndex = Model.GetColumnIndex(action.ColumnName) + 1;
+        <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function () {
+                $('#@Model.ID').off('click', 'tr td:nth-child(@columnIndex) a');
+                $('#@Model.ID').on('click', 'tr td:nth-child(@columnIndex) a',
+                    {
+                        modelId: '@Model.ID',
+                        successFunc: '@action.SuccessFunc',
+                        errorFunc: '@action.ErrorFunc',
+                        bbqKey: '#@(Model.ID)_action@(columnIndex)'
+                    },
+                    actionClickHandler);
+                var actionHashChange = function () {
+                    var action = $.bbq.getState('#@(Model.ID)_action@(columnIndex)');
+                    if (typeof (action) != 'undefined') {
+                        $('#@(Model.ID) tr td:nth-child(@(columnIndex)) a[href="' + action + '"]').trigger('click');
+                    }
+                };
+                $(window).bind("hashchange", actionHashChange);
+                $('#@Model.ID').bind('draw', actionHashChange);
+            });
+            //]]>
+        </script>
+    }
+}
+
+@if (Model.Add != null)
+{
+    var action = Model.Add.Action.Invoke(Model);
+    var title = String.IsNullOrEmpty(Model.Add.Title) ? XElement.Parse(action.ToHtmlString()).Value : Model.Add.Title;
+    var saveText = String.IsNullOrEmpty(Model.Add.SaveText) ? Shared.DataTablesPartial_Save : Model.Add.SaveText;
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function() {
+            if($('#@(Model.ID)_add').length == 0) {
+                var addOptions = {
+                    modelId: '@Model.ID',
+                    title: '@title',
+                    width: @Model.Add.Width,
+                    height: @Model.Add.Height,
+                    editable: true,
+                    saveText: '@saveText',
+                    cancelText: '@Shared.DataTablesPartial_Cancel',
+                    bbqKey: '#@(Model.ID)_dialog-1'
+                };
+                $('#@(Model.ID)').data('addOptions', addOptions);
+                $('@action')
+                    .attr({ 'id': '@(Model.ID)_add', 'class': 'button dataTables_add' })
+                    .click(addOptions, popDialogClickHandler)
+                    .insertAfter($('#@(Model.ID)_filter'));
+            }
+        });
+        //]]>
+    </script>
+}
+@foreach (var column in Model.GetColumns().Where(x => !string.IsNullOrEmpty(x.Toggle) && x.Visible == false))
+{
+    // show checkboxes above for columns that have a toggle and are not visible
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function () {
+            var toggleDiv = $('<input/>').attr({ 'id': '@(column.ColumnName)_toggle', 'type': 'checkbox', 'class': 'toggle', 'search': '@(column.Toggle)' }).insertAfter($('#@(Model.ID)_filter'));
+            $('<label>').attr({ 'for': '@(column.ColumnName)_toggle' }).insertAfter(toggleDiv).html('@(column.Header)');
+        });
+        //]]>
+    </script>
+}
+
+<table @String.Join(" ", Model.TableAttributes.Select(x => x.Key + "=" + HttpUtility.HtmlAttributeEncode(x.Value.ToString())))>
+	<thead>
+        <tr>
+            @foreach (var column in Model.GetColumns())
+            {
+                <th class="@column.Style">
+                    <div class="header-wrapper">
+                    @if (!string.IsNullOrEmpty(column.Toggle))
+                    {
+                        @Html.CheckBox(column.ColumnName + "_toggle", false, new {search = column.Toggle, @class = "toggle"})
+                    }
+                    @(column.Header == null ? column.ColumnName : column.Header)
+                    @if (Model.ColumnIsValid(column) && column.CanSort)
+                    {
+                        <span class="sort-icon ui-icon"></span>
+                    }
+                    </div>
+                </th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="@Model.GetColumns().Count()" class="dataTables_empty">@Shared.DataTables_Loading</td>
+        </tr>
+    </tbody>
+</table>
+
+<div id="@(Model.ID)_modalDialog"></div>

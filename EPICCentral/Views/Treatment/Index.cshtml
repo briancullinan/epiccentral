@@ -1,0 +1,30 @@
+﻿@using System.Globalization
+@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using Treatment = ViewRes.Treatment
+@model IQueryable<TreatmentEntity>
+           
+@{
+    ViewBag.Title = Treatment.Treatments_Title;
+}
+
+<h2>@Treatment.Treatments_Title</h2>
+
+@Html.DataTableFor(Model, new ColumnCollection<TreatmentEntity>
+{
+    {x => x.Patient.FirstName, Treatment.Treatments_FirstName},
+    {x => x.Patient.LastName, Treatment.Treatments_LastName},
+    {x => x.TreatmentType, Treatment.Treatments_Type, x => x.TreatmentType.GetDisplayText()},
+    {x => x.TreatmentTime, Treatment.Treatments_Time, x => TimeZoneInfo.ConvertTime(x.TreatmentTime, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture)},
+    {x => x.Patient.Location.Name, Treatment.Treatments_Location},
+    {"View", "", m => Html.ActionLink(Treatment.Treatments_View, "View", "Treatment", new {treatmentId = m.TreatmentId, page = "Summary"}, null)}
+}, 
+defaultSort: new List<DataTablesRequestModel.Sort>
+                 {
+                     new DataTablesRequestModel.Sort
+                         {
+                             iSortCol = 3,
+                             sSortDir = "desc"
+                         }
+                 })
+

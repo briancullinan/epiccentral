@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="New_AccountNumber" xml:space="preserve">
+    <value>Account Number</value>
+  </data>
+<data name="AddCard_Title" xml:space="preserve">
+    <value>Fügen Sie eine Karte</value>
+  </data>
+<data name="New_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+<data name="New_CreditCard" xml:space="preserve">
+    <value>Kreditkarte</value>
+  </data>
+<data name="New_Device" xml:space="preserve">
+    <value>Gerät</value>
+  </data>
+<data name="New_FirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+<data name="New_LastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+<data name="New_Location" xml:space="preserve">
+    <value>Lage</value>
+  </data>
+<data name="New_Price" xml:space="preserve">
+    <value>Preis</value>
+  </data>
+<data name="New_Rate" xml:space="preserve">
+    <value>Rate ( Preis pro Scan )</value>
+  </data>
+<data name="List_Title" xml:space="preserve">
+    <value>Kauf-Historie</value>
+  </data>
+<data name="New_Total" xml:space="preserve">
+    <value>gesamt</value>
+  </data>
+<data name="Add_Title" xml:space="preserve">
+    <value>Neukauf</value>
+  </data>
+<data name="Add_Error" xml:space="preserve">
+    <value>Konnte nicht hinzugefügt Kauf , bitte korrigieren Sie die Fehler.</value>
+  </data>
+<data name="AddCard_Error" xml:space="preserve">
+    <value>Erstellen Sie die Karte nicht erfolgreich war, korrigieren Sie bitte die nachfolgenden Fehler.</value>
+  </data>
+<data name="List_LocationName" xml:space="preserve">
+    <value>Ort Name</value>
+  </data>
+<data name="List_PurchaseTime" xml:space="preserve">
+    <value>Kauf- Zeit</value>
+  </data>
+<data name="List_ScansPurchased" xml:space="preserve">
+    <value>scannt Gekaufte</value>
+  </data>
+<data name="List_AmountPaid" xml:space="preserve">
+    <value>gezahlten Betrag</value>
+  </data>
+<data name="List_PurchaseNotes" xml:space="preserve">
+    <value>Schuldverschreibungen</value>
+  </data>
+<data name="New_Remove" xml:space="preserve">
+    <value>entfernen</value>
+  </data>
+<data name="New_AddCard" xml:space="preserve">
+    <value>Fügen Sie eine Karte</value>
+  </data>
+<data name="New_Cards" xml:space="preserve">
+    <value>gespeichert Karten</value>
+  </data>
+<data name="New_Cart" xml:space="preserve">
+    <value>Wagen</value>
+  </data>
+<data name="New_Checkout" xml:space="preserve">
+    <value>Kasse</value>
+  </data>
+<data name="New_NewPurchase" xml:space="preserve">
+    <value>Neukauf</value>
+  </data>
+<data name="New_Quantity" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+<data name="New_Title" xml:space="preserve">
+    <value>Neukauf</value>
+  </data>
+<data name="List_TransferPurchases" xml:space="preserve">
+    <value>Einkäufe übertragen</value>
+  </data>
+<data name="List_Transfer" xml:space="preserve">
+    <value>übertragen</value>
+  </data>
+<data name="List_NewPurchase" xml:space="preserve">
+    <value>Neukauf</value>
+  </data>
+<data name="List_Device" xml:space="preserve">
+    <value>Gerät</value>
+  </data>
+<data name="Checkout_Title" xml:space="preserve">
+    <value>Einkauf abschließen</value>
+  </data>
+<data name="Checkout_Purchase" xml:space="preserve">
+    <value>kaufen</value>
+  </data>
+<data name="Checkout_Message" xml:space="preserve">
+    <value>Bitte wählen Sie eine Kreditkarte :</value>
+  </data>
+<data name="Checkout_Total" xml:space="preserve">
+    <value>Gesamt: { 0: C}</value>
+  </data>
+</root>

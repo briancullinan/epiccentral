@@ -1,0 +1,94 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using Purchase = ViewRes.Purchase
+@model NewPurchaseModel
+
+@{
+    ViewBag.Title = Purchase.New_Title;
+}
+
+@section Head
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Purchase-Cart').bind('draw', function () {
+                var oSettings = $('#Purchase-Cart').dataTable().fnSettings();
+                if (oSettings.aoData.length > 0)
+                    $('#checkout-btn').show();
+                else
+                    $('#checkout-btn').hide();
+            });
+        });
+
+        function CartRemoved() {
+            $('#Purchase-Cart').dataTable().fnDraw();
+        }
+
+        function CartError() {
+
+        }
+    </script>
+}
+
+<h2>@Purchase.New_Title</h2>
+
+<h3>@Purchase.New_Cards</h3>
+
+@Html.DataTableFor(Model.Cards, new ColumnCollection<UserCreditCardEntity>
+{
+    {x => x.CreditCard.CreditCardId, Purchase.New_CreditCard},
+    {x => x.CreditCard.FirstName, Purchase.New_FirstName},
+    {x => x.CreditCard.LastName, Purchase.New_LastName},
+    {x => x.User.Organization.Name, Purchase.New_Location},
+    {x => x.CreditCard.Address, Purchase.New_Address},
+    {x => x.CreditCard.AccountNumber, Purchase.New_AccountNumber, x => String.Format("XXXXXXXXXXXX{0}", x.CreditCard.AccountNumber)},
+    {"Edit", "", x => Html.ActionLink(Purchase.New_Edit, "EditCard", "Purchase", new {x.CreditCardId}, null)}
+},  dialogs: new DataTablesDialogModelCollection
+                {
+                    new DataTablesDialogModel{ColumnName = "Edit", Edit = true, Title = Purchase.New_EditCard, Width = 700, Height = 700}
+                },
+add: new DataTablesAddModel
+    {
+        Action = x => Html.ActionLink(Purchase.New_AddCard, "AddCard", "Purchase", new { locationId = ViewData["locationId"], organizationId = ViewData["organizationId"] }, null),
+        Height = 700,
+        Width = 700
+    })
+
+<h3>@Purchase.New_Cart</h3>
+
+@Html.DataTableFor(Model.Cart.AsQueryable(),
+    new ColumnCollection<EPICCentral.Models.Purchase>
+        {
+            {x => x.Device.SerialNumber, Purchase.New_Device, x => SharedRes.Formats.Device.FormatWith(x.Device)},
+            {x => x.Device.DeviceState, "", null, false, null, false},
+            {x => x.ScanRate.ScanType, Purchase.New_Rate, x => SharedRes.Formats.ScanRate.FormatWith(x.ScanRate)},
+            {x => x.ScanRate.RatePerScan, "", null, false, null, false},
+            {x => x.ScanRate.MinCountForRate, "", null, false, null, false},
+            {x => x.ScanRate.MaxCountForRate, "", null, false, null, false},
+            {x => x.Quantity, Purchase.New_Quantity},
+            {x => x.Price, Purchase.New_Price, x => String.Format(SharedRes.Formats.Price, x.Price)},
+            {"Total", Purchase.New_Total, x => String.Format(SharedRes.Formats.Total, Model.Cart.Where((purchase, i) => i <= Model.Cart.IndexOf(x)).Sum(y => y.Price))},
+            {"Remove", "", x => Html.ActionLink(Purchase.New_Remove, "RemoveFromCart", "Purchase", new {index = Model.Cart.IndexOf(x)}, null)}
+        }, 
+    add: new DataTablesAddModel
+            {
+                Action = m => Html.ActionLink(Purchase.New_NewPurchase, "Add", "Purchase", new { locationId = ViewData["locationId"], organizationId = ViewData["organizationId"] }, null),
+                Height = 300,
+                Width = 300,
+                SaveText = Purchase.New_AddToCart,
+            },
+    actions: new DataTablesDirectActionModelCollection
+                {
+                    new DataTablesDirectActionModel
+                        {
+                            ColumnName = "Remove",
+                            ErrorFunc = "CartError",
+                            SuccessFunc = "CartRemoved"
+                        }
+                },
+    htmlAttributes: new {@id = "Purchase-Cart"})
+<br class="clear" />
+<div class="ui-state-highlight ui-corner-all" id="checkout-btn" style="display:none;">
+    @Purchase.New_TheNextScreen<br /><br />
+    @Html.ActionLink(Purchase.New_Checkout, "Checkout", "Purchase", null, new {@class = "button"})
+</div>

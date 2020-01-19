@@ -1,0 +1,8 @@
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\bin\Debug\InterIMAPConsoleTest.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\bin\Debug\InterIMAPConsoleTest.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\bin\Debug\InterIMAP.dll
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\bin\Debug\InterIMAP.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\bin\Debug\InterIMAP.xml
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\obj\Debug\InterIMAPConsoleTest.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAPConsoleTest\obj\Debug\InterIMAPConsoleTest.pdb

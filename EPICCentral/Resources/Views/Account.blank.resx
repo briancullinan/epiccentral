@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="ResetEmailPartial_Title" xml:space="preserve">
+    <value>----ResetEmailPartial_Title----</value>
+  </data>
+<data name="ResetEmailPartial_Greeting" xml:space="preserve">
+    <value>----ResetEmailPartial_Greeting----</value>
+  </data>
+<data name="ResetEmailPartial_GreetingGeneric" xml:space="preserve">
+    <value>----ResetEmailPartial_GreetingGeneric----</value>
+  </data>
+<data name="ResetEmailPartial_Message" xml:space="preserve">
+    <value>----ResetEmailPartial_Message----</value>
+  </data>
+<data name="ResetEmailPartial_CompleteLink" xml:space="preserve">
+    <value>----ResetEmailPartial_CompleteLink----</value>
+  </data>
+<data name="ResetEmailPartial_Instructions" xml:space="preserve">
+    <value>----ResetEmailPartial_Instructions----</value>
+  </data>
+<data name="ResetEmailPartial_Instruction2" xml:space="preserve">
+    <value>----ResetEmailPartial_Instruction2----</value>
+  </data>
+<data name="ResetEmailPartial_Salutation" xml:space="preserve">
+    <value>----ResetEmailPartial_Salutation----</value>
+  </data>
+<data name="ResetEmailPartial_SalutationName" xml:space="preserve">
+    <value>----ResetEmailPartial_SalutationName----</value>
+  </data>
+<data name="ChangePassword_Title" xml:space="preserve">
+    <value>----ChangePassword_Title----</value>
+  </data>
+<data name="ChangePassword_Errors" xml:space="preserve">
+    <value>----ChangePassword_Errors----</value>
+  </data>
+<data name="ChangePassword_ChangePasswordFor" xml:space="preserve">
+    <value>----ChangePassword_ChangePasswordFor----</value>
+  </data>
+<data name="ChangePassword_MinimumLength" xml:space="preserve">
+    <value>----ChangePassword_MinimumLength----</value>
+  </data>
+<data name="ChangePassword_CurrentPassword" xml:space="preserve">
+    <value>----ChangePassword_CurrentPassword----</value>
+  </data>
+<data name="ChangePassword_Save" xml:space="preserve">
+    <value>----ChangePassword_Save----</value>
+  </data>
+<data name="ChangePassword_Cancel" xml:space="preserve">
+    <value>----ChangePassword_Cancel----</value>
+  </data>
+<data name="ChangePasswordSuccess_Continue" xml:space="preserve">
+    <value>----ChangePasswordSuccess_Continue----</value>
+  </data>
+<data name="ChangePasswordSuccess_Message" xml:space="preserve">
+    <value>----ChangePasswordSuccess_Message----</value>
+  </data>
+<data name="ChangePasswordSuccess_Title" xml:space="preserve">
+    <value>----ChangePasswordSuccess_Title----</value>
+  </data>
+<data name="LogOn_Title" xml:space="preserve">
+    <value>----LogOn_Title----</value>
+  </data>
+<data name="LogOn_Message" xml:space="preserve">
+    <value>----LogOn_Message----</value>
+  </data>
+<data name="LogOn_Errors" xml:space="preserve">
+    <value>----LogOn_Errors----</value>
+  </data>
+<data name="LogOn_AccountInformation" xml:space="preserve">
+    <value>----LogOn_AccountInformation----</value>
+  </data>
+<data name="LogOn_IForgot" xml:space="preserve">
+    <value>----LogOn_IForgot----</value>
+  </data>
+<data name="LogOn_Reset" xml:space="preserve">
+    <value>----LogOn_Reset----</value>
+  </data>
+<data name="LogOn_Submit" xml:space="preserve">
+    <value>----LogOn_Submit----</value>
+  </data>
+<data name="Register_Heading" xml:space="preserve">
+    <value>----Register_Heading----</value>
+  </data>
+<data name="Register_Title" xml:space="preserve">
+    <value>----Register_Title----</value>
+  </data>
+<data name="Register_Message" xml:space="preserve">
+    <value>----Register_Message----</value>
+  </data>
+<data name="Register_MinimumLength" xml:space="preserve">
+    <value>----Register_MinimumLength----</value>
+  </data>
+<data name="Register_Errors" xml:space="preserve">
+    <value>----Register_Errors----</value>
+  </data>
+<data name="Register_AccountInformation" xml:space="preserve">
+    <value>----Register_AccountInformation----</value>
+  </data>
+<data name="Register_Submit" xml:space="preserve">
+    <value>----Register_Submit----</value>
+  </data>
+<data name="Reset_Remembered" xml:space="preserve">
+    <value>----Reset_Remembered----</value>
+  </data>
+<data name="Reset_LogOn" xml:space="preserve">
+    <value>----Reset_LogOn----</value>
+  </data>
+<data name="ResetCompletion_Title" xml:space="preserve">
+    <value>----ResetCompletion_Title----</value>
+  </data>
+<data name="ResetCompletion_Message">
+  <value xml:space="preserve">----ResetCompletion_Message----</value>
+</data>
+<data name="ResetCompletion_Errors">
+  <value xml:space="preserve">----ResetCompletion_Errors----</value>
+</data>
+<data name="ResetCompletion_MultipleAccounts">
+  <value xml:space="preserve">----ResetCompletion_MultipleAccounts----</value>
+</data>
+<data name="ResetCompletion_SelectAccount">
+  <value xml:space="preserve">----ResetCompletion_SelectAccount----</value>
+</data>
+<data name="ResetCompletion_CreateNew">
+  <value xml:space="preserve">----ResetCompletion_CreateNew----</value>
+</data>
+<data name="ResetCompletion_Next">
+  <value xml:space="preserve">----ResetCompletion_Next----</value>
+</data>
+<data name="ResetCompletion_Reset">
+  <value xml:space="preserve">----ResetCompletion_Reset----</value>
+</data>
+<data name="ResetCompletionSuccess_Title">
+  <value xml:space="preserve">----ResetCompletionSuccess_Title----</value>
+</data>
+<data name="ResetCompletionSuccess_Message">
+  <value xml:space="preserve">----ResetCompletionSuccess_Message----</value>
+</data>
+<data name="ResetSuccess_Title">
+  <value xml:space="preserve">----ResetSuccess_Title----</value>
+</data>
+<data name="ResetSuccess_Message">
+  <value xml:space="preserve">----ResetSuccess_Message----</value>
+</data>
+</root>

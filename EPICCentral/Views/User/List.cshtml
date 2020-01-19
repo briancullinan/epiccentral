@@ -1,0 +1,62 @@
+﻿@using EPICCentral.Models
+@using EPICCentral.Utilities.DataLayer
+@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.EntityClasses
+@model IQueryable<UserEntity>
+
+<link href="@Url.Content("/Content/jquery.multiselect.css")" rel="stylesheet" type="text/css" />
+@Html.Script(@<script type="text/javascript" src="@Url.Content("/Scripts/jquery.multiselect.js")"></script>)
+
+@{
+    ViewBag.Title = ViewRes.User.List_Title;
+
+    DataTablesDialogModelCollection dialogModels = null;
+    DataTablesAddModel addModel = null;
+
+    ColumnCollection<UserEntity> columns =
+	    new ColumnCollection<UserEntity>
+		    {
+				    {"LastName", ViewRes.User.List_LastName},
+				    {"FirstName", ViewRes.User.List_FirstName},
+				    {"Username", ViewRes.User.List_Username},
+				    {"EmailAddress", ViewRes.User.List_EmailAddress},
+				    {"UserAssignedLocations.Location.Name", ViewRes.User.List_Locations, o => String.Join(", ", o.UserAssignedLocations.Select(x => x.Location.Name))},
+		    };
+            
+    if (RoleUtils.IsUserServiceAdmin())
+	{
+        columns.Insert(3, new DataTableColumn<UserEntity> { ColumnName = "Organization.Name", Header = ViewRes.User.List_Organization, CanSort = true, Visible = true });
+        columns.Add("Online", "Is Online", x => x.Username != "" && Membership.GetUser(x.Username).IsOnline);
+    }
+    
+    if (RoleUtils.IsUserServiceAdmin() || RoleUtils.IsUserOrgAdmin())
+	{
+        columns.Add(new DataTableColumn<UserEntity> { ColumnName = "View", Header = "", Format = (o => Html.ActionLink(ViewRes.User.List_View, "View", "User", new { userId = o.UserId }, null)), Visible = true });
+		columns.Add(new DataTableColumn<UserEntity> { ColumnName = "Edit", Header = "", Format = (o => Html.ActionLink(ViewRes.User.List_Edit, "Edit", "User", new { userId = o.UserId }, null)), Visible = true });
+        dialogModels = new DataTablesDialogModelCollection
+                            {
+                                new DataTablesDialogModel {ColumnName = "View", Title = ViewRes.User.List_UserDetails, Width = 660, Edit = false},
+                                new DataTablesDialogModel {ColumnName = "Edit", Title = ViewRes.User.List_EditUser, Edit = true, Width = 620}
+                            };
+
+        RouteValueDictionary routeValues = new RouteValueDictionary();
+        if (ViewData.ContainsKey("organizationId"))
+        {
+            routeValues.Add("organizationId", ViewData["organizationId"]);
+		}
+        if (ViewData.ContainsKey("locationId"))
+        {
+            routeValues.Add("locationId", ViewData["locationId"]);
+        }
+
+        addModel = new DataTablesAddModel
+                        {
+                            Action = o => Html.ActionLink(ViewRes.User.List_AddUser, "Add", routeValues),
+                            Width = 620
+                        };
+    }
+}
+
+<h2>@ViewRes.User.List_Title</h2>
+
+@Html.DataTableFor(Model, columns, dialogModels, add: addModel)

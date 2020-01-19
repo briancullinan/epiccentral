@@ -1,0 +1,220 @@
+﻿@using System.Globalization
+@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.Linq
+@model EPICCentral.Models.AddUserModel
+
+@{
+    ViewBag.Title = ViewRes.User.Add_Title;
+}
+
+<link href="@Url.Content("/Content/jquery.multiselect.css")" rel="stylesheet" type="text/css" />
+@Html.Script(@<script type="text/javascript" src="@Url.Content("/Scripts/jquery.multiselect.js")"></script>)
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        // Extension function to check if element exists.
+        // Usage: $(selector).exists()
+        $.fn.exists = function () {
+            return this.length !== 0;
+        };
+
+        // Initialize the multiselect control that displays the Role <select> as a
+        // radio button list.
+        $("#Role").multiselect(
+                {
+                    multiple: false,
+                    header: false,
+                    selectedText: function () { return $("#Role").multiselect("getChecked")[0].title; },
+                    noneSelectedText: "Select user's role",
+                    minWidth: 262,
+                    height: 110
+                }
+            );
+
+        // If the Locations <select> is present in the page, initialize the mulitiselect
+        // control that displays it as a checkbox list.
+        if ($("select#Locations").exists()) {
+            $("#Locations").multiselect(
+                {
+                    selectedText: "# of # selected",
+                    noneSelectedText: "Select location(s)",
+                    checkAllText: "Allow All",
+                    uncheckAllText: "Disallow All",
+                    minWidth: 262,
+                    height: 110
+                }
+            );
+
+            // Locations are only valid when the role is not an admin role. So when it's
+            // an admin role, disable the Locations <select>. Enable it when the role is
+            // set to a non-admin role.
+            $("#Role").bind("multiselectclick", function (event, ui) {
+                if (ui.checked === true) {
+                    $("#Locations").multiselect(ui.text === "@RoleUtils.SERVICE_ADMIN_NAME" || ui.text === "@RoleUtils.ORGANIZATION_ADMIN_NAME" ? "disable" : "enable");
+                }
+            });
+        }
+
+        // These functions to update <select> elements are only necessary when the
+        // organization can be changed, i.e. when the OrganizationId <select> is present.
+        // If the organization is pre-select and set, it won't be present. The organization
+        // ID will be in a hidden field.
+        if ($("select#OrganizationId").exists()) {
+
+            // Function does an AJAX query to get the locations for an organization.
+            // When returned, it updates the Locations select and refreshes the
+            // checkbox list control.
+            var updateLocations = function (orgId) {
+                $.post("@Url.Action("GetLocations", "Organization")", { organizationId: orgId },
+                    function (data) {
+                        var locationSelect = $("#Locations");
+                        // Clear all options first.
+                        locationSelect.empty();
+                        // Add an <option> for each location. Initially, mark them all
+                        // selected. Also, count them. When they've been added, if there's
+                        // only one, it is left selected. If there's more than one, they
+                        // are all unselected and the user must choose.
+                        var count = 0;
+                        $.each(data, function (index, name) {
+                            locationSelect.append($('<option>', { value: index, selected: "selected" }).text(name));
+                            count++;
+                        });
+                        // If more than one, unselect all of them.
+                        if (count > 1) {
+                            locationSelect.val([]);
+                        }
+                        // Refresh the checkbox list control with new data.
+                        locationSelect.multiselect("refresh");
+
+                        // NOTE: Tried disabling the multiselect control here if there's
+                        // only one <option>. But if it's disabled, it doesn't send that
+                        // one location back to the server with the POST. There might be
+                        // a way to work around that issue. The server could assume if
+                        // there's no location returned and there's only one, then that's
+                        // THE location. Thought about re-enabling just before the POST,
+                        // but that would probably be ugly. Decided, for now, not to tackle
+                        // it. The thought behind all this is if there's only one location,
+                        // if MUST be selected.
+                    }
+                );
+            };
+
+            // Function does an AJAX query to get the allowed roles for an organization.
+            // When returned it updates the Role <select> and refreshes the multi-select
+            // control.
+            var updateRoles = function (orgId) {
+                $.post("@Url.Action("GetRoles", "Organization")", { organizationId: orgId },
+                    function (data) {
+                        var roleSelect = $("#Role");
+                        // Clear all options first. Then add each in the response.
+                        roleSelect.empty();
+                        $.each(data, function (index, name) {
+                            roleSelect.append($('<option>', { value: index }).text(name));
+                        });
+                        // Refresh the control.
+                        roleSelect.multiselect("refresh");
+                        // Since no role is now selected, be sure the Locations <select> is
+                        // enabled.
+                        $("#Locations").multiselect("enable");
+                    }
+                );
+            };
+
+            // Set the change event for the OrganizationId <select> to update the role
+            // and locations <select>s.
+            $("select#OrganizationId").change(
+                function () {
+                    var orgId = this.options[this.selectedIndex].value;
+                    updateLocations(orgId);
+                    updateRoles(orgId);
+                });
+
+            // If the Locations select also exists, initialize it on page load.
+            if (!$("#Locations").find("option").exists()) {
+                updateLocations($("select#OrganizationId").val());
+            }
+
+            // The Role select is always present. Just initialize it.
+            updateRoles($("select#OrganizationId").val());
+        }
+
+    });
+
+</script>
+
+@using (Html.BeginForm())
+{
+	<fieldset>
+		
+		<legend>@ViewRes.User.Add_Administration</legend>
+		
+		@if (!Model.IsPresetOrganization)
+		{
+			<div class="editor-label">
+                @Html.LabelFor(m => m.OrganizationId, ViewRes.User.Add_Organization)
+            </div>
+			<div class="editor-field">
+				@Html.DropDownListFor(m => m.OrganizationId, new LinqMetaData().Organization.WithPermissions().ToSelectList())
+			</div>
+		}
+		else
+		{
+			@Html.HiddenFor(m => m.OrganizationId.Value)
+		}
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.FirstName, ViewRes.User.Add_FirstName)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.FirstName)
+		</div>
+    
+		<div class="editor-label">
+            @Html.LabelFor(m => m.LastName, ViewRes.User.Add_LastName)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.LastName)
+		</div>
+    
+		<div class="editor-label">
+            @Html.LabelFor(m => m.EmailAddress, ViewRes.User.Add_EmailAddress)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.EmailAddress)
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Pin, ViewRes.User.Add_Pin)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.Pin)
+		</div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Role, ViewRes.User.Add_Role)
+        </div>
+		<div class="editor-field">
+			@Html.ListBoxFor(m => m.Role, Model.RoleList)
+		</div>
+        
+		@{ var locations = Model.LocationList; }
+		@if (locations.Count() != 1)
+		{
+			<div class="editor-label">
+                @Html.LabelFor(m => m.Locations, ViewRes.User.Add_Locations)
+            </div>
+			<div class="editor-field">
+				@Html.ListBoxFor(m => m.Locations, locations, new {multiple = "multiple"})
+			</div>
+		}
+		else
+		{
+			@Html.HiddenFor(m => m.Locations, new { locations.First().Value })
+		}
+        
+        @Html.HiddenFor(m => m.IsPresetOrganization)
+    
+	</fieldset>
+}

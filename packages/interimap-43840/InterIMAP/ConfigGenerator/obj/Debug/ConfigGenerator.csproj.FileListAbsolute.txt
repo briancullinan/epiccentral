@@ -1,0 +1,8 @@
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\bin\Debug\ConfigGenerator.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\bin\Debug\ConfigGenerator.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\bin\Debug\InterIMAP.dll
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\bin\Debug\InterIMAP.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\bin\Debug\InterIMAP.xml
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\obj\Debug\ConfigGenerator.exe
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\ConfigGenerator\obj\Debug\ConfigGenerator.pdb

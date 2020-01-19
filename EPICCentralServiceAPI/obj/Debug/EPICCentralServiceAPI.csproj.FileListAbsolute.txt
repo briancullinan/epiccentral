@@ -1,0 +1,6 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\bin\Debug\log4net.xml
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\bin\Debug\EPICCentralServiceAPI.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\bin\Debug\EPICCentralServiceAPI.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\bin\Debug\log4net.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\obj\Debug\EPICCentralServiceAPI.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralServiceAPI\obj\Debug\EPICCentralServiceAPI.pdb

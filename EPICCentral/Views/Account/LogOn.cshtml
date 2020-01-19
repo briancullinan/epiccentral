@@ -1,0 +1,63 @@
+﻿@using ViewRes
+@model EPICCentral.Models.LogOnModel
+
+@{
+    ViewBag.Title = Account.LogOn_Title;
+}
+
+<h2>@Account.LogOn_Title</h2>
+<p>
+    @Account.LogOn_Message
+</p>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        // When Reset link is clicked, append the username as a parameter, if there is one.
+        $("#Reset").on("click", function () {
+            var url = $(this).attr("href");
+            var username = $("#UserName").val();
+            if (username !== null && username.length > 0)
+                url = url + "?username=" + encodeURIComponent(username);
+            $(this).attr("href", url);
+        });
+    });
+
+</script>
+
+@using (Html.BeginForm()) {
+
+    @Html.ValidationSummary(false, Account.LogOn_Errors)
+
+    <div>
+        <fieldset>
+            <legend>@Account.LogOn_AccountInformation</legend>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.UserName)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(m => m.UserName, new {autocomplete = "off"})
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.Password, new { autocomplete = "off" })
+            </div>
+
+		    <div class="editor-label">
+                @Html.Label("Reset", Account.LogOn_IForgot)
+            </div>
+            <div class="editor-field">
+                @Html.ActionLink(Account.LogOn_Reset, "Reset", null, new { id = "Reset" })
+            </div>
+
+			<p>
+                <input type="submit" value="@Account.LogOn_Submit" />
+            </p>
+        </fieldset>
+    </div>
+}

@@ -1,0 +1,38 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@model IQueryable<ExceptionLogEntity>
+
+@{
+    ViewBag.Title = ViewRes.Exception.List_Title;
+}
+
+<h2>@ViewRes.Exception.List_Title</h2>
+@{
+    @Html.DataTableFor(
+        Model,
+        new ColumnCollection<ExceptionLogEntity>
+            {
+                {x => x.ExceptionLogId, ViewRes.Exception.List_ExceptionId},
+                {x => x.Device.SerialNumber, ViewRes.Exception.List_Device, x => SharedRes.Formats.Device.FormatWith(x.Device)},
+                {x => x.Device.DeviceState, "", null, false, null, false},
+                {x => x.Device.Location.Name, ViewRes.Exception.List_LocationName},
+                {x => x.Title, ViewRes.Exception.List_ExceptionTitle},
+                {x => x.MachineName, ViewRes.Exception.List_MachineName},
+                {x => x.LogTime, ViewRes.Exception.List_LogTime},
+                {x => x.ReceivedTime, ViewRes.Exception.List_ReceivedTime},
+                {"View", "", o => Html.ActionLink(ViewRes.Exception.List_View, "View", "Exception", new {o.ExceptionLogId}, null)}
+            },
+        new DataTablesDialogModelCollection
+            {
+                new DataTablesDialogModel {ColumnName = "View", Title = ViewRes.Exception.List_ViewException, Edit = false, Width = 800, Height = 600}
+            },
+        htmlAttributes: new {id = "Exceptions"},
+        defaultSort: new List<DataTablesRequestModel.Sort>
+                         {
+                             new DataTablesRequestModel.Sort
+                                 {
+                                     iSortCol = 4,
+                                     sSortDir = "desc"
+                                 }
+                         })
+}

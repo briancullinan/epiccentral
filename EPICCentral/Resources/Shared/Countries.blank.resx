@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="AE" xml:space="preserve">
+    <value>----AE----</value>
+  </data>
+<data name="AF" xml:space="preserve">
+    <value>----AF----</value>
+  </data>
+<data name="AL" xml:space="preserve">
+    <value>----AL----</value>
+  </data>
+<data name="AM" xml:space="preserve">
+    <value>----AM----</value>
+  </data>
+<data name="AR" xml:space="preserve">
+    <value>----AR----</value>
+  </data>
+<data name="AT" xml:space="preserve">
+    <value>----AT----</value>
+  </data>
+<data name="AU" xml:space="preserve">
+    <value>----AU----</value>
+  </data>
+<data name="AZ" xml:space="preserve">
+    <value>----AZ----</value>
+  </data>
+<data name="BA" xml:space="preserve">
+    <value>----BA----</value>
+  </data>
+<data name="BD" xml:space="preserve">
+    <value>----BD----</value>
+  </data>
+<data name="BE" xml:space="preserve">
+    <value>----BE----</value>
+  </data>
+<data name="BG" xml:space="preserve">
+    <value>----BG----</value>
+  </data>
+<data name="BH" xml:space="preserve">
+    <value>----BH----</value>
+  </data>
+<data name="BN" xml:space="preserve">
+    <value>----BN----</value>
+  </data>
+<data name="BO" xml:space="preserve">
+    <value>----BO----</value>
+  </data>
+<data name="BR" xml:space="preserve">
+    <value>----BR----</value>
+  </data>
+<data name="BY" xml:space="preserve">
+    <value>----BY----</value>
+  </data>
+<data name="BZ" xml:space="preserve">
+    <value>----BZ----</value>
+  </data>
+<data name="CA" xml:space="preserve">
+    <value>----CA----</value>
+  </data>
+<data name="CH" xml:space="preserve">
+    <value>----CH----</value>
+  </data>
+<data name="CL" xml:space="preserve">
+    <value>----CL----</value>
+  </data>
+<data name="CN" xml:space="preserve">
+    <value>----CN----</value>
+  </data>
+<data name="CO" xml:space="preserve">
+    <value>----CO----</value>
+  </data>
+<data name="CR" xml:space="preserve">
+    <value>----CR----</value>
+  </data>
+<data name="CS" xml:space="preserve">
+    <value>----CS----</value>
+  </data>
+<data name="CZ" xml:space="preserve">
+    <value>----CZ----</value>
+  </data>
+<data name="DE" xml:space="preserve">
+    <value>----DE----</value>
+  </data>
+<data name="DK" xml:space="preserve">
+    <value>----DK----</value>
+  </data>
+<data name="DO" xml:space="preserve">
+    <value>----DO----</value>
+  </data>
+<data name="DZ" xml:space="preserve">
+    <value>----DZ----</value>
+  </data>
+<data name="EC" xml:space="preserve">
+    <value>----EC----</value>
+  </data>
+<data name="EE" xml:space="preserve">
+    <value>----EE----</value>
+  </data>
+<data name="EG" xml:space="preserve">
+    <value>----EG----</value>
+  </data>
+<data name="ES" xml:space="preserve">
+    <value>----ES----</value>
+  </data>
+<data name="ET" xml:space="preserve">
+    <value>----ET----</value>
+  </data>
+<data name="FI" xml:space="preserve">
+    <value>----FI----</value>
+  </data>
+<data name="FO" xml:space="preserve">
+    <value>----FO----</value>
+  </data>
+<data name="FR" xml:space="preserve">
+    <value>----FR----</value>
+  </data>
+<data name="GB" xml:space="preserve">
+    <value>----GB----</value>
+  </data>
+<data name="GE" xml:space="preserve">
+    <value>----GE----</value>
+  </data>
+<data name="GL" xml:space="preserve">
+    <value>----GL----</value>
+  </data>
+<data name="GR" xml:space="preserve">
+    <value>----GR----</value>
+  </data>
+<data name="GT" xml:space="preserve">
+    <value>----GT----</value>
+  </data>
+<data name="HK" xml:space="preserve">
+    <value>----HK----</value>
+  </data>
+<data name="HN" xml:space="preserve">
+    <value>----HN----</value>
+  </data>
+<data name="HR" xml:space="preserve">
+    <value>----HR----</value>
+  </data>
+<data name="HU" xml:space="preserve">
+    <value>----HU----</value>
+  </data>
+<data name="ID" xml:space="preserve">
+    <value>----ID----</value>
+  </data>
+<data name="IE" xml:space="preserve">
+    <value>----IE----</value>
+  </data>
+<data name="IL" xml:space="preserve">
+    <value>----IL----</value>
+  </data>
+<data name="IN" xml:space="preserve">
+    <value>----IN----</value>
+  </data>
+<data name="IQ" xml:space="preserve">
+    <value>----IQ----</value>
+  </data>
+<data name="IR" xml:space="preserve">
+    <value>----IR----</value>
+  </data>
+<data name="IS" xml:space="preserve">
+    <value>----IS----</value>
+  </data>
+<data name="IT" xml:space="preserve">
+    <value>----IT----</value>
+  </data>
+<data name="JM" xml:space="preserve">
+    <value>----JM----</value>
+  </data>
+<data name="JO" xml:space="preserve">
+    <value>----JO----</value>
+  </data>
+<data name="JP" xml:space="preserve">
+    <value>----JP----</value>
+  </data>
+<data name="KE" xml:space="preserve">
+    <value>----KE----</value>
+  </data>
+<data name="KG" xml:space="preserve">
+    <value>----KG----</value>
+  </data>
+<data name="KH" xml:space="preserve">
+    <value>----KH----</value>
+  </data>
+<data name="KR" xml:space="preserve">
+    <value>----KR----</value>
+  </data>
+<data name="KW" xml:space="preserve">
+    <value>----KW----</value>
+  </data>
+<data name="KZ" xml:space="preserve">
+    <value>----KZ----</value>
+  </data>
+<data name="LA" xml:space="preserve">
+    <value>----LA----</value>
+  </data>
+<data name="LB" xml:space="preserve">
+    <value>----LB----</value>
+  </data>
+<data name="LI" xml:space="preserve">
+    <value>----LI----</value>
+  </data>
+<data name="LK" xml:space="preserve">
+    <value>----LK----</value>
+  </data>
+<data name="LT" xml:space="preserve">
+    <value>----LT----</value>
+  </data>
+<data name="LU" xml:space="preserve">
+    <value>----LU----</value>
+  </data>
+<data name="LV" xml:space="preserve">
+    <value>----LV----</value>
+  </data>
+<data name="LY" xml:space="preserve">
+    <value>----LY----</value>
+  </data>
+<data name="MA" xml:space="preserve">
+    <value>----MA----</value>
+  </data>
+<data name="MC" xml:space="preserve">
+    <value>----MC----</value>
+  </data>
+<data name="ME" xml:space="preserve">
+    <value>----ME----</value>
+  </data>
+<data name="MK" xml:space="preserve">
+    <value>----MK----</value>
+  </data>
+<data name="MN" xml:space="preserve">
+    <value>----MN----</value>
+  </data>
+<data name="MO" xml:space="preserve">
+    <value>----MO----</value>
+  </data>
+<data name="MT" xml:space="preserve">
+    <value>----MT----</value>
+  </data>
+<data name="MV" xml:space="preserve">
+    <value>----MV----</value>
+  </data>
+<data name="MX" xml:space="preserve">
+    <value>----MX----</value>
+  </data>
+<data name="MY" xml:space="preserve">
+    <value>----MY----</value>
+  </data>
+<data name="NG" xml:space="preserve">
+    <value>----NG----</value>
+  </data>
+<data name="NI" xml:space="preserve">
+    <value>----NI----</value>
+  </data>
+<data name="NL" xml:space="preserve">
+    <value>----NL----</value>
+  </data>
+<data name="NO" xml:space="preserve">
+    <value>----NO----</value>
+  </data>
+<data name="NP" xml:space="preserve">
+    <value>----NP----</value>
+  </data>
+<data name="NZ" xml:space="preserve">
+    <value>----NZ----</value>
+  </data>
+<data name="OM" xml:space="preserve">
+    <value>----OM----</value>
+  </data>
+<data name="PA" xml:space="preserve">
+    <value>----PA----</value>
+  </data>
+<data name="PE" xml:space="preserve">
+    <value>----PE----</value>
+  </data>
+<data name="PH" xml:space="preserve">
+    <value>----PH----</value>
+  </data>
+<data name="PK" xml:space="preserve">
+    <value>----PK----</value>
+  </data>
+<data name="PL" xml:space="preserve">
+    <value>----PL----</value>
+  </data>
+<data name="PR" xml:space="preserve">
+    <value>----PR----</value>
+  </data>
+<data name="PT" xml:space="preserve">
+    <value>----PT----</value>
+  </data>
+<data name="PY" xml:space="preserve">
+    <value>----PY----</value>
+  </data>
+<data name="QA" xml:space="preserve">
+    <value>----QA----</value>
+  </data>
+<data name="RO" xml:space="preserve">
+    <value>----RO----</value>
+  </data>
+<data name="RS" xml:space="preserve">
+    <value>----RS----</value>
+  </data>
+<data name="RU" xml:space="preserve">
+    <value>----RU----</value>
+  </data>
+<data name="RW" xml:space="preserve">
+    <value>----RW----</value>
+  </data>
+<data name="SA" xml:space="preserve">
+    <value>----SA----</value>
+  </data>
+<data name="SE" xml:space="preserve">
+    <value>----SE----</value>
+  </data>
+<data name="SG" xml:space="preserve">
+    <value>----SG----</value>
+  </data>
+<data name="SI" xml:space="preserve">
+    <value>----SI----</value>
+  </data>
+<data name="SK" xml:space="preserve">
+    <value>----SK----</value>
+  </data>
+<data name="SN" xml:space="preserve">
+    <value>----SN----</value>
+  </data>
+<data name="SV" xml:space="preserve">
+    <value>----SV----</value>
+  </data>
+<data name="SY" xml:space="preserve">
+    <value>----SY----</value>
+  </data>
+<data name="TH" xml:space="preserve">
+    <value>----TH----</value>
+  </data>
+<data name="TJ" xml:space="preserve">
+    <value>----TJ----</value>
+  </data>
+<data name="TM" xml:space="preserve">
+    <value>----TM----</value>
+  </data>
+<data name="TN" xml:space="preserve">
+    <value>----TN----</value>
+  </data>
+<data name="TR" xml:space="preserve">
+    <value>----TR----</value>
+  </data>
+<data name="TT" xml:space="preserve">
+    <value>----TT----</value>
+  </data>
+<data name="TW" xml:space="preserve">
+    <value>----TW----</value>
+  </data>
+<data name="UA" xml:space="preserve">
+    <value>----UA----</value>
+  </data>
+<data name="US" xml:space="preserve">
+    <value>----US----</value>
+  </data>
+<data name="UY" xml:space="preserve">
+    <value>----UY----</value>
+  </data>
+<data name="UZ" xml:space="preserve">
+    <value>----UZ----</value>
+  </data>
+<data name="VE" xml:space="preserve">
+    <value>----VE----</value>
+  </data>
+<data name="VN" xml:space="preserve">
+    <value>----VN----</value>
+  </data>
+<data name="YE" xml:space="preserve">
+    <value>----YE----</value>
+  </data>
+<data name="ZA" xml:space="preserve">
+    <value>----ZA----</value>
+  </data>
+<data name="ZW" xml:space="preserve">
+    <value>----ZW----</value>
+  </data>
+<data name="_29" xml:space="preserve">
+    <value>----_29----</value>
+  </data>
+</root>

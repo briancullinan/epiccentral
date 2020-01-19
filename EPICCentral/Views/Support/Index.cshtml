@@ -1,0 +1,84 @@
+﻿@using System.Globalization
+@using AE.Net.Mail
+@using EPICCentral.Models
+@using EPICCentral.Utilities.Membership
+@using ViewRes
+@using Mailbox = AE.Net.Mail.Imap.Mailbox
+@model SupportModel
+@{
+    ViewBag.Title = Support.Support_Title;
+}
+
+@if (!Model.AccountSetup.HasValue)
+{
+    <h2>@Support.Support_Title</h2>
+    @Support.Support_NotSetup
+}
+else if (!Model.AccountSetup.Value)
+{
+    <h2>@Support.Support_Title</h2>
+    @Support.Support_MustWait
+}
+else
+{
+    <script type="text/javascript" src="@Url.Content("~/Scripts/epic.supportCenter.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            initMessages();
+        });
+    </script>
+    
+    <div class="outer-north">
+        <h2>@Support.Support_Title - <span id="folder-title">@Model.CurrentFolder</span></h2>
+    </div>
+
+    <div id="support-folders" class="outer-west">
+        @Html.ActionLink(Support.Support_Compose, "Compose", "Support", null, new {id = "compose-folders", @class = "button"})
+        @Html.DataTableFor(Model.Mailboxes, 
+                         new ColumnCollection<Mailbox>
+                             {
+                                 {x => x.Name, "", x => (x.NumNewMsg == 0 ? "" : "<strong>") + Html.ActionLink(x.Name, "Messages", "Support", new {epicTableId = "Support-Message-Table", folderPath = x.Name}, null) + (x.NumNewMsg == 0 ? "" : "</strong>")}
+                             }, 
+                         ajaxUrl: Url.Action("Folders", "Support"),
+                         htmlAttributes: new { id = "Support-Folders-Table" },
+                         defaultCount: -1)
+    </div>
+
+    <div id="support-messages" class="outer-center">
+        <div class="inner-north">
+            @{
+                var messageColumns = new ColumnCollection<MailMessage>();
+                if (Model.CurrentFolder == "Drafts")
+                {
+                    messageColumns.Add(x => x.Subject, Support.Support_Subject, x => ((x.Flags & Flags.Recent) > 0 || (x.Flags & Flags.Seen) == 0 ? "<strong>" : "") + Html.ActionLink(String.IsNullOrEmpty(x.Subject) ? Support.Support_Empty : x.Subject, "Compose", "Support", new { Model.CurrentFolder, x.Uid }, null) + ((x.Flags & Flags.Recent) > 0 || (x.Flags & Flags.Seen) == 0 ? "</strong>" : ""), true, "subject");
+                }
+                else
+                {
+                    messageColumns.Add(x => x.Subject, Support.Support_Subject, x => ((x.Flags & Flags.Recent) > 0 || (x.Flags & Flags.Seen) == 0 ? "<strong>" : "") + Html.ActionLink(String.IsNullOrEmpty(x.Subject) ? Support.Support_Empty : x.Subject, "Message", "Support", new { Model.CurrentFolder, x.Uid }, null) + ((x.Flags & Flags.Recent) > 0 || (x.Flags & Flags.Seen) == 0 ? "</strong>" : ""), true, "subject");
+                }
+                messageColumns.Add(x => x.From, Support.Support_Sender);
+                messageColumns.Add(x => x.Date, Support.Support_DateReceived, x => TimeZoneInfo.ConvertTime(x.Date, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture));
+            }
+            @if (RoleUtils.IsUserServiceAdmin())
+            {
+                messageColumns.Add("Delete", "", x => Html.ActionLink(Support.Support_Delete, "Delete", "Support", new { Model.CurrentFolder, x.Uid }, null));
+            }
+
+            @Html.DataTableFor(Model.Messages, messageColumns,
+                ajaxUrl: Url.Action("Messages", "Support"),
+                htmlAttributes: new { id = "Support-Message-Table" },
+                defaultCount: 25,
+       add: new DataTablesAddModel { Action = m => Html.ActionLink(Support.Support_Compose, "Compose", "Support"), Width = 600, Height = 400, SaveText = Support.Support_Send },
+                actions: new DataTablesDirectActionModelCollection { new DataTablesDirectActionModel { ColumnName = "Delete", ErrorFunc = "DeleteFailed", SuccessFunc = "MessageDeleted" } },
+                defaultSort: new List<DataTablesRequestModel.Sort>
+                {
+                    new DataTablesRequestModel.Sort {iSortCol = 2, sSortDir = "desc"}
+                })
+        
+        </div>
+        <div id="support-message" class="inner-center">
+    
+        </div>
+    </div>
+
+}

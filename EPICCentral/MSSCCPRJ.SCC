@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[EPICCentral.csproj]
+SCC_Aux_Path = "P4SCC#arizona5:1666##developer1##developer1_ARIZONA21"
+SCC_Project_Name = Perforce Project

@@ -1,0 +1,9 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using EPICCentralDL.HelperClasses
+@model Treatment
+
+@Html.DataTableFor(Model.Raw, typeof(AnalysisResultFields).GetProperties(),
+    defaultCount: -1
+)
+

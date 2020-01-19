@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="DataTables_Loading" xml:space="preserve">
+    <value>Laden von Daten aus Server</value>
+  </data>
+<data name="EmailLayout_EPICResearch" xml:space="preserve">
+    <value>EPIC Research &amp; Diagnostics, Inc.</value>
+  </data>
+<data name="EmailLayout_Address" xml:space="preserve">
+    <value>8501 East Princess Drive , Suite 100</value>
+  </data>
+<data name="EmailLayout_CityStateZip" xml:space="preserve">
+    <value>Scottsdale, Arizona 85255</value>
+  </data>
+<data name="EmailLayout_Phone" xml:space="preserve">
+    <value>Tel.: 480.477.5242 Fax: 480.292.7933</value>
+  </data>
+<data name="EmailLayout_EmailLabel" xml:space="preserve">
+    <value>E-Mail: {0}</value>
+  </data>
+<data name="EmailLayout_Email" xml:space="preserve">
+    <value>info@epicdiagnostics.com</value>
+  </data>
+<data name="EmailLayout_Copyright" xml:space="preserve">
+    <value>Copyright © {0} EPIC Research &amp; Diagnostics, Inc. Alle Rechte vorbehalten .</value>
+  </data>
+<data name="Layout_EPICCentral" xml:space="preserve">
+    <value>EPIC- Zentrale</value>
+  </data>
+<data name="Layout_EPICCommandCenter" xml:space="preserve">
+    <value>EPIC Command Center</value>
+  </data>
+<data name="Layout_EPICResearch" xml:space="preserve">
+    <value>EPIC Research &amp; Diagnostics, Inc.</value>
+  </data>
+<data name="Layout_Address" xml:space="preserve">
+    <value>8501 East Princess Drive , Suite 100</value>
+  </data>
+<data name="Layout_CityStateZip" xml:space="preserve">
+    <value>Scottsdale, Arizona 85255</value>
+  </data>
+<data name="Layout_Copyright" xml:space="preserve">
+    <value>Copyright © {0} EPIC Research &amp; Diagnostics, Inc. Alle Rechte vorbehalten .</value>
+  </data>
+<data name="Layout_Phone" xml:space="preserve">
+    <value>Tel.: 480.477.5242 Fax: 480.292.7933</value>
+  </data>
+<data name="Layout_EmailLabel" xml:space="preserve">
+    <value>E-Mail: {0}</value>
+  </data>
+<data name="Layout_Email" xml:space="preserve">
+    <value>info@epicdiagnostics.com</value>
+  </data>
+<data name="LogOnPartial_LogOff" xml:space="preserve">
+    <value>abmelden</value>
+  </data>
+<data name="LogOnPartial_LogOn" xml:space="preserve">
+    <value>anmelden</value>
+  </data>
+<data name="LogOnPartial_WelcomeLabel" xml:space="preserve">
+    <value>Willkommen {0} !</value>
+  </data>
+<data name="DataTablesPartial_NoData" xml:space="preserve">
+    <value>Keine Daten vorhanden in der Tabelle .</value>
+  </data>
+<data name="DataTablesPartial_Showing" xml:space="preserve">
+    <value>Zeige _START_ auf der _TOTAL_ Einträge _END_</value>
+  </data>
+<data name="DataTablesPartial_ShowingEmpty" xml:space="preserve">
+    <value>Zeige 0 bis 0 von 0 Einträge</value>
+  </data>
+<data name="DataTablesPartial_Filtered" xml:space="preserve">
+    <value>(gefiltert aus _MAX_ Einträge gesamt )</value>
+  </data>
+<data name="DataTablesPartial_ShowEntries" xml:space="preserve">
+    <value>Zeige Einträge _MENU_</value>
+  </data>
+<data name="DataTablesPartial_Loading" xml:space="preserve">
+    <value>Loading ...</value>
+  </data>
+<data name="DataTablesPartial_Processing" xml:space="preserve">
+    <value>Wird geladen ...</value>
+  </data>
+<data name="DataTablesPartial_Search" xml:space="preserve">
+    <value>Suche:</value>
+  </data>
+<data name="DataTablesPartial_NoMatching" xml:space="preserve">
+    <value>Keine passenden Datensätze gefunden</value>
+  </data>
+<data name="DataTablesPartial_First" xml:space="preserve">
+    <value>erste</value>
+  </data>
+<data name="DataTablesPartial_Last" xml:space="preserve">
+    <value>letzte</value>
+  </data>
+<data name="DataTablesPartial_Next" xml:space="preserve">
+    <value>nächste</value>
+  </data>
+<data name="DataTablesPartial_Previous" xml:space="preserve">
+    <value>Vorherige</value>
+  </data>
+<data name="DataTablesPartial_ARIAAsc" xml:space="preserve">
+    <value>: Aktivieren , um zu sortieren Spalte aufsteigend</value>
+  </data>
+<data name="DataTablesPartial_ARIADesc" xml:space="preserve">
+    <value>: Aktivieren , um Sortierspalte absteigend</value>
+  </data>
+<data name="DataTablesPartial_Cancel">
+  <value xml:space="preserve">stornieren</value>
+</data>
+<data name="DataTablesPartial_Close">
+  <value xml:space="preserve">schließen</value>
+</data>
+</root>

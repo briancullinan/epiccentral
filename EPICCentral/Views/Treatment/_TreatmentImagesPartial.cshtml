@@ -1,0 +1,100 @@
+﻿@using ViewRes
+@model EPICCentral.Models.Treatment
+
+<script type="text/javascript">
+    var clicked = null;
+    var zoom = 1;
+    $(document).ready(function () {
+        $('#filtered-images, #unfiltered-images, #calibration-images').on('click', 'a', function (event) {
+            event.preventDefault();
+            clicked = $(this).lightBox({ overlayBgColor: '#ffffff' }).click();
+        });
+        $('body').on('mousewheel', function (event, delta, deltaX, deltaY) {
+            if (clicked == null || $('#jquery-lightbox').length == 0)
+                return;
+            zoom += deltaY;
+            if (zoom > 5)
+                zoom = 5;
+            if (zoom < 1)
+                zoom = 1;
+            var objImagePreloader = new Image();
+            objImagePreloader.onload = function () {
+                $('#lightbox-container-image-box').css('height', objImagePreloader.height * zoom + (10 * 2));
+                $('#lightbox-container-image-box').css('width', objImagePreloader.width * zoom + (10 * 2));
+                $('#lightbox-container-image-data-box').css({ width: objImagePreloader.width * zoom });
+                //	clear onLoad, IE behaves irratically with animated gifs otherwise
+                objImagePreloader.onload = function () { };
+            };
+            objImagePreloader.src = clicked.attr('href');
+        });
+    });
+</script>
+
+<h2>@Treatment.Images_EnergizedImagesWOFilter</h2>
+
+<table id="unfiltered-images" class="center">
+    <thead>
+        <tr>
+            <td colspan="5" class="center">@Treatment.Images_Right</td>
+            <td colspan="5" class="center">@Treatment.Images_Left</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @for (var i = 0; i < 10; i++)
+            {
+            <td>
+                <a href="@Url.Action("Image", "Treatment", new {calibration = false, index = i, treatmentId = Model.TreatmentId})" rel="lightbox[images]" title="@(i < 5 ? 'R' : 'L')@(i % 5 + 1)">
+                    <img height="120" width="160" src="@Url.Action("Image", "Treatment", new {  calibration = false, index = i, treatmentId = Model.TreatmentId })" alt="@(i < 5 ? 'R' : 'L')@(i % 5 + 1)"/>
+                </a>
+            </td>
+            }    
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<h2>@Treatment.Images_EnergizedImagesWFilter</h2>
+
+<table id="filtered-images" class="center">
+    <thead>
+        <tr>
+            <td colspan="5" class="center">@Treatment.Images_Right</td>
+            <td colspan="5" class="center">@Treatment.Images_Left</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @for (var i = 10; i < 20; i++)
+            {
+            <td>
+                <a href="@Url.Action("Image", "Treatment", new { calibration = false, index = i, treatmentId = Model.TreatmentId })" rel="lightbox[images]" title="@(i < 5 ? 'R' : 'L')@(i % 5 + 1)">
+                    <img height="120" width="160" src="@Url.Action("Image", "Treatment", new { calibration = false, index = i, treatmentId = Model.TreatmentId })" alt="@(i < 5 ? 'R' : 'L')@(i % 5 + 1)"/>
+                </a>
+            </td>
+            }    
+        </tr>
+    </tbody>
+</table>
+<br />
+
+<h2>@Treatment.Images_CalibrationImages</h2>
+
+<table id="calibration-images" class="center">
+    <tbody>
+        <tr>
+            @for (var i = 0; i < 10; i++)
+            {
+            <td>
+                <a href="@Url.Action("Image", "Treatment", new { calibration = true, index = i, treatmentId = Model.TreatmentId })" rel="lightbox[images]" title="Cal @(i+1)">
+                    <img height="120" width="160" src="@Url.Action("Image", "Treatment", new { calibration = true, index = i, treatmentId = Model.TreatmentId })" alt="Cal @(i+1)"/>
+                </a>
+            </td>
+            }    
+        </tr>
+    </tbody>
+</table>
+
+
+
+

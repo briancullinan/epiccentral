@@ -1,0 +1,48 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using EPICCentralDL.Linq
+@using ViewRes
+@model dynamic
+@{
+    ViewBag.Title = Configuration.Configuration_Title;
+}
+
+<h2>@Configuration.Configuration_Title</h2>
+
+<h2>@Configuration.Configuration_Rates</h2>
+@Html.DataTableFor(new LinqMetaData().ScanRate, new ColumnCollection<ScanRateEntity>
+{
+    {x => x.ScanRateId, Configuration.Configuration_ScanRateId},
+    {x => x.ScanType, Configuration.Configuration_ScanType, x => x.ScanType.GetDisplayText()},
+    {x => x.RatePerScan, Configuration.Configuration_RatePerScan},
+    {x => x.MinCountForRate, Configuration.Configuration_Min},
+    {x => x.MaxCountForRate, Configuration.Configuration_Max},
+    {x => x.EffectiveDate, Configuration.Configuration_Effective},
+    {x => x.IsActive, Configuration.Configuration_Active},
+    {"Edit", "", x => Html.ActionLink(Configuration.Configuration_RateEdit, "EditRate", "Configuration", new {x.ScanRateId}, null)}
+}, new DataTablesDialogModelCollection
+{
+    {"Edit",Configuration.Configuration_RateEditTitle,800,600,true}
+},add: new DataTablesAddModel
+           {
+               Action = x => Html.ActionLink("Add", "EditRate", "Configuration"),
+               Height = 600,
+               Width = 800
+           })
+
+
+<h2>@Configuration.Configuration_Settings</h2>
+@Html.DataTableFor(new LinqMetaData().SystemSetting, new ColumnCollection<SystemSettingEntity>
+{
+    {x => x.Name, Configuration.Configuration_SettingName},
+    {x => x.Value, Configuration.Configuration_SettingValue},
+    {"Edit", "", x => Html.ActionLink(Configuration.Configuration_EditSetting, "EditSetting", "Configuration", new {x.Name}, null)}
+}, new DataTablesDialogModelCollection
+        {
+            {"Edit",Configuration.Configuration_EditSettingTitle,800,600,true}
+        }, add: new DataTablesAddModel
+        {
+            Action = x => Html.ActionLink("Add", "EditSetting", "Configuration"),
+            Height = 400,
+            Width = 800
+        })

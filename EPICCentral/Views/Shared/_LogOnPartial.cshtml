@@ -1,0 +1,8 @@
+﻿@using ViewRes
+@if(Request.IsAuthenticated) {
+    <text>@MvcHtmlString.Create(String.Format(Shared.LogOnPartial_WelcomeLabel, "<strong>" + User.Identity.Name + "</strong>"))
+    [ @Html.ActionLink(Shared.LogOnPartial_LogOff, "LogOff", "Account") ]</text>
+}
+else {
+    @:[ @Html.ActionLink(Shared.LogOnPartial_LogOn, "LogOn", "Account") ]
+}

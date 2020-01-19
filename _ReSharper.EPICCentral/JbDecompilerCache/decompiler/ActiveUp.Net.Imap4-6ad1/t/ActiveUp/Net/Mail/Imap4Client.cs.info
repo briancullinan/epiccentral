@@ -1,0 +1,8 @@
+﻿Code version: 6.1.37.86
+Assembly name ActiveUp.Net.Imap4, Version=5.0.3454.364, Culture=neutral, PublicKeyToken=9d424b1770e92b68 mvid {6d0da494-57a0-462d-8a92-ef8017193a96}
+* ref mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {8d72cd66-3505-496d-9c29-6f5111d4d831}
+* ref ActiveUp.Net.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6cceae6a4844c51b
+  mvid {c0c500bc-511e-424e-951f-8471cae98d0f}
+* ref System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {fe33b146-7b17-4c0a-ad71-ac6debff2fed}

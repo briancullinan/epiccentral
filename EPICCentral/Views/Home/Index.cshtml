@@ -1,0 +1,120 @@
+﻿@using ViewRes
+@model EPICCentral.Models.HomeModel
+
+@{
+    ViewBag.Title = Home.Home_Title;
+}
+
+@section Head
+{
+    <script type="text/javascript">
+        function EncodeAndSave() {
+            // encode locations in a string
+            var locations = 'left_column=';
+            $('#left_column > div:not(:hidden)').each(function () {
+                locations += $(this).attr('id') + ',';
+            });
+            locations += '&center_column=';
+            $('#center_column > div:not(:hidden)').each(function () {
+                locations += $(this).attr('id') + ',';
+            });
+            locations += '&right_column=';
+            $('#right_column > div:not(:hidden)').each(function () {
+                locations += $(this).attr('id') + ',';
+            });
+            $.ajax({
+                url: '@Url.Action("SaveWidgets", "Home")' + '?' + locations
+            });
+        }
+
+        $(document).ready(function () {
+            $('#left_column, #center_column, #right_column').sortable({
+                connectWith: '#left_column, #center_column, #right_column',
+                handle: 'th.title',
+                stop: EncodeAndSave,
+                placeholder: 'placeholder ui-state-highlight',
+                activate: function (event, ui) {
+                    ui.placeholder.height(ui.item.height());
+                }
+            });
+
+            $('#Widgets input').click(function () {
+                var type = $(this).attr('id').substring(7);
+                if ($('#' + type).length > 0) {
+                    if($(this).is(':checked'))
+                        $('#' + type).show();
+                    else
+                        $('#' + type).hide();
+                    EncodeAndSave();
+                }
+                else {
+                    // insert the module using AJAX
+                    $('#widget-loader').load('@Url.Action("LoadWidget", "Home")' + '?type=' + type, function (data) {
+                        $('#left_column').append($(this).find('#' + type));
+                        EncodeAndSave();
+                        if(typeof (window['load_' + type]) != 'undefined')
+                            window['load_" + type + "']();
+                    });
+                }
+            });
+            
+            @foreach(var widget in Model.Widgets)
+            {
+                if (Model.LeftTypes.Contains(widget.Key) || Model.CenterTypes.Contains(widget.Key) || Model.RightTypes.Contains(widget.Key))
+                {
+                    @:if(typeof(window['load_@(widget.Key.Name)']) != 'undefined')
+                        @:window['load_@(widget.Key.Name)']();
+                }
+            }
+        });
+
+    </script>
+
+}
+
+<h2>@Home.Home_Welcome</h2>
+
+<div id="widgets-container">
+    <input type="button" onclick="$('#Widgets').toggle(); return false;" id="widgets-btn" value="@Home.Home_Widgets" />
+
+    <div id="Widgets" style="display:none;">
+        @foreach(var widget in Model.Widgets)
+        {
+            if (Model.LeftTypes.Contains(widget.Key) || Model.CenterTypes.Contains(widget.Key) || Model.RightTypes.Contains(widget.Key))
+            {
+                <label for="widget-@widget.Key.Name"><input type="checkbox" name="@widget.Key.Name" id="widget-@widget.Key.Name" checked="checked" /> @widget.Value.Title</label>
+            }
+            else
+            {
+                <label for="widget-@widget.Key.Name"><input type="checkbox" name="@widget.Key.Name" id="widget-@widget.Key.Name" /> @widget.Value.Title</label>
+            }
+        }
+    </div>
+</div>
+
+<br class="clear"/>
+
+<div id="left_column">
+    @foreach(var leftType in Model.LeftTypes)
+    {
+        @Html.Widget(Model.Widgets[leftType])
+    }
+</div>
+
+<div id="center_column">
+    @foreach(var centerType in Model.CenterTypes)
+    {
+        @Html.Widget(Model.Widgets[centerType])
+    }
+</div>
+
+<div id="right_column">
+    @foreach(var rightType in Model.RightTypes)
+    {
+        @Html.Widget(Model.Widgets[rightType])
+    }
+</div>
+
+<br class="clear"/>
+
+<div id="widget-loader" style="display:none;"></div>

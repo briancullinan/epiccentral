@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="AddCard_Address" xml:space="preserve">
+    <value>Rechnungsadresse</value>
+  </data>
+<data name="AddCard_CardNumber" xml:space="preserve">
+    <value>Karten-Nummer</value>
+  </data>
+<data name="AddCard_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+<data name="AddCard_Country" xml:space="preserve">
+    <value>Land</value>
+  </data>
+<data name="AddCard_ExpirationDate" xml:space="preserve">
+    <value>Ablaufdatum</value>
+  </data>
+<data name="AddCard_FirstName" xml:space="preserve">
+    <value>Billing Vorname</value>
+  </data>
+<data name="AddCard_LastName" xml:space="preserve">
+    <value>Billing Nachname</value>
+  </data>
+<data name="AddCard_Month" xml:space="preserve">
+    <value>Monat</value>
+  </data>
+<data name="AddCard_SecurityCode" xml:space="preserve">
+    <value>Security Code / CCV</value>
+  </data>
+<data name="AddCard_State" xml:space="preserve">
+    <value>Zustand</value>
+  </data>
+<data name="AddCard_Year" xml:space="preserve">
+    <value>Jahr</value>
+  </data>
+<data name="AddCard_YearFormat" xml:space="preserve">
+    <value>Jahr muss volles Jahr sein, zum Beispiel 2012.</value>
+  </data>
+<data name="AddCard_Zip" xml:space="preserve">
+    <value>Postleitzahl</value>
+  </data>
+<data name="Add_Device" xml:space="preserve">
+    <value>Wählen Sie ein Gerät</value>
+  </data>
+<data name="Add_Quantity" xml:space="preserve">
+    <value>Geben Sie eine Menge</value>
+  </data>
+<data name="Add_QuantityError" xml:space="preserve">
+    <value>Sie müssen eine Menge zwischen {1} und {2} .</value>
+  </data>
+<data name="Add_Rate" xml:space="preserve">
+    <value>Wählen Sie eine Rate</value>
+  </data>
+<data name="CreditCard" xml:space="preserve">
+    <value>Kreditkarte</value>
+  </data>
+<data name="List_FromDevice" xml:space="preserve">
+    <value>von Gerät</value>
+  </data>
+<data name="List_Quantity" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+<data name="List_ToDevice" xml:space="preserve">
+    <value>um Geräte-</value>
+  </data>
+<data name="PurchaseNotes" xml:space="preserve">
+    <value>Schuldverschreibungen</value>
+  </data>
+</root>

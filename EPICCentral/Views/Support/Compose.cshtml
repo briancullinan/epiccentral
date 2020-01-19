@@ -1,0 +1,49 @@
+﻿@using ViewRes
+@model EPICCentral.Models.ComposeMail
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        initCompose('@Url.Action("GetTos", "Support")', '@Support.Compose_SavingDraft');
+    });
+</script>
+
+@using (Html.BeginForm("Compose", "Support", FormMethod.Post, new {@id = "compose-form"}))
+{
+    @Html.ValidationSummary(false, Support.Compose_Error)
+
+    <fieldset id="compose">
+        <legend>@Support.Compose_Title</legend>
+    
+        @Html.HiddenFor(x => x.Uid)
+        @Html.HiddenFor(x => x.ReplyUid)
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.From)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.From)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.To)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.To)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Subject)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Subject)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Body)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Body)
+        </div>
+    
+    </fieldset>
+}

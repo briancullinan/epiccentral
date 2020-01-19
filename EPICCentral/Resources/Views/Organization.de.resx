@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>1.3</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Edit_Title">
+  <value xml:space="preserve">Organisation bearbeiten</value>
+</data>
+<data name="Edit_Error">
+  <value xml:space="preserve">Konnte nicht gespeichert werden die Organisation Informationen , pleast korrigieren die Fehler unten.</value>
+</data>
+<data name="Edit_OrganizationInformation">
+  <value xml:space="preserve">Informationen über Ihre Organisation</value>
+</data>
+<data name="Edit_Name">
+  <value xml:space="preserve">Name</value>
+</data>
+<data name="Edit_Type">
+  <value xml:space="preserve">Typ</value>
+</data>
+<data name="Edit_Active">
+  <value xml:space="preserve">Aktiv?</value>
+</data>
+<data name="Edit_Save">
+  <value xml:space="preserve">sparen</value>
+</data>
+<data name="Edit_Cancel">
+  <value xml:space="preserve">stornieren</value>
+</data>
+<data name="List_Name">
+  <value xml:space="preserve">Name</value>
+</data>
+<data name="List_Type">
+  <value xml:space="preserve">Typ</value>
+</data>
+<data name="List_UniqueID">
+  <value xml:space="preserve">Unique Identifier</value>
+</data>
+<data name="List_Edit">
+  <value xml:space="preserve">bearbeiten</value>
+</data>
+<data name="List_FormatLocations">
+  <value xml:space="preserve">Standorte ({0} )</value>
+</data>
+<data name="List_EditOrganization">
+  <value xml:space="preserve">Organisation bearbeiten</value>
+</data>
+<data name="List_AddOrganization">
+  <value xml:space="preserve">Add -Organisation</value>
+</data>
+<data name="List_FormatUsers">
+  <value xml:space="preserve">Benutzer ( {0})</value>
+</data>
+<data name="List_Title">
+  <value xml:space="preserve">Organisationen</value>
+</data>
+<data name="Summary_Title">
+  <value xml:space="preserve">Zusammenfassung</value>
+</data>
+<data name="View_OrganizationInformation">
+  <value xml:space="preserve">Informationen über Ihre Organisation</value>
+</data>
+<data name="View_Name">
+  <value xml:space="preserve">Name</value>
+</data>
+<data name="View_Edit">
+  <value xml:space="preserve">bearbeiten</value>
+</data>
+</root>

@@ -1,0 +1,7 @@
+﻿@using EPICCentral.Models
+@using EPICCentralDL.Customization
+@model Treatment
+
+<div id="treatment-body">
+    <img src="@Url.Action("SystemComparison", "Treatment", new {Model.TreatmentId}, null)"/>
+</div>

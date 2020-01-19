@@ -1,0 +1,115 @@
+﻿@using System.Globalization
+@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.Customization
+@model EPICCentralDL.EntityClasses.UserEntity
+
+@{
+    ViewBag.Title = String.Format(ViewRes.User.View_Title, Model.Username);
+	var isModal = Request.IsAjaxRequest() || ViewContext.Controller.ControllerContext.IsChildAction;
+}
+
+<script type="text/javascript">
+
+    $(function () {
+
+        // Extension function to check if element exists.
+        // Usage: $(selector).exists()
+        $.fn.exists = function () {
+            return this.length !== 0;
+        };
+
+        if ($("#Resend").exists()) {
+            $("#Resend").unbind("click").click(
+                function () {
+                    $.ajax({
+                        url: "@Url.Action("ResendEmail", "User", new {Model.UserId}, null)",
+                        type: "GET"
+                    });
+                    $("#spanResend").empty().text("Email sent!");
+                }
+            );
+        }
+    });
+
+</script>
+
+@if (!isModal)
+{
+    <h2>@SharedRes.Formats.User.FormatWith(Model)</h2>
+}
+
+<div>
+    <fieldset>
+        <legend>@ViewRes.User.View_UserInformation</legend>
+        <div class="display-label">@Html.LabelFor(m => m.Username, ViewRes.User.View_Username)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.Username)</div>
+        <div class="display-label">@Html.LabelFor(m => m.FirstName, ViewRes.User.View_FirstName)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.FirstName)</div>
+        <div class="display-label">@Html.LabelFor(m => m.LastName, ViewRes.User.View_LastName)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.LastName)</div>
+        <div class="display-label">@Html.LabelFor(m => m.EmailAddress, ViewRes.User.View_EmailAddress)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.EmailAddress)</div>
+        <div class="display-label">@Html.Label(ViewRes.User.View_Role)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.Roles[0].Role.Name)</div>
+        <div class="display-label">@Html.LabelFor(m => m.Organization.Name, ViewRes.User.View_Organization)</div>
+        <div class="display-field">@Html.DisplayTextFor(m => m.Organization.Name)</div>
+        @if (!RoleUtils.IsUserAdmin())
+        {
+            <div class="display-label">@Html.Label(ViewRes.User.View_Locations)</div>
+            <div class="display-field">@string.Join(", ", Model.UserAssignedLocations.Select(l => l.Location.Name))</div>
+        }
+        @if (isModal)
+        {
+            <div class="display-label">@Html.LabelFor(m => m.CreateTime, ViewRes.User.View_Created)</div>
+            <div class="display-field">@Html.DisplayTextFor(m => m.CreateTime)</div>
+            <div class="display-label">@Html.LabelFor(m => m.LastLoginTime, ViewRes.User.View_LoggedIn)</div>
+            <div class="display-field">@Html.DisplayTextFor(m => m.LastLoginTime)</div>
+            <div class="display-label">@Html.LabelFor(m => m.LastActivityTime, ViewRes.User.View_LastActivity)</div>
+            <div class="display-field">@Html.DisplayTextFor(m => m.LastActivityTime)</div>
+            <div class="display-label">@Html.LabelFor(m => m.LastPasswordChangeTime, ViewRes.User.View_PasswordChanged)</div>
+            <div class="display-field">@Html.DisplayTextFor(m => m.LastPasswordChangeTime)</div>
+            <div class="display-label">@Html.LabelFor(m => m.LastLockoutTime, ViewRes.User.View_LastLockout)</div>
+            <div class="display-field">@Html.DisplayTextFor(m => m.LastLockoutTime)</div>
+            if (Model.UserAccountRestrictions.Count > 0 && Model.UserAccountRestrictions[0].AccountRestriction.AccountRestrictionType == AccountRestrictionType.NewUser)
+            {
+                <div class="display-field" style="border: none;">
+                    <span style="color: red;">@ViewRes.User.View_RegistrationPending</span>
+                    <span id="spanResend" style="float: right; color: red;">
+                        <input id="Resend" type="button" value="@ViewRes.User.View_ResendEmail" />
+                    </span>
+                </div>
+            }
+        }
+    </fieldset>
+    
+    <fieldset>
+        <legend>@ViewRes.User.View_UserSettings</legend>
+        
+        @{
+            var language = Model.Settings.FirstOrDefault(x => x.Name == "Language");
+            CultureInfo ci;
+            try
+            {
+                ci = language != null ? new CultureInfo(language.Value) : new CultureInfo("en-US");
+            }
+            catch
+            {
+                ci = new CultureInfo("en-US");
+            }
+            var region = Model.Settings.FirstOrDefault(x => x.Name == "Region");
+        }
+
+        <div class="display-label"><label>@ViewRes.User.View_Language</label></div>
+        <div class="display-field">@SharedRes.Cultures.ResourceManager.GetString("_" + ci.Name.Replace("-", "_"))</div>
+        <div class="display-label"><label>@ViewRes.User.View_Region</label></div>
+        <div class="display-field">@(region != null ? region.Value : "UTC")</div>
+    </fieldset>
+    
+    @if(!isModal)
+    {
+        <p>
+			<input type="button" value="@ViewRes.User.View_Edit" onclick="location.href='@Url.Action("EditMe")'"/>
+            <input type="button" value="@ViewRes.User.View_ChangePassword" onclick="location.href='@Url.Action("ChangePassword", "Account")'"/>
+		</p>
+    }
+</div>

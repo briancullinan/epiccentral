@@ -1,0 +1,93 @@
+﻿@using System.Globalization
+@using EPICCentral.Utilities.Information
+@using ViewRes
+@model EPICCentral.Models.AddCard
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, Purchase.AddCard_Error)
+
+    <fieldset>
+        <legend>@Purchase.AddCard_Title</legend>
+		
+        <div class="editor-label">
+            @Html.LabelFor(m => m.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CardNumber)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.CardNumber)
+        </div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Expiration)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.CardMonth, new { style = "width: 50px; min-width:50px;" })
+            @Html.TextBoxFor(m => m.CardYear, new { style = "width: 50px; min-width:50px;" })
+            <br />
+            <small>@Html.LabelFor(m => m.CardMonth) / @Html.LabelFor(m => m.CardYear)</small>
+        </div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.SecurityCode)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.SecurityCode)
+        </div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.AddressLine1)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.AddressLine1, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+			<label for="AddressLine2">&nbsp;</label>
+		</div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.AddressLine2, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.City)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.City, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.State)
+        </div>
+		<div class="editor-field">
+			@Html.DropDownListFor(m => m.State, UnitedStatesStates.StateSelectList, new { style = "width: 300px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Country)
+        </div>
+		<div class="editor-field">
+			@Html.DropDownListFor(m => m.Country, CultureInfo.CurrentCulture.GetCountries(), new { style = "width: 300px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Zip)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.Zip)
+		</div>
+    </fieldset>
+}

@@ -1,0 +1,11 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\config-connectionStrings.config
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe.config
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.exe
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentral\bin\MailboxChecker.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\MailboxChecker.MailboxChecker.resources
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\MailboxChecker.ServiceInstaller.resources
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\MailboxChecker.exe
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MailboxChecker\obj\x86\Debug\MailboxChecker.pdb

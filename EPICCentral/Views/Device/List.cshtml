@@ -1,0 +1,22 @@
+﻿@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.EntityClasses
+@using ViewRes
+
+@model IQueryable<DeviceEntity>
+
+@{
+	ViewBag.Title = Device.List_Title;
+}
+
+<h2>@Device.List_Title</h2>
+
+@if (RoleUtils.IsUserServiceAdmin())
+{
+	@Html.Partial("_ListFullControl");
+}
+else
+{
+	@Html.Partial("_ListLimitedControl");
+}
+
+

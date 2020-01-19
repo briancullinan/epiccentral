@@ -1,0 +1,40 @@
+﻿@model EPICCentralDL.EntityClasses.ExceptionLogEntity
+           
+@using (Html.BeginForm())
+{
+
+    <fieldset>
+        <legend>@ViewRes.Exception.View_Title</legend>
+
+        <div class="display-label">@Html.LabelFor(m => m.DeviceId, ViewRes.Exception.View_DeviceId)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.DeviceId)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.Device.SerialNumber, ViewRes.Exception.View_Serial)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.Device.SerialNumber)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.Device.Location.Name, ViewRes.Exception.View_LocationName)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.Device.Location.Name)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.RemoteExceptionLogId, ViewRes.Exception.View_RemoteId)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.RemoteExceptionLogId)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.Title, ViewRes.Exception.View_ExceptionTitle)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.Title)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.Message, ViewRes.Exception.View_Message)</div>
+	    <div class="display-field"><pre>@Html.DisplayTextFor(m => m.Message)</pre></div>
+	    <div class="display-label">@Html.LabelFor(m => m.StackTrace, ViewRes.Exception.View_StackTrace)</div>
+	    <div class="display-field"><pre>@Html.DisplayTextFor(m => m.StackTrace)</pre></div>
+	    <div class="display-label">@Html.LabelFor(m => m.MachineName, ViewRes.Exception.View_MachingName)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.MachineName)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.User, ViewRes.Exception.View_User)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.User)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.MachineOS, ViewRes.Exception.View_MachineOS)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.MachineOS)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.ApplicationVersion, ViewRes.Exception.View_Version)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.ApplicationVersion)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.CLRVersion, ViewRes.Exception.View_CLRVersion)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.CLRVersion)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.MemoryUsage, ViewRes.Exception.View_MemoryUsage)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.MemoryUsage)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.LogTime, ViewRes.Exception.View_LogTime)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.LogTime)</div>
+	    <div class="display-label">@Html.LabelFor(m => m.ReceivedTime, ViewRes.Exception.View_ReceivedTime)</div>
+	    <div class="display-field">@Html.DisplayTextFor(m => m.ReceivedTime)</div>
+    </fieldset>
+}

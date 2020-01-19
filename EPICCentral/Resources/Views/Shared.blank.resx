@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="DataTables_Loading" xml:space="preserve">
+    <value>----DataTables_Loading----</value>
+  </data>
+<data name="EmailLayout_EPICResearch" xml:space="preserve">
+    <value>----EmailLayout_EPICResearch----</value>
+  </data>
+<data name="EmailLayout_Address" xml:space="preserve">
+    <value>----EmailLayout_Address----</value>
+  </data>
+<data name="EmailLayout_CityStateZip" xml:space="preserve">
+    <value>----EmailLayout_CityStateZip----</value>
+  </data>
+<data name="EmailLayout_Phone" xml:space="preserve">
+    <value>----EmailLayout_Phone----</value>
+  </data>
+<data name="EmailLayout_EmailLabel" xml:space="preserve">
+    <value>----EmailLayout_EmailLabel----</value>
+  </data>
+<data name="EmailLayout_Email" xml:space="preserve">
+    <value>----EmailLayout_Email----</value>
+  </data>
+<data name="EmailLayout_Copyright" xml:space="preserve">
+    <value>----EmailLayout_Copyright----</value>
+  </data>
+<data name="Layout_EPICCentral" xml:space="preserve">
+    <value>----Layout_EPICCentral----</value>
+  </data>
+<data name="Layout_EPICCommandCenter" xml:space="preserve">
+    <value>----Layout_EPICCommandCenter----</value>
+  </data>
+<data name="Layout_EPICResearch" xml:space="preserve">
+    <value>----Layout_EPICResearch----</value>
+  </data>
+<data name="Layout_Address" xml:space="preserve">
+    <value>----Layout_Address----</value>
+  </data>
+<data name="Layout_CityStateZip" xml:space="preserve">
+    <value>----Layout_CityStateZip----</value>
+  </data>
+<data name="Layout_Copyright" xml:space="preserve">
+    <value>----Layout_Copyright----</value>
+  </data>
+<data name="Layout_Phone" xml:space="preserve">
+    <value>----Layout_Phone----</value>
+  </data>
+<data name="Layout_EmailLabel" xml:space="preserve">
+    <value>----Layout_EmailLabel----</value>
+  </data>
+<data name="Layout_Email" xml:space="preserve">
+    <value>----Layout_Email----</value>
+  </data>
+<data name="LogOnPartial_LogOff" xml:space="preserve">
+    <value>----LogOnPartial_LogOff----</value>
+  </data>
+<data name="LogOnPartial_LogOn" xml:space="preserve">
+    <value>----LogOnPartial_LogOn----</value>
+  </data>
+<data name="LogOnPartial_WelcomeLabel" xml:space="preserve">
+    <value>----LogOnPartial_WelcomeLabel----</value>
+  </data>
+<data name="DataTablesPartial_NoData" xml:space="preserve">
+    <value>----DataTablesPartial_NoData----</value>
+  </data>
+<data name="DataTablesPartial_Showing" xml:space="preserve">
+    <value>----DataTablesPartial_Showing----</value>
+  </data>
+<data name="DataTablesPartial_ShowingEmpty" xml:space="preserve">
+    <value>----DataTablesPartial_ShowingEmpty----</value>
+  </data>
+<data name="DataTablesPartial_Filtered" xml:space="preserve">
+    <value>----DataTablesPartial_Filtered----</value>
+  </data>
+<data name="DataTablesPartial_ShowEntries" xml:space="preserve">
+    <value>----DataTablesPartial_ShowEntries----</value>
+  </data>
+<data name="DataTablesPartial_Loading" xml:space="preserve">
+    <value>----DataTablesPartial_Loading----</value>
+  </data>
+<data name="DataTablesPartial_Processing" xml:space="preserve">
+    <value>----DataTablesPartial_Processing----</value>
+  </data>
+<data name="DataTablesPartial_Search" xml:space="preserve">
+    <value>----DataTablesPartial_Search----</value>
+  </data>
+<data name="DataTablesPartial_NoMatching" xml:space="preserve">
+    <value>----DataTablesPartial_NoMatching----</value>
+  </data>
+<data name="DataTablesPartial_First" xml:space="preserve">
+    <value>----DataTablesPartial_First----</value>
+  </data>
+<data name="DataTablesPartial_Last" xml:space="preserve">
+    <value>----DataTablesPartial_Last----</value>
+  </data>
+<data name="DataTablesPartial_Next" xml:space="preserve">
+    <value>----DataTablesPartial_Next----</value>
+  </data>
+<data name="DataTablesPartial_Previous" xml:space="preserve">
+    <value>----DataTablesPartial_Previous----</value>
+  </data>
+<data name="DataTablesPartial_ARIAAsc" xml:space="preserve">
+    <value>----DataTablesPartial_ARIAAsc----</value>
+  </data>
+<data name="DataTablesPartial_ARIADesc" xml:space="preserve">
+    <value>----DataTablesPartial_ARIADesc----</value>
+  </data>
+<data name="DataTablesPartial_Cancel">
+  <value xml:space="preserve">----DataTablesPartial_Cancel----</value>
+</data>
+<data name="DataTablesPartial_Close">
+  <value xml:space="preserve">----DataTablesPartial_Close----</value>
+</data>
+</root>

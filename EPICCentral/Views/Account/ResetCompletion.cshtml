@@ -1,0 +1,106 @@
+﻿@using ViewRes
+@model EPICCentral.Models.ResetCompletionModel
+
+@{
+    ViewBag.Title = Account.ResetCompletion_Title;
+}
+
+@section Head
+{
+    @if (Model.Step != 1)
+	{
+		<link href="@Url.Content("~/Content/jquery.password-strength-meter.css")" rel="stylesheet" type="text/css" />
+		<script src="@Url.Content("~/Scripts/jquery.password-strength-meter.js")" type="text/javascript"> </script>
+
+		<script type="text/javascript">
+
+		    $( document ).ready( function() {
+
+		        $( "input#Password" ).passwordstrengthmeter( {
+		            "policyUrl": "/Account/PasswordPolicy",
+		            "policyDataType": "json",
+		            "meterWidth": 300
+		        } );
+
+		        $( ":submit" ).click( function() {
+		            return $( "input#Password" ).passwordstrengthmeter( "isValid" );
+		        } );
+
+		    } );
+
+		</script>
+	}
+}
+
+<h2>@Account.ResetCompletion_Title</h2>
+<p>
+    @Account.ResetCompletion_Message
+</p>
+
+@using (Html.BeginForm()) {
+
+    @Html.ValidationSummary(false, Account.ResetCompletion_Errors)
+
+    <div>
+		<fieldset>
+			
+		@if (Model.Step == 1)
+		{
+			<legend>@Account.ResetCompletion_SelectAccount</legend>
+			<p>
+                @Account.ResetCompletion_MultipleAccounts
+            </p>
+            
+			foreach(var username in Model.UserNames)
+			{
+				<p>
+                    @Html.RadioButton("UserName", username, new { id = string.Format("username_{0}", username) })
+                    <span>@username</span>
+				</p>
+			}
+		}
+		else
+		{
+			<legend>@Account.ResetCompletion_CreateNew</legend>
+
+			<div class="editor-label">
+				@Html.LabelFor(m => m.UserName)
+			</div>
+			<div class="editor-field">
+				@Html.DisplayTextFor(m => m.UserName)
+			</div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.Password)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(m => m.ConfirmPassword)
+            </div>
+            <div class="editor-field">
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </div>
+        }
+        
+            @Html.HiddenFor(m => m.Step)
+            @Html.HiddenFor(m => m.OriginalEmail)
+            @Html.HiddenFor(m => m.ResetKey)
+            @Html.HiddenFor(m => m.UserName)
+
+			<p>
+		@if (Model.Step == 1)
+		{
+			    <input type="submit" value="@Account.ResetCompletion_Next" />
+		}
+        else
+		{
+			    <input type="submit" value="@Account.ResetCompletion_Reset" />
+        }
+			</p>
+		</fieldset>
+    </div>
+}

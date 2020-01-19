@@ -1,0 +1,2090 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--LLBLGen Pro v3.5 project file. Do not manually edit this file. Incorrect references could lead to an unloadable project file.-->
+<Project Version="3.5" TargetFrameworkName="LLBLGen Pro Runtime Framework">
+  <Properties>
+    <Abbreviations />
+    <Property Name="AdditionalTaskPerformerFolder" Value="" />
+    <Property Name="AdditionalTasksFolder" Value="" />
+    <Property Name="AdditionalTemplatesFolder" Value="" />
+    <Property Name="AdditionalTypeConverterFolder" Value=".\GeneratedCode\bin\Debug" />
+    <Property Name="AddNewElementsAfterRefresh" Value="0" />
+    <Property Name="AddNewFieldsAfterRefresh" Value="0" />
+    <Property Name="AddNewViewsAsEntitiesAfterRefresh" Value="0" />
+    <Property Name="AutoAddManyToManyRelationships" Value="false" />
+    <Property Name="AutoAssignSequencesToIntegerPks" Value="true" />
+    <Property Name="AutoAssignTypeConverterToFieldMapping" Value="true" />
+    <Property Name="CleanUpVsNetProjects" Value="true" />
+    <Property Name="ConnectionStringKeyNamePattern" Value="Main.ConnectionString" />
+    <Property Name="EncodingToUse" Value="0" />
+    <Property Name="EnforcePascalCasingAlways" Value="true" />
+    <Property Name="EntityFieldNameStripPattern" Value="{}{}" />
+    <Property Name="EntityNameStripPattern" Value="{tbl_}{}" />
+    <Property Name="ExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="FailCodeGenerationOnWriteError" Value="false" />
+    <Property Name="FieldMappedOntoRelatedFieldPattern" Value="{$RelatedFieldName}" />
+    <Property Name="FkFieldsAreNamedAfterTargetField" Value="true" />
+    <Property Name="ForeignKeyFieldPattern" Value="{$NavigatorName}{$RelatedFieldName}" />
+    <Property Name="GroupUsage" Value="0" />
+    <Property Name="IdentifyingFieldsFollowDBPrimaryKeyConstraints" Value="0" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseInsensitiveDBs" Value="false" />
+    <Property Name="InsertUnderscoreAtWordBreakCaseSensitiveDBs" Value="false" />
+    <Property Name="LengthPrecisionScaleFollowDBLengthPrecisionScale" Value="0" />
+    <Property Name="MakeElementNamePascalCasing" Value="true" />
+    <Property Name="NavigatorMappedOntoManyToManyPattern" Value="{$EndEntityName}CollectionVia{$IntermediateEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneManyToOnePattern" Value="{$EndEntityName$S}" />
+    <Property Name="NavigatorMappedOntoOneToManyPattern" Value="{$EndEntityName$P}" />
+    <Property Name="NonExcludableOrphanedElementDetectedAction" Value="3" />
+    <Property Name="PreferDecimalOverCurrencyTypes" Value="true" />
+    <Property Name="PreferNaturalCharacterTypes" Value="true" />
+    <Property Name="PreferVariableLengthTypes" Value="true" />
+    <Property Name="ProjectCreator" Value="Lloyd Kurth" />
+    <Property Name="ProjectName" Value="EPICCentralDL" />
+    <Property Name="ReflectNullabilityOfElementFieldInTargetField" Value="0" />
+    <Property Name="RelationalModelDataElementNameCasingCaseInsensitiveDBs" Value="3" />
+    <Property Name="RelationalModelDataElementNameCasingCaseSensitiveDBs" Value="3" />
+    <Property Name="RelationshipsFollowDBForeignKeyConstraints" Value="0" />
+    <Property Name="RemoveUnderscoresFromElementName" Value="true" />
+    <Property Name="RemoveUnmappedElementsAfterRefresh" Value="0" />
+    <Property Name="ResetFieldOrderBasedOnTargetOrderAtRefresh" Value="false" />
+    <Property Name="RetrieveDBCustomProperties" Value="false" />
+    <Property Name="RootNamespace" Value="" />
+    <Property Name="SequencePattern" Value="SEQ_{$EntityName}" />
+    <Property Name="SetGroupNameAfterSchemaName" Value="true" />
+    <Property Name="SetSchemaNameAfterGroupName" Value="true" />
+    <Property Name="StoredProcNameStripPattern" Value="{pr_, sp_}{}" />
+    <Property Name="StoreTimeLastGeneratedIntoProject" Value="false" />
+    <Property Name="SyncMappedElementNamesAfterRefresh" Value="0" />
+    <Property Name="SyncRelationalModelDataElementNameAfterRename" Value="0" />
+    <Property Name="SyncRenamedMappedElementNamesAfterRefresh" Value="0" />
+    <Property Name="TargetPerEntityEdgesRequireBackingFkConstraint" Value="true" />
+    <Property Name="TypedViewFieldNameStripPattern" Value="{}{}" />
+    <Property Name="TypedViewNameStripPattern" Value="{vw_}{}" />
+    <Property Name="UniqueConstraintsFollowDBUniqueConstraints" Value="0" />
+    <Property Name="UpdateCustomPropertiesAfterRefresh" Value="0" />
+    <Property Name="UseCustomFieldOrderingOnNewElements" Value="false" />
+  </Properties>
+  <TypeShortcuts>
+    <TypeShortcut Shortcut="AccountRestrictionType" Type="EPICCentralDL.Customization.AccountRestrictionType, EPICCentralDL" />
+    <TypeShortcut Shortcut="DeviceState" Type="EPICCentralDL.Customization.DeviceState, EPICCentralDL" />
+    <TypeShortcut Shortcut="EventType" Type="EPICCentralDL.Customization.EventType, EPICCentralDL" />
+    <TypeShortcut Shortcut="Gender" Type="EPICCentralDL.Customization.Gender, EPICCentralDL" />
+    <TypeShortcut Shortcut="LicenseMode" Type="EPICCentralDL.Customization.LicenseMode, EPICCentralDL" />
+    <TypeShortcut Shortcut="MessageType" Type="EPICCentralDL.Customization.MessageType, EPICCentralDL" />
+    <TypeShortcut Shortcut="OrganComponent" Type="EPICCentralDL.Customization.OrganComponent, EPICCentralDL" />
+    <TypeShortcut Shortcut="OrganizationType" Type="EPICCentralDL.Customization.OrganizationType, EPICCentralDL" />
+    <TypeShortcut Shortcut="ScanType" Type="EPICCentralDL.Customization.ScanType, EPICCentralDL" />
+  </TypeShortcuts>
+  <CodeGenerationCyclePreferences>
+    <OutputType Value="3">
+      <LastUsedPreferences>
+        <DestinationRootFolder Value=".\GeneratedCode" />
+        <FrameworkName Value="LLBLGen Pro Runtime Framework" />
+        <LanguageName Value="C#" />
+        <PlatformName Value=".NET 4.0" />
+        <PresetName Value="SD.Presets.SelfServicing.General2010" />
+        <RootNamespace Value="EPICCentralDL" />
+        <TemplateGroup Value="SelfServicing" />
+        <TemplateBindings>
+          <Binding Name="SD.TemplateBindings.SqlServerSpecific.NET20" />
+          <Binding Name="SD.TemplateBindings.SharedTemplates.NET40" />
+          <Binding Name="SD.TemplateBindings.SharedTemplates.NET35" />
+          <Binding Name="SD.TemplateBindings.SharedTemplates.NET20" />
+          <Binding Name="SD.TemplateBindings.General" />
+        </TemplateBindings>
+      </LastUsedPreferences>
+    </OutputType>
+  </CodeGenerationCyclePreferences>
+  <OutputSettingValues>
+    <SettingValues>
+      <SettingValue Name="1:FieldPropertyIsPublicDefault" Value="true" Type="3" />
+    </SettingValues>
+  </OutputSettingValues>
+  <CodeGenerationMetaDataDefaults>
+    <TargetElement Type="256">
+      <Defaults>
+        <Attributes>
+          <Attribute Value="Browsable($false)" />
+        </Attributes>
+      </Defaults>
+    </TargetElement>
+  </CodeGenerationMetaDataDefaults>
+  <EntityModel>
+    <ValueTypeDefinitions />
+    <EntityDefinitions>
+      <EntityDefinition Name="AccountRestriction">
+        <Fields>
+          <Field Name="AccountRestrictionId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="AccountRestrictionType" Type="AccountRestrictionType" Precision="5" FieldIndex="1" />
+          <Field Name="CreatedBy" Type="int" IsOptional="true" Precision="10" FieldIndex="6" />
+          <Field Name="CreationTime" Type="datetime" FieldIndex="7" />
+          <Field Name="EmailAddress" Type="string" MaxLength="128" FieldIndex="3" />
+          <Field Name="IPAddress" Type="string" MaxLength="32" FieldIndex="5" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="9" />
+          <Field Name="Parameters" Type="string" IsOptional="true" MaxLength="128" FieldIndex="4" />
+          <Field Name="RemovalTime" Type="datetime" IsOptional="true" FieldIndex="8" />
+          <Field Name="RestrictionKey" Type="string" MaxLength="128" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ActiveOrganization">
+        <Fields>
+          <Field Name="ActiveOrganizationId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="ActivityTime" Type="datetime" IsOptional="true" FieldIndex="3" />
+          <Field Name="ActivityTypeId" Type="short" Precision="5" FieldIndex="2" />
+          <Field Name="LocationId" Type="int" Precision="10" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ActivityType">
+        <Fields>
+          <Field Name="ActivityTypeId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Description" Type="string" IsOptional="true" MaxLength="80" FieldIndex="2" />
+          <Field Name="Name" Type="string" MaxLength="40" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="AnalysisResult">
+        <Fields>
+          <Field Name="AI1" Type="double" Precision="38" FieldIndex="26" />
+          <Field Name="AI2" Type="double" Precision="38" FieldIndex="27" />
+          <Field Name="AI3" Type="double" Precision="38" FieldIndex="28" />
+          <Field Name="AI4" Type="double" Precision="38" FieldIndex="29" />
+          <Field Name="AnalysisResultId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="AnalysisTime" Type="datetime" FieldIndex="2" />
+          <Field Name="AngleOfRotation" Type="double" Precision="38" FieldIndex="21" />
+          <Field Name="AverageIntensity" Type="double" Precision="38" FieldIndex="12" />
+          <Field Name="BreakCoefficient" Type="double" Precision="38" FieldIndex="24" />
+          <Field Name="CenterX" Type="double" Precision="38" FieldIndex="17" />
+          <Field Name="CenterY" Type="double" Precision="38" FieldIndex="18" />
+          <Field Name="EndAngle" Type="int" Precision="10" FieldIndex="8" />
+          <Field Name="Entropy" Type="double" Precision="38" FieldIndex="13" />
+          <Field Name="FingerDesc" Type="string" IsOptional="true" MaxLength="50" FieldIndex="4" />
+          <Field Name="FingerType" Type="int" Precision="10" FieldIndex="5" />
+          <Field Name="Form11" Type="double" Precision="38" FieldIndex="30" />
+          <Field Name="Form12" Type="double" Precision="38" FieldIndex="31" />
+          <Field Name="Form13" Type="double" Precision="38" FieldIndex="32" />
+          <Field Name="Form14" Type="double" Precision="38" FieldIndex="33" />
+          <Field Name="Form2" Type="double" Precision="38" FieldIndex="22" />
+          <Field Name="Form2Prime" Type="double" Precision="38" FieldIndex="36" />
+          <Field Name="FormCoefficient" Type="double" Precision="38" FieldIndex="14" />
+          <Field Name="FractalCoefficient" Type="double" Precision="38" FieldIndex="15" />
+          <Field Name="IntegralArea" Type="double" Precision="38" FieldIndex="10" />
+          <Field Name="IsFiltered" Type="bool" Precision="3" FieldIndex="3" />
+          <Field Name="JsInteger" Type="double" Precision="38" FieldIndex="16" />
+          <Field Name="NoiseLevel" Type="int" Precision="10" FieldIndex="23" />
+          <Field Name="NormalizedArea" Type="double" Precision="38" FieldIndex="11" />
+          <Field Name="RadiusMax" Type="double" Precision="38" FieldIndex="20" />
+          <Field Name="RadiusMin" Type="double" Precision="38" FieldIndex="19" />
+          <Field Name="RingIntensity" Type="double" Precision="38" FieldIndex="35" />
+          <Field Name="RingThickness" Type="double" Precision="38" FieldIndex="34" />
+          <Field Name="SectorArea" Type="double" Precision="38" FieldIndex="9" />
+          <Field Name="SectorNumber" Type="int" Precision="10" FieldIndex="6" />
+          <Field Name="SoftwareVersion" Type="string" IsOptional="true" MaxLength="20" FieldIndex="25" />
+          <Field Name="StartAngle" Type="int" Precision="10" FieldIndex="7" />
+          <Field Name="TreatmentId" Type="long" Precision="19" FieldIndex="1" />
+          <Field Name="UserName" Type="string" MaxLength="20" FieldIndex="37" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Application">
+        <Fields>
+          <Field Name="AppId" Type="int" Precision="10" IsPrimaryKey="true" />
+          <Field Name="AppName" Type="string" MaxLength="280" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="CalculationDebugData">
+        <Fields>
+          <Field Name="AI1" Type="decimal" Precision="16" Scale="4" FieldIndex="13" />
+          <Field Name="AI2" Type="decimal" Precision="16" Scale="4" FieldIndex="14" />
+          <Field Name="AI3" Type="decimal" Precision="16" Scale="4" FieldIndex="15" />
+          <Field Name="AI4" Type="decimal" Precision="16" Scale="4" FieldIndex="16" />
+          <Field Name="Area" Type="decimal" Precision="16" Scale="4" FieldIndex="5" />
+          <Field Name="AverageIntensity" Type="decimal" Precision="16" Scale="4" FieldIndex="6" />
+          <Field Name="BreakCoefficient" Type="decimal" IsOptional="true" Precision="16" Scale="4" FieldIndex="7" />
+          <Field Name="CalculationDebugDataId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Entropy" Type="decimal" Precision="16" Scale="4" FieldIndex="8" />
+          <Field Name="EPICBaseScore" Type="decimal" Precision="16" Scale="4" FieldIndex="24" />
+          <Field Name="EPICBonusScore" Type="decimal" Precision="16" Scale="4" FieldIndex="25" />
+          <Field Name="EPICRank" Type="int" Precision="10" FieldIndex="28" />
+          <Field Name="EPICScaledScore" Type="decimal" Precision="16" Scale="4" FieldIndex="27" />
+          <Field Name="EPICScore" Type="decimal" Precision="16" Scale="4" FieldIndex="26" />
+          <Field Name="FingerSector" Type="string" MaxLength="20" FieldIndex="2" />
+          <Field Name="Form" Type="decimal" Precision="16" Scale="4" FieldIndex="11" />
+          <Field Name="Form11" Type="decimal" Precision="16" Scale="4" FieldIndex="17" />
+          <Field Name="Form12" Type="decimal" Precision="16" Scale="4" FieldIndex="18" />
+          <Field Name="Form13" Type="decimal" Precision="16" Scale="4" FieldIndex="19" />
+          <Field Name="Form14" Type="decimal" Precision="16" Scale="4" FieldIndex="20" />
+          <Field Name="Form2" Type="decimal" Precision="16" Scale="4" FieldIndex="12" />
+          <Field Name="Form2Prime" Type="decimal" Precision="16" Scale="4" FieldIndex="23" />
+          <Field Name="Fractal" Type="decimal" Precision="16" Scale="4" FieldIndex="10" />
+          <Field Name="IsFiltered" Type="bool" FieldIndex="3" />
+          <Field Name="LRRank" Type="int" Precision="10" FieldIndex="29" />
+          <Field Name="LRScaledScore" Type="decimal" Precision="16" Scale="4" FieldIndex="31" />
+          <Field Name="LRScore" Type="decimal" Precision="16" Scale="4" FieldIndex="30" />
+          <Field Name="NS" Type="decimal" Precision="16" Scale="4" FieldIndex="9" />
+          <Field Name="OrganComponent" Type="OrganComponent" Precision="5" FieldIndex="4" />
+          <Field Name="RingIntensity" Type="decimal" Precision="16" Scale="4" FieldIndex="21" />
+          <Field Name="RingThickness" Type="decimal" Precision="16" Scale="4" FieldIndex="22" />
+          <Field Name="SumZScore" Type="decimal" Precision="16" Scale="4" FieldIndex="32" />
+          <Field Name="TreatmentId" Type="long" Precision="19" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Calibration">
+        <Fields>
+          <Field Name="CalibrationId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="CalibrationTime" Type="datetime" FieldIndex="3" />
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="ImageSetId" Type="long" Precision="19" FieldIndex="5" />
+          <Field Name="PerformedBy" Type="string" MaxLength="80" FieldIndex="4" />
+          <Field Name="ReceivedTime" Type="datetime" FieldIndex="6" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Contact">
+        <Fields>
+          <Field Name="ContactId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="EmailAddress" Type="string" MaxLength="128" FieldIndex="4" />
+          <Field Name="FirstName" Type="string" MaxLength="50" FieldIndex="2" />
+          <Field Name="LastName" Type="string" MaxLength="50" FieldIndex="3" />
+          <Field Name="OrganizationId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="PhoneNumber" Type="string" MaxLength="20" FieldIndex="5" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="CreditCard">
+        <Fields>
+          <Field Name="AccountNumber" Type="string" IsOptional="true" MaxLength="4" FieldIndex="4" />
+          <Field Name="Address" Type="string" IsOptional="true" MaxLength="64" FieldIndex="5" />
+          <Field Name="AuthorizeId" Type="string" MaxLength="20" FieldIndex="1" />
+          <Field Name="CreditCardId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="FirstName" Type="string" MaxLength="50" FieldIndex="2" />
+          <Field Name="LastName" Type="string" MaxLength="50" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Device">
+        <Fields>
+          <Field Name="AuthenticationToken" Type="byte[]" IsOptional="true" MaxLength="64" FieldIndex="3" />
+          <Field Name="CurrentStatus" Type="string" MaxLength="50" FieldIndex="11" />
+          <Field Name="DateIssued" Type="datetime" FieldIndex="7" />
+          <Field Name="DeviceId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="DeviceState" Type="DeviceState" Precision="5" FieldIndex="5" />
+          <Field Name="LastReportTime" Type="datetime" IsOptional="true" FieldIndex="12" />
+          <Field Name="LocationId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="RevisionLevel" Type="string" MaxLength="5" FieldIndex="8" />
+          <Field Name="ScansAvailable" Type="int" Precision="10" FieldIndex="9" />
+          <Field Name="ScansUsed" Type="int" Precision="10" FieldIndex="10" />
+          <Field Name="SerialNumber" Type="string" MaxLength="40" FieldIndex="6" />
+          <Field Name="UidQualifier" Type="int" IsReadOnly="true" Precision="10" FieldIndex="4" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="DeviceEvent">
+        <Fields>
+          <Field Name="DeviceEventId" Type="long" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="EventTime" Type="datetime" FieldIndex="3" />
+          <Field Name="EventType" Type="EventType" Precision="5" FieldIndex="2" />
+          <Field Name="ReceivedTime" Type="datetime" FieldIndex="4" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="DeviceMessage">
+        <Fields>
+          <Field Name="DeliveryTime" Type="datetime" IsOptional="true" FieldIndex="2" />
+          <Field Name="DeviceId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="MessageId" Type="long" Precision="19" IsPrimaryKey="true" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="DeviceStateTracking">
+        <Fields>
+          <Field Name="ChangeReason" Type="string" MaxLength="512" FieldIndex="4" />
+          <Field Name="ChangeTime" Type="datetime" FieldIndex="5" />
+          <Field Name="CurrentState" Type="DeviceState" Precision="5" FieldIndex="2" />
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="DeviceStateTrackingId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="PreviousState" Type="DeviceState" Precision="5" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ExceptionLog">
+        <Fields>
+          <Field Name="ApplicationVersion" Type="string" IsOptional="true" MaxLength="40" FieldIndex="11" />
+          <Field Name="CLRVersion" Type="string" IsOptional="true" MaxLength="50" FieldIndex="12" />
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="ExceptionLogId" Type="long" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="FormName" Type="string" IsOptional="true" MaxLength="50" FieldIndex="8" />
+          <Field Name="LogTime" Type="datetime" FieldIndex="6" />
+          <Field Name="MachineName" Type="string" IsOptional="true" MaxLength="50" FieldIndex="9" />
+          <Field Name="MachineOS" Type="string" IsOptional="true" MaxLength="50" FieldIndex="10" />
+          <Field Name="MemoryUsage" Type="string" IsOptional="true" MaxLength="40" FieldIndex="13" />
+          <Field Name="Message" Type="string" MaxLength="1024" FieldIndex="4" />
+          <Field Name="ReceivedTime" Type="datetime" FieldIndex="14" />
+          <Field Name="RemoteExceptionLogId" Type="long" Precision="19" FieldIndex="2" />
+          <Field Name="StackTrace" Type="string" MaxLength="2147483647" FieldIndex="5" />
+          <Field Name="Title" Type="string" IsOptional="true" MaxLength="1024" FieldIndex="3" />
+          <Field Name="User" Type="string" IsOptional="true" MaxLength="50" FieldIndex="7" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ImageCache">
+        <Fields>
+          <Field Name="Description" Type="string" MaxLength="50" />
+          <Field Name="Id" Type="long" Precision="19" IsPrimaryKey="true" />
+          <Field Name="Image" Type="byte[]" MaxLength="2147483647" />
+          <Field Name="LookupKey" Type="long" Precision="19" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ImageSet">
+        <Fields>
+          <Field Name="Images" Type="byte[]" MaxLength="2147483647" FieldIndex="2" />
+          <Field Name="ImageSetId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="LicenseOrganSystem">
+        <Fields>
+          <Field Name="LicenseMode" Type="LicenseMode" Precision="5" FieldIndex="1" />
+          <Field Name="LicenseOrganSystemId" Type="short" IsReadOnly="true" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="OrganSystemId" Type="short" Precision="5" FieldIndex="2" />
+          <Field Name="ReportOrder" Type="short" Precision="5" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Location">
+        <Fields>
+          <Field Name="AddressLine1" Type="string" MaxLength="80" FieldIndex="4" />
+          <Field Name="AddressLine2" Type="string" IsOptional="true" MaxLength="80" FieldIndex="5" />
+          <Field Name="City" Type="string" MaxLength="40" FieldIndex="6" />
+          <Field Name="Country" Type="string" MaxLength="2" FieldIndex="8" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="13" />
+          <Field Name="Latitude" Type="decimal" IsOptional="true" Precision="18" Scale="7" FieldIndex="11" />
+          <Field Name="LocationId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Longitude" Type="decimal" IsOptional="true" Precision="18" Scale="7" FieldIndex="12" />
+          <Field Name="Name" Type="string" MaxLength="80" FieldIndex="3" />
+          <Field Name="OrganizationId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="PhoneNumber" Type="string" MaxLength="20" FieldIndex="10" />
+          <Field Name="PostalCode" Type="string" MaxLength="10" FieldIndex="9" />
+          <Field Name="State" Type="string" MaxLength="2" FieldIndex="7" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Message">
+        <Fields>
+          <Field Name="Body" Type="string" MaxLength="4096" FieldIndex="3" />
+          <Field Name="CreateTime" Type="datetime" FieldIndex="4" />
+          <Field Name="EndTime" Type="datetime" IsOptional="true" FieldIndex="6" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="7" />
+          <Field Name="MessageId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="MessageType" Type="MessageType" Precision="5" FieldIndex="1" />
+          <Field Name="StartTime" Type="datetime" FieldIndex="5" />
+          <Field Name="Title" Type="string" MaxLength="255" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="NBAnalysisResult">
+        <Fields>
+          <Field Name="NBAnalysisResultId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="OrganSystemId" Type="short" Precision="5" FieldIndex="2" />
+          <Field Name="ProbabilityFiltered" Type="decimal" Precision="16" Scale="4" FieldIndex="5" />
+          <Field Name="ProbabilityUnfiltered" Type="decimal" Precision="16" Scale="4" FieldIndex="6" />
+          <Field Name="ResultScoreFiltered" Type="decimal" Precision="16" Scale="4" FieldIndex="3" />
+          <Field Name="ResultScoreUnfiltered" Type="decimal" Precision="16" Scale="4" FieldIndex="4" />
+          <Field Name="TreatmentId" Type="long" Precision="19" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Organ">
+        <Fields>
+          <Field Name="Description" Type="string" MaxLength="128" FieldIndex="2" />
+          <Field Name="LComp" Type="string" IsOptional="true" MaxLength="10" FieldIndex="4" />
+          <Field Name="OrganComponent" Type="OrganComponent" Precision="5" FieldIndex="1" />
+          <Field Name="OrganId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="RComp" Type="string" IsOptional="true" MaxLength="10" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Organization">
+        <Fields>
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="4" />
+          <Field Name="Name" Type="string" MaxLength="128" FieldIndex="2" />
+          <Field Name="OrganizationId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="OrganizationType" Type="OrganizationType" Precision="5" FieldIndex="1" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="OrganSystem">
+        <Fields>
+          <Field Name="Description" Type="string" MaxLength="50" FieldIndex="1" />
+          <Field Name="OrganSystemId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="OrganSystemOrgan">
+        <Fields>
+          <Field Name="LicenseOrganSystemId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="OrganId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="ReportOrder" Type="short" Precision="5" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Patient">
+        <Fields>
+          <Field Name="BirthDate" Type="datetime" FieldIndex="7" />
+          <Field Name="EmailAddress" Type="string" IsOptional="true" MaxLength="128" FieldIndex="6" />
+          <Field Name="FirstName" Type="string" MaxLength="50" FieldIndex="2" />
+          <Field Name="Gender" Type="Gender" Precision="5" FieldIndex="8" />
+          <Field Name="LastName" Type="string" MaxLength="50" FieldIndex="3" />
+          <Field Name="LocationId" Type="int" Precision="10" IsAutoCreated="true" FieldIndex="9" />
+          <Field Name="MiddleInitial" Type="string" IsOptional="true" MaxLength="1" FieldIndex="4" />
+          <Field Name="PatientId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="PhoneNumber" Type="string" IsOptional="true" MaxLength="20" FieldIndex="5" />
+          <Field Name="ReceivedTime" Type="datetime" FieldIndex="10" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="PurchaseHistory">
+        <Fields>
+          <Field Name="AmountPaid" Type="decimal" Precision="19" Scale="4" FieldIndex="6" />
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="2" />
+          <Field Name="LocationId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="PurchaseHistoryId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="PurchaseNotes" Type="string" MaxLength="2048" FieldIndex="8" />
+          <Field Name="PurchaseTime" Type="datetime" FieldIndex="4" />
+          <Field Name="ScansPurchased" Type="int" IsOptional="true" Precision="10" FieldIndex="5" />
+          <Field Name="TransactionId" Type="string" MaxLength="64" FieldIndex="7" />
+          <Field Name="UserId" Type="int" Precision="10" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Role">
+        <Fields>
+          <Field Name="Description" Type="string" IsOptional="true" MaxLength="512" FieldIndex="2" />
+          <Field Name="Name" Type="string" MaxLength="80" FieldIndex="1" />
+          <Field Name="RoleId" Type="short" IsReadOnly="true" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ScanHistory">
+        <Fields>
+          <Field Name="DeviceId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="ScanHistoryId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="ScanStartTime" Type="datetime" FieldIndex="3" />
+          <Field Name="ScanType" Type="ScanType" Precision="5" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="ScanRate">
+        <Fields>
+          <Field Name="EffectiveDate" Type="datetime" FieldIndex="5" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="6" />
+          <Field Name="MaxCountForRate" Type="int" Precision="10" FieldIndex="4" />
+          <Field Name="MinCountForRate" Type="int" Precision="10" FieldIndex="3" />
+          <Field Name="RatePerScan" Type="decimal" Precision="19" Scale="4" FieldIndex="2" />
+          <Field Name="ScanRateId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="ScanType" Type="ScanType" Precision="5" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Session">
+        <Fields>
+          <Field Name="Created" Type="datetime" />
+          <Field Name="Expires" Type="datetime" />
+          <Field Name="Flags" Type="int" Precision="10" />
+          <Field Name="LockCookie" Type="int" Precision="10" />
+          <Field Name="LockDate" Type="datetime" />
+          <Field Name="LockDateLocal" Type="datetime" />
+          <Field Name="Locked" Type="bool" />
+          <Field Name="SessionId" Type="string" MaxLength="88" IsPrimaryKey="true" />
+          <Field Name="SessionItemLong" Type="byte[]" IsOptional="true" MaxLength="2147483647" />
+          <Field Name="SessionItemShort" Type="byte[]" IsOptional="true" MaxLength="7000" />
+          <Field Name="Timeout" Type="int" Precision="10" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Severity">
+        <Fields>
+          <Field Name="MentalLeft" Type="int" IsOptional="true" Precision="10" FieldIndex="6" />
+          <Field Name="MentalRight" Type="int" IsOptional="true" Precision="10" FieldIndex="5" />
+          <Field Name="OrganId" Type="short" Precision="5" FieldIndex="2" />
+          <Field Name="PhysicalLeft" Type="int" IsOptional="true" Precision="10" FieldIndex="4" />
+          <Field Name="PhysicalRight" Type="int" IsOptional="true" Precision="10" FieldIndex="3" />
+          <Field Name="SeverityId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="TreatmentId" Type="long" Precision="19" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SupportArea">
+        <Fields>
+          <Field Name="Description" Type="string" IsOptional="true" MaxLength="80" FieldIndex="2" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="3" />
+          <Field Name="Name" Type="string" MaxLength="40" FieldIndex="1" />
+          <Field Name="SupportAreaId" Type="short" IsReadOnly="true" Precision="5" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SupportIssue">
+        <Fields>
+          <Field Name="Body" Type="string" MaxLength="6144" FieldIndex="7" />
+          <Field Name="CreateTime" Type="datetime" FieldIndex="3" />
+          <Field Name="FromUserId" Type="int" IsOptional="true" Precision="10" FieldIndex="5" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="13" />
+          <Field Name="IsClosedByFromUser" Type="bool" Precision="3" FieldIndex="12" />
+          <Field Name="IsClosedByToUser" Type="bool" Precision="3" FieldIndex="11" />
+          <Field Name="IsPublic" Type="bool" Precision="3" FieldIndex="10" />
+          <Field Name="ParentId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="Priority" Type="short" Precision="5" FieldIndex="9" />
+          <Field Name="Status" Type="string" MaxLength="128" FieldIndex="8" />
+          <Field Name="Subject" Type="string" MaxLength="512" FieldIndex="6" />
+          <Field Name="SupportAreaId" Type="short" Precision="5" FieldIndex="2" />
+          <Field Name="SupportIssueId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="ToUserId" Type="int" IsOptional="true" Precision="10" FieldIndex="4" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="SystemSetting">
+        <Fields>
+          <Field Name="Name" Type="string" MaxLength="50" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Value" Type="string" MaxLength="2048" FieldIndex="1" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="Treatment">
+        <Fields>
+          <Field Name="AnalysisTime" Type="datetime" FieldIndex="11" />
+          <Field Name="CalibrationId" Type="long" Precision="19" FieldIndex="2" />
+          <Field Name="EnergizedImageSetId" Type="long" Precision="19" FieldIndex="7" />
+          <Field Name="FingerImageSetId" Type="long" IsOptional="true" Precision="19" FieldIndex="8" />
+          <Field Name="FirmwareVersion" Type="string" MaxLength="50" FieldIndex="10" />
+          <Field Name="PatientId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="PerformedBy" Type="string" MaxLength="80" FieldIndex="6" />
+          <Field Name="ReceivedTime" Type="datetime" FieldIndex="12" />
+          <Field Name="SoftwareVersion" Type="string" MaxLength="20" FieldIndex="9" />
+          <Field Name="TreatmentId" Type="long" IsReadOnly="true" Precision="19" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="TreatmentTime" Type="datetime" FieldIndex="5" />
+          <Field Name="TreatmentType" Type="short" Precision="5" FieldIndex="4" />
+          <Field Name="UniqueIdentifier" Type="string" MaxLength="48" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UpdateStatus">
+        <Fields>
+          <Field Name="Action" Type="string" MaxLength="128" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="Controller" Type="string" MaxLength="512" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Method" Type="string" MaxLength="16" FieldIndex="2" />
+          <Field Name="UpdateTime" Type="datetime" FieldIndex="3" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="User">
+        <Fields>
+          <Field Name="CreateTime" Type="datetime" FieldIndex="7" />
+          <Field Name="EmailAddress" Type="string" MaxLength="128" FieldIndex="4" />
+          <Field Name="FirstName" Type="string" MaxLength="50" FieldIndex="5" />
+          <Field Name="IsActive" Type="bool" Precision="3" FieldIndex="12" />
+          <Field Name="LastActivityTime" Type="datetime" IsOptional="true" FieldIndex="9" />
+          <Field Name="LastLockoutTime" Type="datetime" IsOptional="true" FieldIndex="11" />
+          <Field Name="LastLoginTime" Type="datetime" IsOptional="true" FieldIndex="8" />
+          <Field Name="LastName" Type="string" MaxLength="50" FieldIndex="6" />
+          <Field Name="LastPasswordChangeTime" Type="datetime" IsOptional="true" FieldIndex="10" />
+          <Field Name="OrganizationId" Type="int" Precision="10" FieldIndex="1" />
+          <Field Name="Password" Type="string" MaxLength="512" FieldIndex="3" />
+          <Field Name="UserId" Type="int" IsReadOnly="true" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Username" Type="string" MaxLength="80" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserAccountRestriction">
+        <Fields>
+          <Field Name="AccountRestrictionId" Type="int" Precision="10" IsPrimaryKey="true" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserAssignedLocation">
+        <Fields>
+          <Field Name="LocationId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserCreditCard">
+        <Fields>
+          <Field Name="CreditCardId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserRole">
+        <Fields>
+          <Field Name="RoleId" Type="short" Precision="5" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserSalt">
+        <Fields>
+          <Field Name="Salt" Type="string" MaxLength="4096" FieldIndex="1" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+        </Fields>
+      </EntityDefinition>
+      <EntityDefinition Name="UserSetting">
+        <Fields>
+          <Field Name="Name" Type="string" MaxLength="50" IsPrimaryKey="true" FieldIndex="1" />
+          <Field Name="UserId" Type="int" Precision="10" IsPrimaryKey="true" FieldIndex="0" />
+          <Field Name="Value" Type="string" MaxLength="2048" FieldIndex="2" />
+        </Fields>
+      </EntityDefinition>
+    </EntityDefinitions>
+    <Relationships>
+      <NormalRelationship Name="ActiveOrganization.ActivityType-ActivityType.ActiveOrganizations" Start=":ActiveOrganization" End=":ActivityType" StartNavigator="ActivityType" EndNavigator="ActiveOrganizations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="ActivityTypeId" PkField="ActivityTypeId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="ActiveOrganization.Location-Location.ActiveOrganizations" Start=":ActiveOrganization" End=":Location" StartNavigator="Location" EndNavigator="ActiveOrganizations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LocationId" PkField="LocationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="AnalysisResult.Treatment-Treatment.AnalysisResults" Start=":AnalysisResult" End=":Treatment" StartNavigator="Treatment" EndNavigator="AnalysisResults" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="TreatmentId" PkField="TreatmentId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="CalculationDebugData.Treatment-Treatment.CalculationDebugDatas" Start=":CalculationDebugData" End=":Treatment" StartNavigator="Treatment" EndNavigator="CalculationDebugDatas" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="TreatmentId" PkField="TreatmentId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Calibration.Device-Device.Calibrations" Start=":Calibration" End=":Device" StartNavigator="Device" EndNavigator="Calibrations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Calibration.ImageSet-ImageSet.Calibrations" Start=":Calibration" End=":ImageSet" StartNavigator="ImageSet" EndNavigator="Calibrations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="ImageSetId" PkField="ImageSetId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Contact.Organization-Organization.Contacts" Start=":Contact" End=":Organization" StartNavigator="Organization" EndNavigator="Contacts" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganizationId" PkField="OrganizationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Device.Location-Location.Devices" Start=":Device" End=":Location" StartNavigator="Location" EndNavigator="Devices" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LocationId" PkField="LocationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="DeviceEvent.Device-Device.DeviceEvents" Start=":DeviceEvent" End=":Device" StartNavigator="Device" EndNavigator="DeviceEvents" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="DeviceMessage.Device-Device.DeviceMessages" Start=":DeviceMessage" End=":Device" StartNavigator="Device" EndNavigator="DeviceMessages" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="DeviceMessage.Message-Message.DeviceMessages" Start=":DeviceMessage" End=":Message" StartNavigator="Message" EndNavigator="DeviceMessages" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="MessageId" PkField="MessageId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="DeviceStateTracking.Device-Device.DeviceStateTrackings" Start=":DeviceStateTracking" End=":Device" StartNavigator="Device" EndNavigator="DeviceStateTrackings" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="ExceptionLog.Device-Device.ExceptionLogs" Start=":ExceptionLog" End=":Device" StartNavigator="Device" EndNavigator="ExceptionLogs" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="LicenseOrganSystem.OrganSystem-OrganSystem.LicenseOrganSystems" Start=":LicenseOrganSystem" End=":OrganSystem" StartNavigator="OrganSystem" EndNavigator="LicenseOrganSystems" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganSystemId" PkField="OrganSystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Location.Organization-Organization.Locations" Start=":Location" End=":Organization" StartNavigator="Organization" EndNavigator="Locations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganizationId" PkField="OrganizationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="NBAnalysisResult.OrganSystem-OrganSystem.NBAnalysisResults" Start=":NBAnalysisResult" End=":OrganSystem" StartNavigator="OrganSystem" EndNavigator="NBAnalysisResults" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganSystemId" PkField="OrganSystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="NBAnalysisResult.Treatment-Treatment.NBAnalysisResults" Start=":NBAnalysisResult" End=":Treatment" StartNavigator="Treatment" EndNavigator="NBAnalysisResults" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="TreatmentId" PkField="TreatmentId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="OrganSystemOrgan.LicenseOrganSystem-LicenseOrganSystem.OrganSystemOrgans" Start=":OrganSystemOrgan" End=":LicenseOrganSystem" StartNavigator="LicenseOrganSystem" EndNavigator="OrganSystemOrgans" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LicenseOrganSystemId" PkField="LicenseOrganSystemId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="OrganSystemOrgan.Organ-Organ.OrganSystemOrgans" Start=":OrganSystemOrgan" End=":Organ" StartNavigator="Organ" EndNavigator="OrganSystemOrgans" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganId" PkField="OrganId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Patient.Location-Location.Patients" Start=":Patient" End=":Location" StartNavigator="Location" EndNavigator="Patients" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LocationId" PkField="LocationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="PurchaseHistory.Device-Device.PurchaseHistories" Start=":PurchaseHistory" End=":Device" StartNavigator="Device" EndNavigator="PurchaseHistories" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="PurchaseHistory.Location-Location.PurchaseHistories" Start=":PurchaseHistory" End=":Location" StartNavigator="Location" EndNavigator="PurchaseHistories" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LocationId" PkField="LocationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="PurchaseHistory.User-User.PurchaseHistories" Start=":PurchaseHistory" End=":User" StartNavigator="User" EndNavigator="PurchaseHistories" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="ScanHistory.Device-Device.ScanHistories" Start=":ScanHistory" End=":Device" StartNavigator="Device" EndNavigator="ScanHistories" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="DeviceId" PkField="DeviceId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Severity.Organ-Organ.Severities" Start=":Severity" End=":Organ" StartNavigator="Organ" EndNavigator="Severities" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganId" PkField="OrganId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Severity.Treatment-Treatment.Severities" Start=":Severity" End=":Treatment" StartNavigator="Treatment" EndNavigator="Severities" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="TreatmentId" PkField="TreatmentId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SupportIssue.SupportArea-SupportArea.SupportIssues" Start=":SupportIssue" End=":SupportArea" StartNavigator="SupportArea" EndNavigator="SupportIssues" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="SupportAreaId" PkField="SupportAreaId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SupportIssue.User-User.SupportIssues" Start=":SupportIssue" End=":User" StartNavigator="User" EndNavigator="SupportIssues" Type="4" EndIsOptional="true">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="FromUserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="SupportIssue.User_-User.SupportIssues_" Start=":SupportIssue" End=":User" StartNavigator="User_" EndNavigator="SupportIssues_" Type="4" EndIsOptional="true">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="ToUserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Treatment.Calibration-Calibration.Treatments" Start=":Treatment" End=":Calibration" StartNavigator="Calibration" EndNavigator="Treatments" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="CalibrationId" PkField="CalibrationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Treatment.ImageSet-ImageSet.Treatments" Start=":Treatment" End=":ImageSet" StartNavigator="ImageSet" EndNavigator="Treatments" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="EnergizedImageSetId" PkField="ImageSetId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Treatment.ImageSet_-ImageSet.Treatments_" Start=":Treatment" End=":ImageSet" StartNavigator="ImageSet_" EndNavigator="Treatments_" Type="4" EndIsOptional="true">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="FingerImageSetId" PkField="ImageSetId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="Treatment.Patient-Patient.Treatments" Start=":Treatment" End=":Patient" StartNavigator="Patient" EndNavigator="Treatments" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="PatientId" PkField="PatientId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="User.Organization-Organization.Users" Start=":User" End=":Organization" StartNavigator="Organization" EndNavigator="Users" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="OrganizationId" PkField="OrganizationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserAccountRestriction.AccountRestriction-AccountRestriction.UserAccountRestrictions" Start=":UserAccountRestriction" End=":AccountRestriction" StartNavigator="AccountRestriction" EndNavigator="UserAccountRestrictions" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="AccountRestrictionId" PkField="AccountRestrictionId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserAccountRestriction.User-User.UserAccountRestrictions" Start=":UserAccountRestriction" End=":User" StartNavigator="User" EndNavigator="UserAccountRestrictions" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserAssignedLocation.Location-Location.UserAssignedLocations" Start=":UserAssignedLocation" End=":Location" StartNavigator="Location" EndNavigator="UserAssignedLocations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="LocationId" PkField="LocationId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserAssignedLocation.User-User.UserAssignedLocations" Start=":UserAssignedLocation" End=":User" StartNavigator="User" EndNavigator="UserAssignedLocations" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserCreditCard.CreditCard-CreditCard.UserCreditCards" Start=":UserCreditCard" End=":CreditCard" StartNavigator="CreditCard" EndNavigator="UserCreditCards" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="CreditCardId" PkField="CreditCardId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserCreditCard.User-User.UserCreditCards" Start=":UserCreditCard" End=":User" StartNavigator="User" EndNavigator="UserCreditCards" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserRole.Role-Role.UserRoles" Start=":UserRole" End=":Role" StartNavigator="Role" EndNavigator="UserRoles" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="RoleId" PkField="RoleId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserRole.User-User.UserRoles" Start=":UserRole" End=":User" StartNavigator="User" EndNavigator="UserRoles" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserSalt.User-User.UserSalt" Start=":UserSalt" End=":User" StartNavigator="User" EndNavigator="UserSalt" Type="1" StartIsOptional="true">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+      <NormalRelationship Name="UserSetting.User-User.Settings" Start=":UserSetting" End=":User" StartNavigator="User" EndNavigator="Settings" Type="4">
+        <FieldRelationships>
+          <FieldFieldRelationship FkField="UserId" PkField="UserId" />
+        </FieldRelationships>
+      </NormalRelationship>
+    </Relationships>
+    <InheritanceHierarchies />
+  </EntityModel>
+  <TargetDatabases>
+    <TargetDatabase Type="2D18D138-1DD2-467E-86CC-4838250611AE">
+      <ConnectionElements>
+        <ConnectionElement Name="ServerName" Value="epic-dbsrv1" />
+        <ConnectionElement Name="CatalogName" Value="master" />
+        <ConnectionElement Name="UseWindowsAuthentication" Value="true" />
+        <ConnectionElement Name="UserID" Value="" />
+        <ConnectionElement Name="Password" Value="" />
+      </ConnectionElements>
+      <SystemSequences>
+        <Sequence Name="SCOPE_IDENTITY()" />
+        <Sequence Name="@@IDENTITY" />
+      </SystemSequences>
+      <Catalogs>
+        <Catalog Name="EPICCentral">
+          <Schemas>
+            <Schema Name="dbo">
+              <Tables>
+                <Table Name="AccountRestriction">
+                  <Fields>
+                    <Field Name="AccountRestrictionId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_AccountRestriction" DbType="8" Precision="10" />
+                    <Field Name="AccountRestrictionType" Ordinal="2" DbType="16" Precision="5" />
+                    <Field Name="RestrictionKey" Ordinal="3" DbType="24" Length="128" />
+                    <Field Name="EmailAddress" Ordinal="4" DbType="24" Length="128" />
+                    <Field Name="Parameters" Ordinal="5" IsOptional="true" DbType="24" Length="128" />
+                    <Field Name="IPAddress" Ordinal="6" DbType="24" Length="32" />
+                    <Field Name="CreatedBy" Ordinal="7" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="CreationTime" Ordinal="8" DefaultValue="(getutcdate())" DbType="4" />
+                    <Field Name="RemovalTime" Ordinal="9" IsOptional="true" DbType="4" />
+                    <Field Name="IsActive" Ordinal="10" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="ActiveOrganization">
+                  <Fields>
+                    <Field Name="ActiveOrganizationId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ActiveOrganization" DbType="8" Precision="10" />
+                    <Field Name="LocationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="ActivityTypeId" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="ActivityTime" Ordinal="4" IsOptional="true" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="ActivityType">
+                  <Fields>
+                    <Field Name="ActivityTypeId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_ActivityType" DbType="16" Precision="5" />
+                    <Field Name="Name" Ordinal="2" DbType="24" Length="40" />
+                    <Field Name="Description" Ordinal="3" IsOptional="true" DefaultValue="(NULL)" DbType="24" Length="80" />
+                  </Fields>
+                </Table>
+                <Table Name="AnalysisResult">
+                  <Fields>
+                    <Field Name="AnalysisResultID" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_AnalysisResult" DbType="0" Precision="19" />
+                    <Field Name="TreatmentId" Ordinal="2" DbType="0" Precision="19" />
+                    <Field Name="AnalysisTime" Ordinal="3" DefaultValue="(getutcdate())" DbType="4" />
+                    <Field Name="IsFiltered" Ordinal="4" DefaultValue="((0))" DbType="22" Precision="3" />
+                    <Field Name="FingerDesc" Ordinal="5" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="FingerType" Ordinal="6" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="SectorNumber" Ordinal="7" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="StartAngle" Ordinal="8" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="EndAngle" Ordinal="9" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="SectorArea" Ordinal="10" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="IntegralArea" Ordinal="11" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="NormalizedArea" Ordinal="12" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="AverageIntensity" Ordinal="13" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Entropy" Ordinal="14" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="FormCoefficient" Ordinal="15" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="FractalCoefficient" Ordinal="16" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="JsInteger" Ordinal="17" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="CenterX" Ordinal="18" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="CenterY" Ordinal="19" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="RadiusMin" Ordinal="20" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="RadiusMax" Ordinal="21" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="AngleOfRotation" Ordinal="22" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Form2" Ordinal="23" DefaultValue="((0.0))" DbType="6" Precision="38" />
+                    <Field Name="NoiseLevel" Ordinal="24" DefaultValue="((30))" DbType="8" Precision="10" />
+                    <Field Name="BreakCoefficient" Ordinal="25" DefaultValue="((0.0))" DbType="6" Precision="38" />
+                    <Field Name="SoftwareVersion" Ordinal="26" IsOptional="true" DefaultValue="('-Unknown-')" DbType="24" Length="20" />
+                    <Field Name="AI1" Ordinal="27" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="AI2" Ordinal="28" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="AI3" Ordinal="29" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="AI4" Ordinal="30" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Form1_1" Ordinal="31" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Form1_2" Ordinal="32" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Form1_3" Ordinal="33" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="Form1_4" Ordinal="34" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="RingThickness" Ordinal="35" DefaultValue="((0.0))" DbType="6" Precision="38" />
+                    <Field Name="RingIntensity" Ordinal="36" DefaultValue="((0.0))" DbType="6" Precision="38" />
+                    <Field Name="Form2Prime" Ordinal="37" DefaultValue="((0))" DbType="6" Precision="38" />
+                    <Field Name="UserName" Ordinal="38" DefaultValue="('Administrator')" DbType="24" Length="20" />
+                  </Fields>
+                </Table>
+                <Table Name="ASPStateTempApplications">
+                  <Fields>
+                    <Field Name="AppId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK__ASPState__8E2CF7F9627A95E8" DbType="8" Precision="10" />
+                    <Field Name="AppName" Ordinal="2" DbType="3" Length="280" />
+                  </Fields>
+                </Table>
+                <Table Name="ASPStateTempSessions">
+                  <Fields>
+                    <Field Name="SessionId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK__ASPState__C9F492905CC1BC92" DbType="12" Length="88" />
+                    <Field Name="Created" Ordinal="2" DefaultValue="(getutcdate())" DbType="4" />
+                    <Field Name="Expires" Ordinal="3" DbType="4" />
+                    <Field Name="LockDate" Ordinal="4" DbType="4" />
+                    <Field Name="LockDateLocal" Ordinal="5" DbType="4" />
+                    <Field Name="LockCookie" Ordinal="6" DbType="8" Precision="10" />
+                    <Field Name="Timeout" Ordinal="7" DbType="8" Precision="10" />
+                    <Field Name="Locked" Ordinal="8" DbType="2" />
+                    <Field Name="SessionItemShort" Ordinal="9" IsOptional="true" DbType="23" Length="7000" />
+                    <Field Name="SessionItemLong" Ordinal="10" IsOptional="true" DbType="7" Length="2147483647" />
+                    <Field Name="Flags" Ordinal="11" DefaultValue="((0))" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="CalculationDebugData">
+                  <Fields>
+                    <Field Name="CalculationDebugDataId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_CalculationDebugData" DbType="0" Precision="19" />
+                    <Field Name="TreatmentId" Ordinal="2" DbType="0" Precision="19" />
+                    <Field Name="FingerSector" Ordinal="3" DbType="24" Length="20" />
+                    <Field Name="IsFiltered" Ordinal="4" DbType="2" />
+                    <Field Name="OrganComponent" Ordinal="5" DbType="16" Precision="5" />
+                    <Field Name="Entropy" Ordinal="6" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form" Ordinal="7" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form2" Ordinal="8" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form1_1" Ordinal="9" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form1_2" Ordinal="10" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form1_3" Ordinal="11" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form1_4" Ordinal="12" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Area" Ordinal="13" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="AverageIntensity" Ordinal="14" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="AI1" Ordinal="15" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="AI2" Ordinal="16" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="AI3" Ordinal="17" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="AI4" Ordinal="18" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="NS" Ordinal="19" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Fractal" Ordinal="20" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="RingThickness" Ordinal="21" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="RingIntensity" Ordinal="22" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="BreakCoefficient" Ordinal="23" IsOptional="true" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="EPICBaseScore" Ordinal="24" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="EPICBonusScore" Ordinal="25" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="EPICScore" Ordinal="26" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="EPICRank" Ordinal="27" DbType="8" Precision="10" />
+                    <Field Name="EPICScaledScore" Ordinal="28" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="SumZScore" Ordinal="29" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="LRScore" Ordinal="30" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="LRRank" Ordinal="31" DbType="8" Precision="10" />
+                    <Field Name="LRScaledScore" Ordinal="32" DbType="5" Precision="16" Scale="4" />
+                    <Field Name="Form2Prime" Ordinal="33" DefaultValue="((0))" DbType="5" Precision="16" Scale="4" />
+                  </Fields>
+                </Table>
+                <Table Name="Calibration">
+                  <Fields>
+                    <Field Name="CalibrationId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Calibration" DbType="0" Precision="19" />
+                    <Field Name="DeviceId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="UniqueIdentifier" Ordinal="3" DbType="24" Length="48" />
+                    <Field Name="CalibrationTime" Ordinal="4" DbType="4" />
+                    <Field Name="PerformedBy" Ordinal="5" DbType="24" Length="80" />
+                    <Field Name="ImageSetId" Ordinal="6" DbType="0" Precision="19" />
+                    <Field Name="ReceivedTime" Ordinal="7" DefaultValue="(getutcdate())" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="Contact">
+                  <Fields>
+                    <Field Name="ContactId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Contact" DbType="8" Precision="10" />
+                    <Field Name="OrganizationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="FirstName" Ordinal="3" DbType="24" Length="50" />
+                    <Field Name="LastName" Ordinal="4" DbType="24" Length="50" />
+                    <Field Name="EmailAddress" Ordinal="5" DbType="24" Length="128" />
+                    <Field Name="PhoneNumber" Ordinal="6" DbType="24" Length="20" />
+                  </Fields>
+                </Table>
+                <Table Name="CreditCard">
+                  <Fields>
+                    <Field Name="CreditCardId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_CreditCard" DbType="8" Precision="10" />
+                    <Field Name="AuthorizeId" Ordinal="2" DbType="24" Length="20" />
+                    <Field Name="FirstName" Ordinal="3" DbType="24" Length="50" />
+                    <Field Name="LastName" Ordinal="4" DbType="24" Length="50" />
+                    <Field Name="AccountNumber" Ordinal="5" IsOptional="true" DbType="3" Length="4" />
+                    <Field Name="Address" Ordinal="6" IsOptional="true" DbType="24" Length="64" />
+                  </Fields>
+                </Table>
+                <Table Name="Device">
+                  <Fields>
+                    <Field Name="DeviceId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Device" DbType="8" Precision="10" />
+                    <Field Name="LocationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="UniqueIdentifier" Ordinal="3" DbType="24" Length="48" />
+                    <Field Name="AuthenticationToken" Ordinal="4" IsOptional="true" DbType="1" Length="64" />
+                    <Field Name="UidQualifier" Ordinal="5" DefaultValue="([dbo].[GetUidQualifier]())" DbType="8" Precision="10" />
+                    <Field Name="DeviceState" Ordinal="6" DefaultValue="((1))" DbType="16" Precision="5" />
+                    <Field Name="SerialNumber" Ordinal="7" DbType="24" Length="40" />
+                    <Field Name="DateIssued" Ordinal="8" DbType="4" />
+                    <Field Name="RevisionLevel" Ordinal="9" DbType="24" Length="5" />
+                    <Field Name="ScansAvailable" Ordinal="10" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="ScansCompleted" Ordinal="11" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="CurrentStatus" Ordinal="12" DefaultValue="('')" DbType="24" Length="50" />
+                    <Field Name="LastReportTime" Ordinal="13" IsOptional="true" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="DeviceEvent">
+                  <Fields>
+                    <Field Name="DeviceEventId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_DeviceEvent" DbType="0" Precision="19" />
+                    <Field Name="DeviceId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="EventType" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="EventTime" Ordinal="4" DbType="4" />
+                    <Field Name="ReceivedTime" Ordinal="5" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="DeviceMessage">
+                  <Fields>
+                    <Field Name="DeviceId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_DeviceMessage" DbType="8" Precision="10" />
+                    <Field Name="MessageId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_DeviceMessage" DbType="0" Precision="19" />
+                    <Field Name="DeliveryTime" Ordinal="3" IsOptional="true" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="DeviceStateTracking">
+                  <Fields>
+                    <Field Name="DeviceStateTrackingId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_DeviceStateTracking" DbType="0" Precision="19" />
+                    <Field Name="DeviceId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="CurrentState" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="PreviousState" Ordinal="4" DefaultValue="((0))" DbType="16" Precision="5" />
+                    <Field Name="ChangeReason" Ordinal="5" DefaultValue="('')" DbType="24" Length="512" />
+                    <Field Name="ChangeTime" Ordinal="6" DefaultValue="(getutcdate())" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="ExceptionLog">
+                  <Fields>
+                    <Field Name="ExceptionLogId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ExceptionLog" DbType="0" Precision="19" />
+                    <Field Name="DeviceId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="RemoteExceptionLogId" Ordinal="3" DbType="0" Precision="19" />
+                    <Field Name="Title" Ordinal="4" IsOptional="true" DbType="24" Length="1024" />
+                    <Field Name="Message" Ordinal="5" DbType="24" Length="1024" />
+                    <Field Name="StackTrace" Ordinal="6" DbType="24" Length="2147483647" />
+                    <Field Name="LogTime" Ordinal="7" DbType="4" />
+                    <Field Name="User" Ordinal="8" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="FormName" Ordinal="9" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="MachineName" Ordinal="10" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="MachineOS" Ordinal="11" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="ApplicationVersion" Ordinal="12" IsOptional="true" DbType="24" Length="40" />
+                    <Field Name="CLRVersion" Ordinal="13" IsOptional="true" DbType="24" Length="50" />
+                    <Field Name="MemoryUsage" Ordinal="14" IsOptional="true" DbType="24" Length="40" />
+                    <Field Name="ReceivedTime" Ordinal="15" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="ImageCache">
+                  <Fields>
+                    <Field Name="Id" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ImageCache" DbType="0" Precision="19" />
+                    <Field Name="LookupKey" Ordinal="2" DbType="0" Precision="19" />
+                    <Field Name="Description" Ordinal="3" DbType="24" Length="50" />
+                    <Field Name="Image" Ordinal="4" DbType="23" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="ImageSet">
+                  <Fields>
+                    <Field Name="ImageSetId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ImageSet" DbType="0" Precision="19" />
+                    <Field Name="UniqueIdentifier" Ordinal="2" DbType="24" Length="48" />
+                    <Field Name="Images" Ordinal="3" DbType="23" Length="2147483647" />
+                  </Fields>
+                </Table>
+                <Table Name="LicenseOrganSystem">
+                  <Fields>
+                    <Field Name="LicenseOrganSystemId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_LicenseOrganSystem" DbType="16" Precision="5" />
+                    <Field Name="LicenseMode" Ordinal="2" DefaultValue="((1))" DbType="16" Precision="5" />
+                    <Field Name="OrganSystemId" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="ReportOrder" Ordinal="4" DbType="16" Precision="5" />
+                  </Fields>
+                </Table>
+                <Table Name="Location">
+                  <Fields>
+                    <Field Name="LocationId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Location" DbType="8" Precision="10" />
+                    <Field Name="OrganizationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="UniqueIdentifier" Ordinal="3" DbType="24" Length="48" />
+                    <Field Name="Name" Ordinal="4" DbType="24" Length="80" />
+                    <Field Name="AddressLine1" Ordinal="5" DefaultValue="('')" DbType="24" Length="80" />
+                    <Field Name="AddressLine2" Ordinal="6" IsOptional="true" DefaultValue="('')" DbType="24" Length="80" />
+                    <Field Name="City" Ordinal="7" DefaultValue="('')" DbType="24" Length="40" />
+                    <Field Name="State" Ordinal="8" DefaultValue="('')" DbType="24" Length="2" />
+                    <Field Name="Country" Ordinal="9" DefaultValue="('')" DbType="24" Length="2" />
+                    <Field Name="PostalCode" Ordinal="10" DefaultValue="('')" DbType="24" Length="10" />
+                    <Field Name="PhoneNumber" Ordinal="11" DbType="24" Length="20" />
+                    <Field Name="Latitude" Ordinal="12" IsOptional="true" DbType="13" Precision="18" Scale="7" />
+                    <Field Name="Longitude" Ordinal="13" IsOptional="true" DbType="13" Precision="18" Scale="7" />
+                    <Field Name="IsActive" Ordinal="14" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="Message">
+                  <Fields>
+                    <Field Name="MessageId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Message" DbType="0" Precision="19" />
+                    <Field Name="MessageType" Ordinal="2" DbType="16" Precision="5" />
+                    <Field Name="Title" Ordinal="3" DbType="24" Length="255" />
+                    <Field Name="Body" Ordinal="4" DbType="24" Length="4096" />
+                    <Field Name="CreateTime" Ordinal="5" DbType="4" />
+                    <Field Name="StartTime" Ordinal="6" DbType="4" />
+                    <Field Name="EndTime" Ordinal="7" IsOptional="true" DefaultValue="(NULL)" DbType="4" />
+                    <Field Name="IsActive" Ordinal="8" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="NBAnalysisResult">
+                  <Fields>
+                    <Field Name="NBAnalysisResultId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_NBAnalysisResult" DbType="0" Precision="19" />
+                    <Field Name="TreatmentId" Ordinal="2" DbType="0" Precision="19" />
+                    <Field Name="OrganSystemId" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="ResultScoreFiltered" Ordinal="4" DbType="13" Precision="16" Scale="4" />
+                    <Field Name="ResultScoreUnfiltered" Ordinal="5" DbType="13" Precision="16" Scale="4" />
+                    <Field Name="ProbabilityFiltered" Ordinal="6" DbType="13" Precision="16" Scale="4" />
+                    <Field Name="ProbabilityUnfiltered" Ordinal="7" DbType="13" Precision="16" Scale="4" />
+                  </Fields>
+                </Table>
+                <Table Name="Organ">
+                  <Fields>
+                    <Field Name="OrganId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_Organ" DbType="16" Precision="5" />
+                    <Field Name="OrganComponent" Ordinal="2" DbType="16" Precision="5" />
+                    <Field Name="Description" Ordinal="3" DbType="24" Length="128" />
+                    <Field Name="RComp" Ordinal="4" IsOptional="true" DbType="24" Length="10" />
+                    <Field Name="LComp" Ordinal="5" IsOptional="true" DbType="24" Length="10" />
+                  </Fields>
+                </Table>
+                <Table Name="Organization">
+                  <Fields>
+                    <Field Name="OrganizationId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Organization" DbType="8" Precision="10" />
+                    <Field Name="OrganizationType" Ordinal="2" DbType="16" Precision="5" />
+                    <Field Name="Name" Ordinal="3" DbType="24" Length="128" />
+                    <Field Name="UniqueIdentifier" Ordinal="4" DbType="24" Length="48" />
+                    <Field Name="IsActive" Ordinal="5" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="OrganSystem">
+                  <Fields>
+                    <Field Name="OrganSystemId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_OrganSystem" DbType="16" Precision="5" />
+                    <Field Name="Description" Ordinal="2" DbType="24" Length="50" />
+                  </Fields>
+                </Table>
+                <Table Name="OrganSystemOrgan">
+                  <Fields>
+                    <Field Name="OrganId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_OrganSystemOrgan" DbType="16" Precision="5" />
+                    <Field Name="LicenseOrganSystemId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_OrganSystemOrgan" DbType="16" Precision="5" />
+                    <Field Name="ReportOrder" Ordinal="3" DbType="16" Precision="5" />
+                  </Fields>
+                </Table>
+                <Table Name="Patient">
+                  <Fields>
+                    <Field Name="PatientId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Patient" DbType="8" Precision="10" />
+                    <Field Name="UniqueIdentifier" Ordinal="2" DbType="24" Length="48" />
+                    <Field Name="FirstName" Ordinal="3" DbType="24" Length="50" />
+                    <Field Name="LastName" Ordinal="4" DbType="24" Length="50" />
+                    <Field Name="MiddleInitial" Ordinal="5" IsOptional="true" DbType="3" Length="1" />
+                    <Field Name="PhoneNumber" Ordinal="6" IsOptional="true" DbType="24" Length="20" />
+                    <Field Name="EmailAddress" Ordinal="7" IsOptional="true" DbType="24" Length="128" />
+                    <Field Name="BirthDate" Ordinal="8" DbType="4" />
+                    <Field Name="Gender" Ordinal="9" DbType="16" Precision="5" />
+                    <Field Name="LocationId" Ordinal="10" DbType="8" Precision="10" />
+                    <Field Name="ReceivedTime" Ordinal="11" DefaultValue="(getutcdate())" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="PurchaseHistory">
+                  <Fields>
+                    <Field Name="PurchaseHistoryId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_PurchaseHistory" DbType="8" Precision="10" />
+                    <Field Name="LocationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="DeviceId" Ordinal="3" DbType="8" Precision="10" />
+                    <Field Name="UserId" Ordinal="4" DbType="8" Precision="10" />
+                    <Field Name="PurchaseTime" Ordinal="5" DbType="4" />
+                    <Field Name="ScansPurchased" Ordinal="6" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="AmountPaid" Ordinal="7" DefaultValue="((0))" DbType="9" Precision="19" Scale="4" />
+                    <Field Name="TransactionId" Ordinal="8" DbType="24" Length="64" />
+                    <Field Name="PurchaseNotes" Ordinal="9" DefaultValue="('')" DbType="24" Length="2048" />
+                  </Fields>
+                </Table>
+                <Table Name="Role">
+                  <Fields>
+                    <Field Name="RoleId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Role" DbType="16" Precision="5" />
+                    <Field Name="Name" Ordinal="2" DbType="24" Length="80" />
+                    <Field Name="Description" Ordinal="3" IsOptional="true" DbType="24" Length="512" />
+                  </Fields>
+                </Table>
+                <Table Name="ScanHistory">
+                  <Fields>
+                    <Field Name="ScanHistoryId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ScanHistory" DbType="0" Precision="19" />
+                    <Field Name="DeviceId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="ScanType" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="ScanStartTime" Ordinal="4" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="ScanRate">
+                  <Fields>
+                    <Field Name="ScanRateId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_ScanRate" DbType="8" Precision="10" />
+                    <Field Name="ScanType" Ordinal="2" DbType="16" Precision="5" />
+                    <Field Name="RatePerScan" Ordinal="3" DbType="9" Precision="19" Scale="4" />
+                    <Field Name="MinCountForRate" Ordinal="4" DbType="8" Precision="10" />
+                    <Field Name="MaxCountForRate" Ordinal="5" DbType="8" Precision="10" />
+                    <Field Name="EffectiveDate" Ordinal="6" DbType="4" />
+                    <Field Name="IsActive" Ordinal="7" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="SchemaVersion">
+                  <Fields>
+                    <Field Name="Version" Ordinal="1" DbType="16" Precision="5" />
+                  </Fields>
+                </Table>
+                <Table Name="Severity">
+                  <Fields>
+                    <Field Name="SeverityId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Severity" DbType="0" Precision="19" />
+                    <Field Name="TreatmentId" Ordinal="2" DbType="0" Precision="19" />
+                    <Field Name="OrganId" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="PhysicalRight" Ordinal="4" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="PhysicalLeft" Ordinal="5" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="MentalRight" Ordinal="6" IsOptional="true" DbType="8" Precision="10" />
+                    <Field Name="MentalLeft" Ordinal="7" IsOptional="true" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="SupportArea">
+                  <Fields>
+                    <Field Name="SupportAreaId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_SupportArea" DbType="16" Precision="5" />
+                    <Field Name="Name" Ordinal="2" DbType="24" Length="40" />
+                    <Field Name="Description" Ordinal="3" IsOptional="true" DbType="24" Length="80" />
+                    <Field Name="IsActive" Ordinal="4" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="SupportIssue">
+                  <Fields>
+                    <Field Name="SupportIssueId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_SupportIssue" DbType="8" Precision="10" />
+                    <Field Name="ParentId" Ordinal="2" DefaultValue="((0))" DbType="8" Precision="10" />
+                    <Field Name="SupportAreaId" Ordinal="3" DbType="16" Precision="5" />
+                    <Field Name="CreateTime" Ordinal="4" DbType="4" />
+                    <Field Name="ToUserId" Ordinal="5" IsOptional="true" DefaultValue="(NULL)" DbType="8" Precision="10" />
+                    <Field Name="FromUserId" Ordinal="6" IsOptional="true" DefaultValue="(NULL)" DbType="8" Precision="10" />
+                    <Field Name="Subject" Ordinal="7" DbType="24" Length="512" />
+                    <Field Name="Body" Ordinal="8" DbType="24" Length="6144" />
+                    <Field Name="Status" Ordinal="9" DefaultValue="('')" DbType="24" Length="128" />
+                    <Field Name="Priority" Ordinal="10" DefaultValue="((0))" DbType="16" Precision="5" />
+                    <Field Name="IsPublic" Ordinal="11" DefaultValue="((0))" DbType="22" Precision="3" />
+                    <Field Name="IsClosedByToUser" Ordinal="12" DefaultValue="((0))" DbType="22" Precision="3" />
+                    <Field Name="IsClosedByFromUser" Ordinal="13" DefaultValue="((0))" DbType="22" Precision="3" />
+                    <Field Name="IsActive" Ordinal="14" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="SystemSetting">
+                  <Fields>
+                    <Field Name="Name" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_EC_System" DbType="24" Length="50" />
+                    <Field Name="Value" Ordinal="2" DbType="24" Length="2048" />
+                  </Fields>
+                </Table>
+                <Table Name="Treatment">
+                  <Fields>
+                    <Field Name="TreatmentId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_Treatment" DbType="0" Precision="19" />
+                    <Field Name="PatientId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="CalibrationId" Ordinal="3" DbType="0" Precision="19" />
+                    <Field Name="UniqueIdentifier" Ordinal="4" DbType="24" Length="48" />
+                    <Field Name="TreatmentType" Ordinal="5" DbType="16" Precision="5" />
+                    <Field Name="TreatmentTime" Ordinal="6" DbType="4" />
+                    <Field Name="PerformedBy" Ordinal="7" DbType="24" Length="80" />
+                    <Field Name="EnergizedImageSetId" Ordinal="8" DbType="0" Precision="19" />
+                    <Field Name="FingerImageSetId" Ordinal="9" IsOptional="true" DbType="0" Precision="19" />
+                    <Field Name="SoftwareVersion" Ordinal="10" DbType="24" Length="20" />
+                    <Field Name="FirmwareVersion" Ordinal="11" DbType="24" Length="50" />
+                    <Field Name="AnalysisTime" Ordinal="12" DbType="4" />
+                    <Field Name="ReceivedTime" Ordinal="13" DefaultValue="(getutcdate())" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="UpdateStatus">
+                  <Fields>
+                    <Field Name="Controller" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UpdateStatus" DbType="24" Length="512" />
+                    <Field Name="Action" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UpdateStatus" DbType="24" Length="128" />
+                    <Field Name="Method" Ordinal="3" DbType="24" Length="16" />
+                    <Field Name="UpdateTime" Ordinal="4" DefaultValue="(getutcdate())" DbType="4" />
+                  </Fields>
+                </Table>
+                <Table Name="User">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsIdentity="true" IsPrimaryKey="true" PkConstraintName="PK_User" DbType="8" Precision="10" />
+                    <Field Name="OrganizationId" Ordinal="2" DbType="8" Precision="10" />
+                    <Field Name="Username" Ordinal="3" DbType="24" Length="80" />
+                    <Field Name="Password" Ordinal="4" DbType="24" Length="512" />
+                    <Field Name="EmailAddress" Ordinal="5" DbType="24" Length="128" />
+                    <Field Name="FirstName" Ordinal="6" DbType="24" Length="50" />
+                    <Field Name="LastName" Ordinal="7" DbType="24" Length="50" />
+                    <Field Name="CreateTime" Ordinal="8" DefaultValue="(getutcdate())" DbType="4" />
+                    <Field Name="LastLoginTime" Ordinal="9" IsOptional="true" DbType="4" />
+                    <Field Name="LastActivityTime" Ordinal="10" IsOptional="true" DbType="4" />
+                    <Field Name="LastPasswordChangeTime" Ordinal="11" IsOptional="true" DbType="4" />
+                    <Field Name="LastLockoutTime" Ordinal="12" IsOptional="true" DbType="4" />
+                    <Field Name="IsActive" Ordinal="13" DefaultValue="((1))" DbType="22" Precision="3" />
+                  </Fields>
+                </Table>
+                <Table Name="UserAccountRestriction">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserAccountRestriction" DbType="8" Precision="10" />
+                    <Field Name="AccountRestrictionId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UserAccountRestriction" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="UserAssignedLocation">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserAssignedLocation" DbType="8" Precision="10" />
+                    <Field Name="LocationId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UserAssignedLocation" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="UserCreditCard">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserCreditCard" DbType="8" Precision="10" />
+                    <Field Name="CreditCardId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UserCreditCard" DbType="8" Precision="10" />
+                  </Fields>
+                </Table>
+                <Table Name="UserRole">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserRole" DbType="8" Precision="10" />
+                    <Field Name="RoleId" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UserRole" DbType="16" Precision="5" />
+                  </Fields>
+                </Table>
+                <Table Name="UserSalt">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserSalt" DbType="8" Precision="10" />
+                    <Field Name="Salt" Ordinal="2" DbType="24" Length="4096" />
+                  </Fields>
+                </Table>
+                <Table Name="UserSetting">
+                  <Fields>
+                    <Field Name="UserId" Ordinal="1" IsPrimaryKey="true" PkConstraintName="PK_UserSetting" DbType="8" Precision="10" />
+                    <Field Name="Name" Ordinal="2" IsPrimaryKey="true" PkConstraintName="PK_UserSetting" DbType="24" Length="50" />
+                    <Field Name="Value" Ordinal="3" DefaultValue="('')" DbType="24" Length="2048" />
+                  </Fields>
+                </Table>
+              </Tables>
+            </Schema>
+          </Schemas>
+          <ForeignKeyConstraints>
+            <ForeignKeyConstraint Name="dbo:ActiveOrganization:FK_ActiveOrganization_ActivityType">
+              <FieldPairs>
+                <FieldPair PkField="dbo:ActivityType:ActivityTypeId" FkField="dbo:ActiveOrganization:ActivityTypeId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:ActiveOrganization:FK_ActiveOrganization_Location">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Location:LocationId" FkField="dbo:ActiveOrganization:LocationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:AnalysisResult:FK_AnalysisResult_Treatment">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Treatment:TreatmentId" FkField="dbo:AnalysisResult:TreatmentId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:CalculationDebugData:FK_CalculationDebugData_Treatment">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Treatment:TreatmentId" FkField="dbo:CalculationDebugData:TreatmentId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Calibration:FK_Calibration_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:Calibration:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Calibration:FK_Calibration_ImageSet">
+              <FieldPairs>
+                <FieldPair PkField="dbo:ImageSet:ImageSetId" FkField="dbo:Calibration:ImageSetId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Contact:FK_Contact_Organization">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Organization:OrganizationId" FkField="dbo:Contact:OrganizationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Device:FK_Device_Location">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Location:LocationId" FkField="dbo:Device:LocationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:DeviceEvent:FK_DeviceEvent_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:DeviceEvent:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:DeviceMessage:FK_DeviceMessage_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:DeviceMessage:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:DeviceMessage:FK_DeviceMessage_Message">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Message:MessageId" FkField="dbo:DeviceMessage:MessageId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:DeviceStateTracking:FK_DeviceStateTracking_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:DeviceStateTracking:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:ExceptionLog:FK_ExceptionLog_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:ExceptionLog:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:LicenseOrganSystem:FK_LicenseOrganSystem_OrganSystem">
+              <FieldPairs>
+                <FieldPair PkField="dbo:OrganSystem:OrganSystemId" FkField="dbo:LicenseOrganSystem:OrganSystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Location:FK_Location_Organization">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Organization:OrganizationId" FkField="dbo:Location:OrganizationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:NBAnalysisResult:FK_NBAnalysisResult_OrganSystem">
+              <FieldPairs>
+                <FieldPair PkField="dbo:OrganSystem:OrganSystemId" FkField="dbo:NBAnalysisResult:OrganSystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:NBAnalysisResult:FK_NBAnalysisResult_Treatment">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Treatment:TreatmentId" FkField="dbo:NBAnalysisResult:TreatmentId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:OrganSystemOrgan:FK_OrganSystemOrgan_LicenseOrganSystem">
+              <FieldPairs>
+                <FieldPair PkField="dbo:LicenseOrganSystem:LicenseOrganSystemId" FkField="dbo:OrganSystemOrgan:LicenseOrganSystemId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:OrganSystemOrgan:FK_OrganSystemOrgan_Organ">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Organ:OrganId" FkField="dbo:OrganSystemOrgan:OrganId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Patient:FK_Patient_Location">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Location:LocationId" FkField="dbo:Patient:LocationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:PurchaseHistory:FK_PurchaseHistory_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:PurchaseHistory:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:PurchaseHistory:FK_PurchaseHistory_Location">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Location:LocationId" FkField="dbo:PurchaseHistory:LocationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:PurchaseHistory:FK_PurchaseHistory_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:PurchaseHistory:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:ScanHistory:FK_ScanHistory_Device">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Device:DeviceId" FkField="dbo:ScanHistory:DeviceId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Severity:FK_Severity_Organ">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Organ:OrganId" FkField="dbo:Severity:OrganId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Severity:FK_Severity_Treatment">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Treatment:TreatmentId" FkField="dbo:Severity:TreatmentId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SupportIssue:FK_SupportIssue_FromUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:SupportIssue:FromUserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SupportIssue:FK_SupportIssue_SupportArea">
+              <FieldPairs>
+                <FieldPair PkField="dbo:SupportArea:SupportAreaId" FkField="dbo:SupportIssue:SupportAreaId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:SupportIssue:FK_SupportIssue_ToUser">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:SupportIssue:ToUserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Treatment:FK_Treatment_Calibration">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Calibration:CalibrationId" FkField="dbo:Treatment:CalibrationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Treatment:FK_Treatment_EnergizedImageSet">
+              <FieldPairs>
+                <FieldPair PkField="dbo:ImageSet:ImageSetId" FkField="dbo:Treatment:EnergizedImageSetId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Treatment:FK_Treatment_FingerImageSet">
+              <FieldPairs>
+                <FieldPair PkField="dbo:ImageSet:ImageSetId" FkField="dbo:Treatment:FingerImageSetId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:Treatment:FK_Treatment_Patient">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Patient:PatientId" FkField="dbo:Treatment:PatientId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:User:FK_User_Organization">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Organization:OrganizationId" FkField="dbo:User:OrganizationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserAccountRestriction:FK_UserAccountRestriction_AccountRestriction">
+              <FieldPairs>
+                <FieldPair PkField="dbo:AccountRestriction:AccountRestrictionId" FkField="dbo:UserAccountRestriction:AccountRestrictionId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserAccountRestriction:FK_UserAccountRestriction_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserAccountRestriction:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserAssignedLocation:FK_UserAssignedLocation_Location">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Location:LocationId" FkField="dbo:UserAssignedLocation:LocationId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserAssignedLocation:FK_UserAssignedLocation_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserAssignedLocation:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserCreditCard:FK_UserCreditCard_CreditCard">
+              <FieldPairs>
+                <FieldPair PkField="dbo:CreditCard:CreditCardId" FkField="dbo:UserCreditCard:CreditCardId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserCreditCard:FK_UserCreditCard_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserCreditCard:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserRole:FK_UserRole_Role">
+              <FieldPairs>
+                <FieldPair PkField="dbo:Role:RoleId" FkField="dbo:UserRole:RoleId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserRole:FK_UserRole_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserRole:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserSalt:FK_UserSalt_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserSalt:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+            <ForeignKeyConstraint Name="dbo:UserSetting:FK_UserSetting_User">
+              <FieldPairs>
+                <FieldPair PkField="dbo:User:UserId" FkField="dbo:UserSetting:UserId" />
+              </FieldPairs>
+            </ForeignKeyConstraint>
+          </ForeignKeyConstraints>
+        </Catalog>
+      </Catalogs>
+    </TargetDatabase>
+  </TargetDatabases>
+  <MappingStores>
+    <MappingStore Type="2D18D138-1DD2-467E-86CC-4838250611AE">
+      <EntityMappings>
+        <EntityMapping EntityName=":AccountRestriction" TargetName="EPICCentral:dbo:AccountRestriction">
+          <FieldMappings>
+            <FieldMapping FieldName="AccountRestrictionId" TargetFieldName="AccountRestrictionId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="AccountRestrictionType" TargetFieldName="AccountRestrictionType" TypeConverterToUse="EPICCentralDL.Customization.AccountRestrictionTypeConverter" />
+            <FieldMapping FieldName="CreatedBy" TargetFieldName="CreatedBy" />
+            <FieldMapping FieldName="CreationTime" TargetFieldName="CreationTime" />
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="EmailAddress" />
+            <FieldMapping FieldName="IPAddress" TargetFieldName="IPAddress" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="Parameters" TargetFieldName="Parameters" />
+            <FieldMapping FieldName="RemovalTime" TargetFieldName="RemovalTime" />
+            <FieldMapping FieldName="RestrictionKey" TargetFieldName="RestrictionKey" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ActiveOrganization" TargetName="EPICCentral:dbo:ActiveOrganization">
+          <FieldMappings>
+            <FieldMapping FieldName="ActiveOrganizationId" TargetFieldName="ActiveOrganizationId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="ActivityTime" TargetFieldName="ActivityTime" />
+            <FieldMapping FieldName="ActivityTypeId" TargetFieldName="ActivityTypeId" />
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ActivityType" TargetName="EPICCentral:dbo:ActivityType">
+          <FieldMappings>
+            <FieldMapping FieldName="ActivityTypeId" TargetFieldName="ActivityTypeId" />
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":AnalysisResult" TargetName="EPICCentral:dbo:AnalysisResult">
+          <FieldMappings>
+            <FieldMapping FieldName="AI1" TargetFieldName="AI1" />
+            <FieldMapping FieldName="AI2" TargetFieldName="AI2" />
+            <FieldMapping FieldName="AI3" TargetFieldName="AI3" />
+            <FieldMapping FieldName="AI4" TargetFieldName="AI4" />
+            <FieldMapping FieldName="AnalysisResultId" TargetFieldName="AnalysisResultID" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="AnalysisTime" TargetFieldName="AnalysisTime" />
+            <FieldMapping FieldName="AngleOfRotation" TargetFieldName="AngleOfRotation" />
+            <FieldMapping FieldName="AverageIntensity" TargetFieldName="AverageIntensity" />
+            <FieldMapping FieldName="BreakCoefficient" TargetFieldName="BreakCoefficient" />
+            <FieldMapping FieldName="CenterX" TargetFieldName="CenterX" />
+            <FieldMapping FieldName="CenterY" TargetFieldName="CenterY" />
+            <FieldMapping FieldName="EndAngle" TargetFieldName="EndAngle" />
+            <FieldMapping FieldName="Entropy" TargetFieldName="Entropy" />
+            <FieldMapping FieldName="FingerDesc" TargetFieldName="FingerDesc" />
+            <FieldMapping FieldName="FingerType" TargetFieldName="FingerType" />
+            <FieldMapping FieldName="Form11" TargetFieldName="Form1_1" />
+            <FieldMapping FieldName="Form12" TargetFieldName="Form1_2" />
+            <FieldMapping FieldName="Form13" TargetFieldName="Form1_3" />
+            <FieldMapping FieldName="Form14" TargetFieldName="Form1_4" />
+            <FieldMapping FieldName="Form2" TargetFieldName="Form2" />
+            <FieldMapping FieldName="Form2Prime" TargetFieldName="Form2Prime" />
+            <FieldMapping FieldName="FormCoefficient" TargetFieldName="FormCoefficient" />
+            <FieldMapping FieldName="FractalCoefficient" TargetFieldName="FractalCoefficient" />
+            <FieldMapping FieldName="IntegralArea" TargetFieldName="IntegralArea" />
+            <FieldMapping FieldName="IsFiltered" TargetFieldName="IsFiltered" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="JsInteger" TargetFieldName="JsInteger" />
+            <FieldMapping FieldName="NoiseLevel" TargetFieldName="NoiseLevel" />
+            <FieldMapping FieldName="NormalizedArea" TargetFieldName="NormalizedArea" />
+            <FieldMapping FieldName="RadiusMax" TargetFieldName="RadiusMax" />
+            <FieldMapping FieldName="RadiusMin" TargetFieldName="RadiusMin" />
+            <FieldMapping FieldName="RingIntensity" TargetFieldName="RingIntensity" />
+            <FieldMapping FieldName="RingThickness" TargetFieldName="RingThickness" />
+            <FieldMapping FieldName="SectorArea" TargetFieldName="SectorArea" />
+            <FieldMapping FieldName="SectorNumber" TargetFieldName="SectorNumber" />
+            <FieldMapping FieldName="SoftwareVersion" TargetFieldName="SoftwareVersion" />
+            <FieldMapping FieldName="StartAngle" TargetFieldName="StartAngle" />
+            <FieldMapping FieldName="TreatmentId" TargetFieldName="TreatmentId" />
+            <FieldMapping FieldName="UserName" TargetFieldName="UserName" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Application" TargetName="EPICCentral:dbo:ASPStateTempApplications">
+          <FieldMappings>
+            <FieldMapping FieldName="AppId" TargetFieldName="AppId" />
+            <FieldMapping FieldName="AppName" TargetFieldName="AppName" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":CalculationDebugData" TargetName="EPICCentral:dbo:CalculationDebugData">
+          <FieldMappings>
+            <FieldMapping FieldName="AI1" TargetFieldName="AI1" />
+            <FieldMapping FieldName="AI2" TargetFieldName="AI2" />
+            <FieldMapping FieldName="AI3" TargetFieldName="AI3" />
+            <FieldMapping FieldName="AI4" TargetFieldName="AI4" />
+            <FieldMapping FieldName="Area" TargetFieldName="Area" />
+            <FieldMapping FieldName="AverageIntensity" TargetFieldName="AverageIntensity" />
+            <FieldMapping FieldName="BreakCoefficient" TargetFieldName="BreakCoefficient" />
+            <FieldMapping FieldName="CalculationDebugDataId" TargetFieldName="CalculationDebugDataId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="Entropy" TargetFieldName="Entropy" />
+            <FieldMapping FieldName="EPICBaseScore" TargetFieldName="EPICBaseScore" />
+            <FieldMapping FieldName="EPICBonusScore" TargetFieldName="EPICBonusScore" />
+            <FieldMapping FieldName="EPICRank" TargetFieldName="EPICRank" />
+            <FieldMapping FieldName="EPICScaledScore" TargetFieldName="EPICScaledScore" />
+            <FieldMapping FieldName="EPICScore" TargetFieldName="EPICScore" />
+            <FieldMapping FieldName="FingerSector" TargetFieldName="FingerSector" />
+            <FieldMapping FieldName="Form" TargetFieldName="Form" />
+            <FieldMapping FieldName="Form11" TargetFieldName="Form1_1" />
+            <FieldMapping FieldName="Form12" TargetFieldName="Form1_2" />
+            <FieldMapping FieldName="Form13" TargetFieldName="Form1_3" />
+            <FieldMapping FieldName="Form14" TargetFieldName="Form1_4" />
+            <FieldMapping FieldName="Form2" TargetFieldName="Form2" />
+            <FieldMapping FieldName="Form2Prime" TargetFieldName="Form2Prime" />
+            <FieldMapping FieldName="Fractal" TargetFieldName="Fractal" />
+            <FieldMapping FieldName="IsFiltered" TargetFieldName="IsFiltered" />
+            <FieldMapping FieldName="LRRank" TargetFieldName="LRRank" />
+            <FieldMapping FieldName="LRScaledScore" TargetFieldName="LRScaledScore" />
+            <FieldMapping FieldName="LRScore" TargetFieldName="LRScore" />
+            <FieldMapping FieldName="NS" TargetFieldName="NS" />
+            <FieldMapping FieldName="OrganComponent" TargetFieldName="OrganComponent" TypeConverterToUse="EPICCentralDL.Customization.OrganComponentConverter" />
+            <FieldMapping FieldName="RingIntensity" TargetFieldName="RingIntensity" />
+            <FieldMapping FieldName="RingThickness" TargetFieldName="RingThickness" />
+            <FieldMapping FieldName="SumZScore" TargetFieldName="SumZScore" />
+            <FieldMapping FieldName="TreatmentId" TargetFieldName="TreatmentId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Calibration" TargetName="EPICCentral:dbo:Calibration">
+          <FieldMappings>
+            <FieldMapping FieldName="CalibrationId" TargetFieldName="CalibrationId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="CalibrationTime" TargetFieldName="CalibrationTime" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="ImageSetId" TargetFieldName="ImageSetId" />
+            <FieldMapping FieldName="PerformedBy" TargetFieldName="PerformedBy" />
+            <FieldMapping FieldName="ReceivedTime" TargetFieldName="ReceivedTime" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Contact" TargetName="EPICCentral:dbo:Contact">
+          <FieldMappings>
+            <FieldMapping FieldName="ContactId" TargetFieldName="ContactId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="EmailAddress" />
+            <FieldMapping FieldName="FirstName" TargetFieldName="FirstName" />
+            <FieldMapping FieldName="LastName" TargetFieldName="LastName" />
+            <FieldMapping FieldName="OrganizationId" TargetFieldName="OrganizationId" />
+            <FieldMapping FieldName="PhoneNumber" TargetFieldName="PhoneNumber" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":CreditCard" TargetName="EPICCentral:dbo:CreditCard">
+          <FieldMappings>
+            <FieldMapping FieldName="AccountNumber" TargetFieldName="AccountNumber" />
+            <FieldMapping FieldName="Address" TargetFieldName="Address" />
+            <FieldMapping FieldName="AuthorizeId" TargetFieldName="AuthorizeId" />
+            <FieldMapping FieldName="CreditCardId" TargetFieldName="CreditCardId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="FirstName" TargetFieldName="FirstName" />
+            <FieldMapping FieldName="LastName" TargetFieldName="LastName" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Device" TargetName="EPICCentral:dbo:Device">
+          <FieldMappings>
+            <FieldMapping FieldName="AuthenticationToken" TargetFieldName="AuthenticationToken" />
+            <FieldMapping FieldName="CurrentStatus" TargetFieldName="CurrentStatus" />
+            <FieldMapping FieldName="DateIssued" TargetFieldName="DateIssued" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="DeviceState" TargetFieldName="DeviceState" TypeConverterToUse="EPICCentralDL.Customization.DeviceStateTypeConverter" />
+            <FieldMapping FieldName="LastReportTime" TargetFieldName="LastReportTime" />
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" />
+            <FieldMapping FieldName="RevisionLevel" TargetFieldName="RevisionLevel" />
+            <FieldMapping FieldName="ScansAvailable" TargetFieldName="ScansAvailable" />
+            <FieldMapping FieldName="ScansUsed" TargetFieldName="ScansCompleted" />
+            <FieldMapping FieldName="SerialNumber" TargetFieldName="SerialNumber" />
+            <FieldMapping FieldName="UidQualifier" TargetFieldName="UidQualifier" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":DeviceEvent" TargetName="EPICCentral:dbo:DeviceEvent">
+          <FieldMappings>
+            <FieldMapping FieldName="DeviceEventId" TargetFieldName="DeviceEventId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="EventTime" TargetFieldName="EventTime" />
+            <FieldMapping FieldName="EventType" TargetFieldName="EventType" TypeConverterToUse="EPICCentralDL.Customization.EventTypeConverter" />
+            <FieldMapping FieldName="ReceivedTime" TargetFieldName="ReceivedTime" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":DeviceMessage" TargetName="EPICCentral:dbo:DeviceMessage">
+          <FieldMappings>
+            <FieldMapping FieldName="DeliveryTime" TargetFieldName="DeliveryTime" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="MessageId" TargetFieldName="MessageId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":DeviceStateTracking" TargetName="EPICCentral:dbo:DeviceStateTracking">
+          <FieldMappings>
+            <FieldMapping FieldName="ChangeReason" TargetFieldName="ChangeReason" />
+            <FieldMapping FieldName="ChangeTime" TargetFieldName="ChangeTime" />
+            <FieldMapping FieldName="CurrentState" TargetFieldName="CurrentState" TypeConverterToUse="EPICCentralDL.Customization.DeviceStateTypeConverter" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="DeviceStateTrackingId" TargetFieldName="DeviceStateTrackingId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="PreviousState" TargetFieldName="PreviousState" TypeConverterToUse="EPICCentralDL.Customization.DeviceStateTypeConverter" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ExceptionLog" TargetName="EPICCentral:dbo:ExceptionLog">
+          <FieldMappings>
+            <FieldMapping FieldName="ApplicationVersion" TargetFieldName="ApplicationVersion" />
+            <FieldMapping FieldName="CLRVersion" TargetFieldName="CLRVersion" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="ExceptionLogId" TargetFieldName="ExceptionLogId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="FormName" TargetFieldName="FormName" />
+            <FieldMapping FieldName="LogTime" TargetFieldName="LogTime" />
+            <FieldMapping FieldName="MachineName" TargetFieldName="MachineName" />
+            <FieldMapping FieldName="MachineOS" TargetFieldName="MachineOS" />
+            <FieldMapping FieldName="MemoryUsage" TargetFieldName="MemoryUsage" />
+            <FieldMapping FieldName="Message" TargetFieldName="Message" />
+            <FieldMapping FieldName="ReceivedTime" TargetFieldName="ReceivedTime" />
+            <FieldMapping FieldName="RemoteExceptionLogId" TargetFieldName="RemoteExceptionLogId" />
+            <FieldMapping FieldName="StackTrace" TargetFieldName="StackTrace" />
+            <FieldMapping FieldName="Title" TargetFieldName="Title" />
+            <FieldMapping FieldName="User" TargetFieldName="User" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ImageCache" TargetName="EPICCentral:dbo:ImageCache">
+          <FieldMappings>
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="Id" TargetFieldName="Id" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="Image" TargetFieldName="Image" />
+            <FieldMapping FieldName="LookupKey" TargetFieldName="LookupKey" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ImageSet" TargetName="EPICCentral:dbo:ImageSet">
+          <FieldMappings>
+            <FieldMapping FieldName="Images" TargetFieldName="Images" />
+            <FieldMapping FieldName="ImageSetId" TargetFieldName="ImageSetId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":LicenseOrganSystem" TargetName="EPICCentral:dbo:LicenseOrganSystem">
+          <FieldMappings>
+            <FieldMapping FieldName="LicenseMode" TargetFieldName="LicenseMode" TypeConverterToUse="EPICCentralDL.Customization.LicenseModeTypeConverter" />
+            <FieldMapping FieldName="LicenseOrganSystemId" TargetFieldName="LicenseOrganSystemId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="OrganSystemId" TargetFieldName="OrganSystemId" />
+            <FieldMapping FieldName="ReportOrder" TargetFieldName="ReportOrder" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Location" TargetName="EPICCentral:dbo:Location">
+          <FieldMappings>
+            <FieldMapping FieldName="AddressLine1" TargetFieldName="AddressLine1" />
+            <FieldMapping FieldName="AddressLine2" TargetFieldName="AddressLine2" />
+            <FieldMapping FieldName="City" TargetFieldName="City" />
+            <FieldMapping FieldName="Country" TargetFieldName="Country" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="Latitude" TargetFieldName="Latitude" />
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="Longitude" TargetFieldName="Longitude" />
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="OrganizationId" TargetFieldName="OrganizationId" />
+            <FieldMapping FieldName="PhoneNumber" TargetFieldName="PhoneNumber" />
+            <FieldMapping FieldName="PostalCode" TargetFieldName="PostalCode" />
+            <FieldMapping FieldName="State" TargetFieldName="State" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Message" TargetName="EPICCentral:dbo:Message">
+          <FieldMappings>
+            <FieldMapping FieldName="Body" TargetFieldName="Body" />
+            <FieldMapping FieldName="CreateTime" TargetFieldName="CreateTime" />
+            <FieldMapping FieldName="EndTime" TargetFieldName="EndTime" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="MessageId" TargetFieldName="MessageId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="MessageType" TargetFieldName="MessageType" TypeConverterToUse="EPICCentralDL.Customization.MessageTypeConverter" />
+            <FieldMapping FieldName="StartTime" TargetFieldName="StartTime" />
+            <FieldMapping FieldName="Title" TargetFieldName="Title" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":NBAnalysisResult" TargetName="EPICCentral:dbo:NBAnalysisResult">
+          <FieldMappings>
+            <FieldMapping FieldName="NBAnalysisResultId" TargetFieldName="NBAnalysisResultId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="OrganSystemId" TargetFieldName="OrganSystemId" />
+            <FieldMapping FieldName="ProbabilityFiltered" TargetFieldName="ProbabilityFiltered" />
+            <FieldMapping FieldName="ProbabilityUnfiltered" TargetFieldName="ProbabilityUnfiltered" />
+            <FieldMapping FieldName="ResultScoreFiltered" TargetFieldName="ResultScoreFiltered" />
+            <FieldMapping FieldName="ResultScoreUnfiltered" TargetFieldName="ResultScoreUnfiltered" />
+            <FieldMapping FieldName="TreatmentId" TargetFieldName="TreatmentId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Organ" TargetName="EPICCentral:dbo:Organ">
+          <FieldMappings>
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="LComp" TargetFieldName="LComp" />
+            <FieldMapping FieldName="OrganComponent" TargetFieldName="OrganComponent" TypeConverterToUse="EPICCentralDL.Customization.OrganComponentConverter" />
+            <FieldMapping FieldName="OrganId" TargetFieldName="OrganId" />
+            <FieldMapping FieldName="RComp" TargetFieldName="RComp" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Organization" TargetName="EPICCentral:dbo:Organization">
+          <FieldMappings>
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="OrganizationId" TargetFieldName="OrganizationId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="OrganizationType" TargetFieldName="OrganizationType" TypeConverterToUse="EPICCentralDL.Customization.OrganizationTypeConverter" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":OrganSystem" TargetName="EPICCentral:dbo:OrganSystem">
+          <FieldMappings>
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="OrganSystemId" TargetFieldName="OrganSystemId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":OrganSystemOrgan" TargetName="EPICCentral:dbo:OrganSystemOrgan">
+          <FieldMappings>
+            <FieldMapping FieldName="LicenseOrganSystemId" TargetFieldName="LicenseOrganSystemId" />
+            <FieldMapping FieldName="OrganId" TargetFieldName="OrganId" />
+            <FieldMapping FieldName="ReportOrder" TargetFieldName="ReportOrder" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Patient" TargetName="EPICCentral:dbo:Patient">
+          <FieldMappings>
+            <FieldMapping FieldName="BirthDate" TargetFieldName="BirthDate" />
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="EmailAddress" />
+            <FieldMapping FieldName="FirstName" TargetFieldName="FirstName" />
+            <FieldMapping FieldName="Gender" TargetFieldName="Gender" TypeConverterToUse="EPICCentralDL.Customization.GenderConverter" />
+            <FieldMapping FieldName="LastName" TargetFieldName="LastName" />
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" />
+            <FieldMapping FieldName="MiddleInitial" TargetFieldName="MiddleInitial" />
+            <FieldMapping FieldName="PatientId" TargetFieldName="PatientId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="PhoneNumber" TargetFieldName="PhoneNumber" />
+            <FieldMapping FieldName="ReceivedTime" TargetFieldName="ReceivedTime" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":PurchaseHistory" TargetName="EPICCentral:dbo:PurchaseHistory">
+          <FieldMappings>
+            <FieldMapping FieldName="AmountPaid" TargetFieldName="AmountPaid" />
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" />
+            <FieldMapping FieldName="PurchaseHistoryId" TargetFieldName="PurchaseHistoryId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="PurchaseNotes" TargetFieldName="PurchaseNotes" />
+            <FieldMapping FieldName="PurchaseTime" TargetFieldName="PurchaseTime" />
+            <FieldMapping FieldName="ScansPurchased" TargetFieldName="ScansPurchased" />
+            <FieldMapping FieldName="TransactionId" TargetFieldName="TransactionId" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Role" TargetName="EPICCentral:dbo:Role">
+          <FieldMappings>
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="RoleId" TargetFieldName="RoleId" SequenceToUse="SCOPE_IDENTITY()" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ScanHistory" TargetName="EPICCentral:dbo:ScanHistory">
+          <FieldMappings>
+            <FieldMapping FieldName="DeviceId" TargetFieldName="DeviceId" />
+            <FieldMapping FieldName="ScanHistoryId" TargetFieldName="ScanHistoryId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="ScanStartTime" TargetFieldName="ScanStartTime" />
+            <FieldMapping FieldName="ScanType" TargetFieldName="ScanType" TypeConverterToUse="EPICCentralDL.Customization.ScanTypeConverter" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":ScanRate" TargetName="EPICCentral:dbo:ScanRate">
+          <FieldMappings>
+            <FieldMapping FieldName="EffectiveDate" TargetFieldName="EffectiveDate" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="MaxCountForRate" TargetFieldName="MaxCountForRate" />
+            <FieldMapping FieldName="MinCountForRate" TargetFieldName="MinCountForRate" />
+            <FieldMapping FieldName="RatePerScan" TargetFieldName="RatePerScan" />
+            <FieldMapping FieldName="ScanRateId" TargetFieldName="ScanRateId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="ScanType" TargetFieldName="ScanType" TypeConverterToUse="EPICCentralDL.Customization.ScanTypeConverter" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Session" TargetName="EPICCentral:dbo:ASPStateTempSessions">
+          <FieldMappings>
+            <FieldMapping FieldName="Created" TargetFieldName="Created" />
+            <FieldMapping FieldName="Expires" TargetFieldName="Expires" />
+            <FieldMapping FieldName="Flags" TargetFieldName="Flags" />
+            <FieldMapping FieldName="LockCookie" TargetFieldName="LockCookie" />
+            <FieldMapping FieldName="LockDate" TargetFieldName="LockDate" />
+            <FieldMapping FieldName="LockDateLocal" TargetFieldName="LockDateLocal" />
+            <FieldMapping FieldName="Locked" TargetFieldName="Locked" />
+            <FieldMapping FieldName="SessionId" TargetFieldName="SessionId" />
+            <FieldMapping FieldName="SessionItemLong" TargetFieldName="SessionItemLong" />
+            <FieldMapping FieldName="SessionItemShort" TargetFieldName="SessionItemShort" />
+            <FieldMapping FieldName="Timeout" TargetFieldName="Timeout" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Severity" TargetName="EPICCentral:dbo:Severity">
+          <FieldMappings>
+            <FieldMapping FieldName="MentalLeft" TargetFieldName="MentalLeft" />
+            <FieldMapping FieldName="MentalRight" TargetFieldName="MentalRight" />
+            <FieldMapping FieldName="OrganId" TargetFieldName="OrganId" />
+            <FieldMapping FieldName="PhysicalLeft" TargetFieldName="PhysicalLeft" />
+            <FieldMapping FieldName="PhysicalRight" TargetFieldName="PhysicalRight" />
+            <FieldMapping FieldName="SeverityId" TargetFieldName="SeverityId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="TreatmentId" TargetFieldName="TreatmentId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SupportArea" TargetName="EPICCentral:dbo:SupportArea">
+          <FieldMappings>
+            <FieldMapping FieldName="Description" TargetFieldName="Description" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="SupportAreaId" TargetFieldName="SupportAreaId" SequenceToUse="SCOPE_IDENTITY()" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SupportIssue" TargetName="EPICCentral:dbo:SupportIssue">
+          <FieldMappings>
+            <FieldMapping FieldName="Body" TargetFieldName="Body" />
+            <FieldMapping FieldName="CreateTime" TargetFieldName="CreateTime" />
+            <FieldMapping FieldName="FromUserId" TargetFieldName="FromUserId" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="IsClosedByFromUser" TargetFieldName="IsClosedByFromUser" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="IsClosedByToUser" TargetFieldName="IsClosedByToUser" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="IsPublic" TargetFieldName="IsPublic" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="ParentId" TargetFieldName="ParentId" />
+            <FieldMapping FieldName="Priority" TargetFieldName="Priority" />
+            <FieldMapping FieldName="Status" TargetFieldName="Status" />
+            <FieldMapping FieldName="Subject" TargetFieldName="Subject" />
+            <FieldMapping FieldName="SupportAreaId" TargetFieldName="SupportAreaId" />
+            <FieldMapping FieldName="SupportIssueId" TargetFieldName="SupportIssueId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="ToUserId" TargetFieldName="ToUserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":SystemSetting" TargetName="EPICCentral:dbo:SystemSetting">
+          <FieldMappings>
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":Treatment" TargetName="EPICCentral:dbo:Treatment">
+          <FieldMappings>
+            <FieldMapping FieldName="AnalysisTime" TargetFieldName="AnalysisTime" />
+            <FieldMapping FieldName="CalibrationId" TargetFieldName="CalibrationId" />
+            <FieldMapping FieldName="EnergizedImageSetId" TargetFieldName="EnergizedImageSetId" />
+            <FieldMapping FieldName="FingerImageSetId" TargetFieldName="FingerImageSetId" />
+            <FieldMapping FieldName="FirmwareVersion" TargetFieldName="FirmwareVersion" />
+            <FieldMapping FieldName="PatientId" TargetFieldName="PatientId" />
+            <FieldMapping FieldName="PerformedBy" TargetFieldName="PerformedBy" />
+            <FieldMapping FieldName="ReceivedTime" TargetFieldName="ReceivedTime" />
+            <FieldMapping FieldName="SoftwareVersion" TargetFieldName="SoftwareVersion" />
+            <FieldMapping FieldName="TreatmentId" TargetFieldName="TreatmentId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="TreatmentTime" TargetFieldName="TreatmentTime" />
+            <FieldMapping FieldName="TreatmentType" TargetFieldName="TreatmentType" />
+            <FieldMapping FieldName="UniqueIdentifier" TargetFieldName="UniqueIdentifier" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UpdateStatus" TargetName="EPICCentral:dbo:UpdateStatus">
+          <FieldMappings>
+            <FieldMapping FieldName="Action" TargetFieldName="Action" />
+            <FieldMapping FieldName="Controller" TargetFieldName="Controller" />
+            <FieldMapping FieldName="Method" TargetFieldName="Method" />
+            <FieldMapping FieldName="UpdateTime" TargetFieldName="UpdateTime" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":User" TargetName="EPICCentral:dbo:User">
+          <FieldMappings>
+            <FieldMapping FieldName="CreateTime" TargetFieldName="CreateTime" />
+            <FieldMapping FieldName="EmailAddress" TargetFieldName="EmailAddress" />
+            <FieldMapping FieldName="FirstName" TargetFieldName="FirstName" />
+            <FieldMapping FieldName="IsActive" TargetFieldName="IsActive" TypeConverterToUse="SD.LLBLGen.Pro.TypeConverters.BooleanNumericConverter" />
+            <FieldMapping FieldName="LastActivityTime" TargetFieldName="LastActivityTime" />
+            <FieldMapping FieldName="LastLockoutTime" TargetFieldName="LastLockoutTime" />
+            <FieldMapping FieldName="LastLoginTime" TargetFieldName="LastLoginTime" />
+            <FieldMapping FieldName="LastName" TargetFieldName="LastName" />
+            <FieldMapping FieldName="LastPasswordChangeTime" TargetFieldName="LastPasswordChangeTime" />
+            <FieldMapping FieldName="OrganizationId" TargetFieldName="OrganizationId" />
+            <FieldMapping FieldName="Password" TargetFieldName="Password" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" SequenceToUse="SCOPE_IDENTITY()" />
+            <FieldMapping FieldName="Username" TargetFieldName="Username" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserAccountRestriction" TargetName="EPICCentral:dbo:UserAccountRestriction">
+          <FieldMappings>
+            <FieldMapping FieldName="AccountRestrictionId" TargetFieldName="AccountRestrictionId" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserAssignedLocation" TargetName="EPICCentral:dbo:UserAssignedLocation">
+          <FieldMappings>
+            <FieldMapping FieldName="LocationId" TargetFieldName="LocationId" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserCreditCard" TargetName="EPICCentral:dbo:UserCreditCard">
+          <FieldMappings>
+            <FieldMapping FieldName="CreditCardId" TargetFieldName="CreditCardId" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserRole" TargetName="EPICCentral:dbo:UserRole">
+          <FieldMappings>
+            <FieldMapping FieldName="RoleId" TargetFieldName="RoleId" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserSalt" TargetName="EPICCentral:dbo:UserSalt">
+          <FieldMappings>
+            <FieldMapping FieldName="Salt" TargetFieldName="Salt" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+          </FieldMappings>
+        </EntityMapping>
+        <EntityMapping EntityName=":UserSetting" TargetName="EPICCentral:dbo:UserSetting">
+          <FieldMappings>
+            <FieldMapping FieldName="Name" TargetFieldName="Name" />
+            <FieldMapping FieldName="UserId" TargetFieldName="UserId" />
+            <FieldMapping FieldName="Value" TargetFieldName="Value" />
+          </FieldMappings>
+        </EntityMapping>
+      </EntityMappings>
+      <TypedViewMappings />
+      <SPCallMappings />
+      <TypeConversionDefinitions>
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.AccountRestrictionTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.DeviceStateTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.EventTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.GenderConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.LicenseModeTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.MessageTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.OrganComponentConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.OrganizationTypeConverter" DbDotNetType="System.Int16" />
+        <TypeConversionDefinition TypeConverter="EPICCentralDL.Customization.ScanTypeConverter" DbDotNetType="System.Int16" />
+      </TypeConversionDefinitions>
+    </MappingStore>
+  </MappingStores>
+  <ModelViews />
+</Project>

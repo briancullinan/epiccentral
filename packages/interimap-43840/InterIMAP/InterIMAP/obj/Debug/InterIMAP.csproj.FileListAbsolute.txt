@@ -1,0 +1,5 @@
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAP\bin\Debug\InterIMAP.dll
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAP\bin\Debug\InterIMAP.pdb
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAP\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAP\obj\Debug\InterIMAP.dll
+C:\Users\briancullinan\Downloads\interimap-43840\InterIMAP\InterIMAP\obj\Debug\InterIMAP.pdb

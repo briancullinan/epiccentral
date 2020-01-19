@@ -1,0 +1,34 @@
+﻿@using ViewRes
+@model EPICCentral.Models.KeyedEmailModel
+
+@{
+	Layout = "~/Views/Shared/_EmailLayout.cshtml";
+	ViewBag.Title = Account.ResetEmailPartial_Title;
+}
+
+<div style="clear: both; padding: 0 0 10px; color: #333333; font-size: 18px;">
+@if (!string.IsNullOrWhiteSpace(Model.FirstName))
+{
+    @String.Format(Account.ResetEmailPartial_Greeting, Model.FirstName)
+}
+else
+{
+    @Account.ResetEmailPartial_GreetingGeneric
+}
+</div>
+<p>
+    @Account.ResetEmailPartial_Message
+</p>
+<p>
+	<a href="@Url.AbsoluteAction("ResetCompletion", "Account", new { ResetKey = Model.Key, Email = Model.EmailAddress })">@Account.ResetEmailPartial_CompleteLink</a>
+</p>
+<p>
+    @Account.ResetEmailPartial_Instructions
+</p>
+<p>
+	<b>@Account.ResetEmailPartial_Instruction2</b>
+</p>
+<p>
+    @Account.ResetEmailPartial_Salutation<br/>
+    @Account.ResetEmailPartial_SalutationName
+</p>

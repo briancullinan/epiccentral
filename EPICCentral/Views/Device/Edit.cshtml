@@ -1,0 +1,83 @@
+@using EPICCentralDL.Linq
+@using SharedRes
+@using ViewRes
+@model EPICCentral.Models.DeviceModel
+@{
+    ViewBag.Title = Device.Edit_Title;
+}
+
+<script type="text/javascript" src="@Url.Content("~/Scripts/epic.devices.js")"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#OrganizationId").data('loadUrl', '@Url.Action("GetLocations", "Device")');
+    });
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, Device.Edit_Errors)
+
+    <fieldset>
+        <legend>@Device.Edit_Administration</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.OrganizationId)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.OrganizationId, new LinqMetaData().Organization.WithPermissions().ToSelectList())
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.LocationId)
+        </div>
+		<div class="editor-field">
+			@if (Model.OrganizationId >= 0)
+			{
+			    @Html.DropDownListFor(m => m.LocationId, new LinqMetaData().Location.WithPermissions(Model.OrganizationId).ToSelectList())
+            }
+            else
+			{
+			    @Html.DropDownListFor(m => m.LocationId, new[] { new SelectListItem { Text = General.NotSelected, Value = "" }})
+            }
+		</div>
+		<div class="editor-label">
+            @Html.LabelFor(m => m.SerialNumber)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.SerialNumber)
+		</div>
+		<div class="editor-label">
+            @Html.LabelFor(m => m.RevisionLevel)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.RevisionLevel)
+		</div>
+		<div class="editor-label">
+            @Html.LabelFor(m => m.ScansAvailable)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.ScansAvailable)
+		</div>
+		<div class="editor-label">
+            @Html.LabelFor(m => m.PurchaseNotes)
+        </div>
+		<div class="editor-field">
+			@Html.TextAreaFor(m => m.PurchaseNotes)
+		</div>
+		@{
+   var validStates = Model.ValidStates;
+   if (!Model.IsNew && validStates.Count > 1)
+   {
+				<div class="editor-label">
+                    @Html.LabelFor(m => m.DeviceState)
+                </div>
+				<div class="editor-field">
+					@Html.DropDownListFor(m => m.DeviceState, validStates)
+				</div>
+   }
+		}
+    </fieldset>
+}
+
+<div id="confirmRetire" title="@Device.Edit_RetiringTitle" style="display: none;">
+    @Html.Raw(Device.Edit_Retiring)
+</div>

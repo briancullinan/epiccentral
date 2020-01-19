@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="AddEmailPartial_AccountCreated" xml:space="preserve">
+    <value>----AddEmailPartial_AccountCreated----</value>
+  </data>
+<data name="AddEmailPartial_Greeting" xml:space="preserve">
+    <value>----AddEmailPartial_Greeting----</value>
+  </data>
+<data name="AddEmailPartial_CompleteRegistration" xml:space="preserve">
+    <value>----AddEmailPartial_CompleteRegistration----</value>
+  </data>
+<data name="AddEmailPartial_Instructions" xml:space="preserve">
+    <value>----AddEmailPartial_Instructions----</value>
+  </data>
+<data name="AddEmailPartial_Salutation" xml:space="preserve">
+    <value>----AddEmailPartial_Salutation----</value>
+  </data>
+<data name="AddEmailPartial_SalutationName" xml:space="preserve">
+    <value>----AddEmailPartial_SalutationName----</value>
+  </data>
+<data name="AddEmailPartial_Title" xml:space="preserve">
+    <value>----AddEmailPartial_Title----</value>
+  </data>
+<data name="Add_Title" xml:space="preserve">
+    <value>----Add_Title----</value>
+  </data>
+<data name="Add_Administration" xml:space="preserve">
+    <value>----Add_Administration----</value>
+  </data>
+<data name="Add_Organization" xml:space="preserve">
+    <value>----Add_Organization----</value>
+  </data>
+<data name="Add_FirstName" xml:space="preserve">
+    <value>----Add_FirstName----</value>
+  </data>
+<data name="Add_LastName" xml:space="preserve">
+    <value>----Add_LastName----</value>
+  </data>
+<data name="Add_EmailAddress" xml:space="preserve">
+    <value>----Add_EmailAddress----</value>
+  </data>
+<data name="Add_Pin" xml:space="preserve">
+    <value>----Add_Pin----</value>
+  </data>
+<data name="Add_Role" xml:space="preserve">
+    <value>----Add_Role----</value>
+  </data>
+<data name="Add_Locations" xml:space="preserve">
+    <value>----Add_Locations----</value>
+  </data>
+<data name="Edit_Title" xml:space="preserve">
+    <value>----Edit_Title----</value>
+  </data>
+<data name="Edit_UserInformation" xml:space="preserve">
+    <value>----Edit_UserInformation----</value>
+  </data>
+<data name="Edit_Username" xml:space="preserve">
+    <value>----Edit_Username----</value>
+  </data>
+<data name="Edit_EmailAddress" xml:space="preserve">
+    <value>----Edit_EmailAddress----</value>
+  </data>
+<data name="Edit_FirstName" xml:space="preserve">
+    <value>----Edit_FirstName----</value>
+  </data>
+<data name="Edit_LastName" xml:space="preserve">
+    <value>----Edit_LastName----</value>
+  </data>
+<data name="Edit_Role" xml:space="preserve">
+    <value>----Edit_Role----</value>
+  </data>
+<data name="Edit_Locations" xml:space="preserve">
+    <value>----Edit_Locations----</value>
+  </data>
+<data name="Edit_Active" xml:space="preserve">
+    <value>----Edit_Active----</value>
+  </data>
+<data name="EditMe_Title" xml:space="preserve">
+    <value>----EditMe_Title----</value>
+  </data>
+<data name="EditMe_Errors" xml:space="preserve">
+    <value>----EditMe_Errors----</value>
+  </data>
+<data name="EditMe_UserInformation" xml:space="preserve">
+    <value>----EditMe_UserInformation----</value>
+  </data>
+<data name="EditMe_Username" xml:space="preserve">
+    <value>----EditMe_Username----</value>
+  </data>
+<data name="EditMe_FirstName" xml:space="preserve">
+    <value>----EditMe_FirstName----</value>
+  </data>
+<data name="EditMe_LastName" xml:space="preserve">
+    <value>----EditMe_LastName----</value>
+  </data>
+<data name="EditMe_EmailAddress" xml:space="preserve">
+    <value>----EditMe_EmailAddress----</value>
+  </data>
+<data name="EditMe_UserSettings" xml:space="preserve">
+    <value>----EditMe_UserSettings----</value>
+  </data>
+<data name="EditMe_Language" xml:space="preserve">
+    <value>----EditMe_Language----</value>
+  </data>
+<data name="EditMe_Save" xml:space="preserve">
+    <value>----EditMe_Save----</value>
+  </data>
+<data name="EditMe_Cancel" xml:space="preserve">
+    <value>----EditMe_Cancel----</value>
+  </data>
+<data name="List_Title" xml:space="preserve">
+    <value>----List_Title----</value>
+  </data>
+<data name="List_LastName" xml:space="preserve">
+    <value>----List_LastName----</value>
+  </data>
+<data name="List_FirstName" xml:space="preserve">
+    <value>----List_FirstName----</value>
+  </data>
+<data name="List_Username" xml:space="preserve">
+    <value>----List_Username----</value>
+  </data>
+<data name="List_EmailAddress" xml:space="preserve">
+    <value>----List_EmailAddress----</value>
+  </data>
+<data name="List_Locations" xml:space="preserve">
+    <value>----List_Locations----</value>
+  </data>
+<data name="List_Organization" xml:space="preserve">
+    <value>----List_Organization----</value>
+  </data>
+<data name="List_View" xml:space="preserve">
+    <value>----List_View----</value>
+  </data>
+<data name="List_Edit" xml:space="preserve">
+    <value>----List_Edit----</value>
+  </data>
+<data name="List_UserDetails" xml:space="preserve">
+    <value>----List_UserDetails----</value>
+  </data>
+<data name="List_EditUser" xml:space="preserve">
+    <value>----List_EditUser----</value>
+  </data>
+<data name="List_Add" xml:space="preserve">
+    <value>----List_Add----</value>
+  </data>
+<data name="List_AddUser" xml:space="preserve">
+    <value>----List_AddUser----</value>
+  </data>
+<data name="View_Title" xml:space="preserve">
+    <value>----View_Title----</value>
+  </data>
+<data name="View_UserInformation" xml:space="preserve">
+    <value>----View_UserInformation----</value>
+  </data>
+<data name="View_Username" xml:space="preserve">
+    <value>----View_Username----</value>
+  </data>
+<data name="View_FirstName" xml:space="preserve">
+    <value>----View_FirstName----</value>
+  </data>
+<data name="View_LastName" xml:space="preserve">
+    <value>----View_LastName----</value>
+  </data>
+<data name="View_EmailAddress" xml:space="preserve">
+    <value>----View_EmailAddress----</value>
+  </data>
+<data name="View_Role" xml:space="preserve">
+    <value>----View_Role----</value>
+  </data>
+<data name="View_Organization" xml:space="preserve">
+    <value>----View_Organization----</value>
+  </data>
+<data name="View_Locations" xml:space="preserve">
+    <value>----View_Locations----</value>
+  </data>
+<data name="View_Created" xml:space="preserve">
+    <value>----View_Created----</value>
+  </data>
+<data name="View_LoggedIn" xml:space="preserve">
+    <value>----View_LoggedIn----</value>
+  </data>
+<data name="View_LastActivity" xml:space="preserve">
+    <value>----View_LastActivity----</value>
+  </data>
+<data name="View_PasswordChanged" xml:space="preserve">
+    <value>----View_PasswordChanged----</value>
+  </data>
+<data name="View_LastLockout" xml:space="preserve">
+    <value>----View_LastLockout----</value>
+  </data>
+<data name="View_RegistrationPending" xml:space="preserve">
+    <value>----View_RegistrationPending----</value>
+  </data>
+<data name="View_ResendEmail" xml:space="preserve">
+    <value>----View_ResendEmail----</value>
+  </data>
+<data name="View_UserSettings" xml:space="preserve">
+    <value>----View_UserSettings----</value>
+  </data>
+<data name="View_Language" xml:space="preserve">
+    <value>----View_Language----</value>
+  </data>
+<data name="View_Region" xml:space="preserve">
+    <value>----View_Region----</value>
+  </data>
+<data name="View_Edit" xml:space="preserve">
+    <value>----View_Edit----</value>
+  </data>
+<data name="View_ChangePassword" xml:space="preserve">
+    <value>----View_ChangePassword----</value>
+  </data>
+<data name="Edit_SelectRole" xml:space="preserve">
+    <value>----Edit_SelectRole----</value>
+  </data>
+<data name="Edit_NumberSelected" xml:space="preserve">
+    <value>----Edit_NumberSelected----</value>
+  </data>
+<data name="Edit_SelectLocations" xml:space="preserve">
+    <value>----Edit_SelectLocations----</value>
+  </data>
+<data name="Edit_AllowAll" xml:space="preserve">
+    <value>----Edit_AllowAll----</value>
+  </data>
+<data name="Edit_DisallowAll" xml:space="preserve">
+    <value>----Edit_DisallowAll----</value>
+  </data>
+</root>

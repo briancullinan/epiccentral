@@ -1,0 +1,63 @@
+﻿@using ViewRes
+@model EPICCentral.Models.ScanRate
+
+@{
+    ViewBag.Title = Configuration.EditRate_Title;
+}
+
+@if (!Request.IsAjaxRequest() && !ViewContext.Controller.ControllerContext.IsChildAction)
+{
+    <h2>@Configuration.EditRate_Title</h2>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, Configuration.EditRate_Errors)
+
+    <fieldset>
+        <legend>@Configuration.EditRate_Administration</legend>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.ScanType)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.ScanType, Model.ScanType.ToSelectList())
+        </div>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.RatePerScan)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.RatePerScan)
+        </div>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.MinCountForRate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.MinCountForRate)
+        </div>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.MaxCountForRate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.MaxCountForRate)
+        </div>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.EffectiveDate)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.EffectiveDate)
+        </div>
+           
+        <div class="editor-label">
+            @Html.LabelFor(m => m.IsActive)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.IsActive, Model.IsActive.ToSelectList())
+        </div>
+    </fieldset>
+}

@@ -1,0 +1,7 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\bin\Debug\MvcApiActionFilter.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\bin\Debug\MvcApiActionFilter.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\bin\Debug\Newtonsoft.Json.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\bin\Debug\Newtonsoft.Json.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\obj\Debug\ResolveAssemblyReference.cache
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\obj\Debug\MvcApiActionFilter.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\MvcApiActionFilter\obj\Debug\MvcApiActionFilter.pdb

@@ -1,0 +1,145 @@
+﻿@using System.Globalization
+@using EPICCentral.Utilities.Information
+@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.Linq
+@using ViewRes
+@model EPICCentral.Models.NewLocationModel
+
+<script type="text/javascript">
+
+    (function () {
+
+        // Looks up geocoding via AJAX call to controller and updates values in form.
+        $("#geocodeLookup").click(
+            function (e) {
+                e.preventDefault();
+                var url = $(this).attr("href");
+                var address = $("#AddressLine1").val();
+                var address2 = $("#AddressLine2").val();
+                var city = $("#City").val();
+                $.trim(address);
+                $.trim(address2);
+                $.trim(city);
+                if (address2)
+                    address = address + ", " + address2;
+                address = address + ", " + city + ", ";
+                address = address + $("#State").val();
+                url = url + "?address=" + address;
+                $.get(
+                    url,
+                    function (response) {
+                        if (response.status == "success") {
+                            $("#Latitude").val(response.lat);
+                            $("#Longitude").val(response.lng);
+                        } else {
+                            $("#Latitude").removeAttr('readonly');
+                            $("#Longitude").removeAttr('readonly');
+                        }
+                    }
+                );
+                return false;
+            }
+        );
+
+    })();
+    
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, Location.Edit_Errors)
+
+    <fieldset>
+		<legend>@Location.Edit_Title</legend>
+    
+		@if(Model.IsNew && Model.OrganizationId == 0)
+		{
+			<div class="editor-label">
+                @Html.LabelFor(m => m.OrganizationId)
+            </div>
+			<div class="editor-field">
+				@Html.DropDownListFor(m => m.OrganizationId, new LinqMetaData().Organization.WithPermissions().ToSelectList())
+			</div>
+		}
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Name)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.Name, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.AddressLine1)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.AddressLine1, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+			<label for="AddressLine2">&nbsp;</label>
+		</div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.AddressLine2, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.City)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.City, new { style = "width: 350px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.State)
+        </div>
+		<div class="editor-field">
+			@Html.DropDownListFor(m => m.State, UnitedStatesStates.StateSelectList, new { style = "width: 300px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Country)
+        </div>
+		<div class="editor-field">
+			@Html.DropDownListFor(m => m.Country, CultureInfo.CurrentCulture.GetCountries(),
+                            new { style = "width: 300px;" })
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.PostalCode)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.PostalCode)
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.PhoneNumber)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.PhoneNumber)
+		</div>
+    
+		@if (RoleUtils.IsUserServiceAdmin())
+		{
+			<div class="editor-label">
+                @Html.LabelFor(m => m.Latitude)
+            </div>
+			<div class="editor-field">
+				@Html.TextBoxFor(m => m.Latitude, new { @readonly = "readonly" })
+				<span>@Html.ActionLink(Location.Edit_Lookup, "Geocode", null, new { id = "geocodeLookup" })</span>
+			</div>
+			<div class="editor-label">
+                @Html.LabelFor(m => m.Longitude)
+            </div>
+			<div class="editor-field">
+				@Html.TextBoxFor(m => m.Longitude, new { @readonly = "readonly" })
+			</div>
+			<div class="editor-label">
+                @Html.LabelFor(m => m.IsActive)
+            </div>
+			<div class="editor-field">
+				@Html.CheckBoxFor(m => m.IsActive)
+			</div>
+		}
+    
+	</fieldset>
+}

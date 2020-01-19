@@ -1,0 +1,96 @@
+﻿@model EPICCentral.Controllers.Widgets.TreatmentsController.TreatmentsModel
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.jqplot.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/plugins/jqplot.canvasTextRenderer.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/plugins/jqplot.categoryAxisRenderer.js")"></script>)
+@Html.Script(@<script type="text/javascript" src="@Url.Content("~/Scripts/plugins/jqplot.canvasAxisTickRenderer.js")"></script>)
+@Html.Script(@<text><!--[if IE]><script type="text/javascript" src="@Url.Content("~/Scripts/excanvas.js")"></script><![endif]--></text>)
+
+<script type="text/javascript">
+    var year = @Model.Year;
+    var jsonurl = "@Url.Action("Data", "Treatments")" + '?year=' + year;
+    var plot2;
+    var options;
+
+    function loadOptions() {
+        options = {
+            use_canvas: !jQuery.browser.msie,
+            dataRenderer: ajaxDataRenderer,
+            axesDefaults: {
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer,
+                    tickOptions: {
+                        angle: -30,
+                        fontSize: '10pt'
+                    }
+                },
+                yaxis: {
+                    autoscale: true,
+                    min: 0,
+                    tickOptions: {
+                        formatString: '%d'
+                    }
+                }
+            }
+        };
+    };
+    
+    function ajaxDataRenderer(url, plot, options) {
+        var ret = null;
+        $.ajax({
+        // have to use synchronous here, else the function
+        // will return before the data is fetched
+            async: false,
+            url: url,
+            dataType: "json",
+            success: function(data) {
+                ret = [data.data];
+                $('#recent-activity-title').html(data.label);
+                if(year == @DateTime.Now.Year)
+                    $('#next-year').attr('disabled', 'disabled');
+                else
+                    $('#next-year').removeAttr('disabled');
+            }
+        });
+        return ret;
+    };
+    
+    function changeYear(newYear) {
+        year = newYear;
+        jsonurl = "@Url.Action("Data", "Treatments")" + '?year=' + year;
+        $.jqplot('jqplotChart', jsonurl, options).replot();
+    }
+
+
+    function load_TreatmentsController()
+    {
+        if(typeof (options) == 'undefined')
+            loadOptions();
+
+        plot2 = $.jqplot('jqplotChart', jsonurl, options);
+
+        $(window).resize(function() {
+            try {
+                plot2.replot();
+            }catch (e) {
+                
+            }
+        });
+        $("#main").bind('resize', function() {
+            try {
+                plot2.replot();
+            }catch (e) {
+                
+            }
+        });
+    }
+
+</script>
+<div id="recent-title">
+    <button id="prev-year" type="button" onclick="changeYear(year-1);"><span class="ui-icon ui-icon-triangle-1-w"></span></button>
+    <div id="recent-activity-title"></div>
+    <button id="next-year" type="button" onclick="changeYear(year+1);"><span class="ui-icon ui-icon-triangle-1-e"></span></button>
+</div>
+<div id="jqplotChart"></div>

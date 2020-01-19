@@ -1,0 +1,17 @@
+<!--
+  This file is required by LLGLGen. It tells LLBLGen where to find external types referenced
+  by type converters. The types defined here are imported by LLBLGen when a project is opened.
+  The types then become available to use, to define a type shortcut in the project settings or
+  to assign a type to an entity field.
+  
+  The typeName parameter is the name of the type as defined in the code. The assemblyFile
+  parameter is the name of the DLL where the type can be found. The path is relative to the
+  "type converter folder" set in the project settings. In the case of EPIC Central, the type
+  converter folder is the output folder of *this* project, the type converters projects. So
+  all the paths need to be relative to that; they can also be absolute paths, but that should
+  be avoided since not all developers will be using the same absolute path to the root of the
+  solution.
+-->
+<typeImports>
+	<typeImport typeName="EventType" assemblyFile="../../../EPICCentralServiceAPI/bin/Debug/EPICCentralServiceAPI.dll" />
+</typeImports>

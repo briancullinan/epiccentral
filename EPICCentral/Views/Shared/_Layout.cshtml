@@ -1,0 +1,177 @@
+﻿@using ViewRes
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>@ViewBag.Title : @Shared.Layout_EPICCentral</title>
+    @* <meta http-equiv="X-UA-Compatible" content="IE=edge" /> *@
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.8.0.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery-ui-1.8.23.custom.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/epic.validation.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.layout-latest.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.ba-bbq.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jstz.min.js")" type="text/javascript"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-ui-timepicker-addon.js")"></script>
+    <script type="text/javascript">
+        var lastUsedIndex = -1;
+        var timezone = @Html.Raw(Session != null && Session["timezone"] != null ? "'set'" : "null");
+        $(document).ready(function() {
+            if(window.timezone == null)
+                window.timezone = jstz.determine();
+
+            $('body').layout({
+            // all panes
+                livePaneResizing: true,
+                spacing_open: 8,  // ALL panes
+                spacing_closed: 12, // ALL panes
+
+                // title
+                north__paneSelector: "#header",
+                north__resizable: false,
+                north__closable: false,
+                north__spacing_open: 0,
+                north__spacing_closed: 0,
+
+                // folder navigation
+                west__paneSelector: "#left_nav",
+                west__minSize: 200,
+                west__resizable: false,
+                west__initClosed: $('#left_nav').css('display') == 'none',
+
+                // center panel
+                center__paneSelector: "#main",
+                center__onresize: function () { $('#main').trigger('resize'); },
+                
+                // footer
+                south__paneSelector: "#footer",
+                south__resizable: false,
+                south__closable: false,
+                south__spacing_open: 0,
+                south__spacing_closed: 0,
+                south__initClosed: $('#footer').css('display') == 'none'
+            });
+        });
+
+        $(window).load(function() {
+            var resizeTimer = null;
+            var resize = function() {
+                if($('#main').is('.ui-layout-pane'))
+                    $('body').layout().resizeAll();
+                else {
+                    if(resizeTimer != null) {
+                        clearTimeout(resizeTimer);
+                        resizeTimer = null;
+                    }
+                    resizeTimer = setTimeout(resize, 100);
+                }
+            };
+            resize();
+        });
+
+        $(document).ajaxError(function myErrorHandler(event, xhr, ajaxOptions, thrownError) {
+            if (xhr.errorHandledLocally !== true) {
+                try {
+                    var error = JSON.parse(xhr.responseText);
+                    var errorHtml = $('<span style="display:none;" class="ui-state-error ui-corner-all">' + error.Message + '</span>');
+                    $("#title").append(errorHtml);
+                    errorHtml.show('fadeIn').delay(3000).hide('fadeOut');
+                    @if(Roles.IsUserInRole("Service Administrator"))
+                    {<text>
+                        var errorDiv = $('<div><p>Controller: ' + error.ControllerName + '</p><p>Action: ' + error.ActionName + '</p><p>Message: ' + error.Message + '</p><pre>Stack Trace: ' + error.StackTrace + '</pre></div>');
+                        $(document.body).append(errorDiv);
+                        errorDiv.dialog({
+                            minWidth: 600,
+                            minHeight: 400,
+                            modal: true,
+                            title: xhr.status + ' : ' + xhr.statusText
+                        });
+                    </text>}
+                } catch(e) {
+
+                }
+            }
+        });
+        window.onerror = function(errorMessage, fileName, lineNumber) {
+            try {
+                var errorDiv = $('<div><p>File: ' + fileName + '</p><p>Line: ' + lineNumber + '</p><p>Message: ' + errorMessage + '</p></div>');
+                $(document.body).append(errorDiv);
+                errorDiv.dialog({
+                    minWidth: 600,
+                    minHeight: 400,
+                    modal: true,
+                    title: 'Window Error'
+                });
+            }
+            catch(e)
+            {
+                
+            }
+        };
+    </script>
+    @RenderSection("Head", required: false)
+    @Html.RenderScripts()
+    @Html.RenderAttachments()
+</head>
+    <body id="@ViewContext.RouteData.Values["controller"].ToString().ToLower()-@ViewContext.RouteData.Values["action"].ToString().ToLower()" class="@RenderSection("BodyClass", required: false)">
+        <div id="header">
+            <div id="logo">
+                <a href="@Url.Action("Index", "Home")"><img alt="@Shared.Layout_EPICResearch" src="@Url.Content("~/Content/logo-epic-200.png")" /></a>
+            </div>
+            <div id="title">
+                <h1>@Shared.Layout_EPICCommandCenter</h1>
+                @{
+                    if(ViewContext.TempData.ContainsKey("error"))
+                    {
+                        <span class="ui-state-error ui-corner-all">@ViewContext.TempData["error"]</span>
+                    }
+                    if (ViewContext.TempData.ContainsKey("highlight"))
+                    {
+                        <span class="ui-state-highlight ui-corner-all">@ViewContext.TempData["highlight"]</span>
+                    }
+                    if (ViewContext.TempData.ContainsKey("default"))
+                    {
+                        <span class="ui-state-default ui-corner-all">@ViewContext.TempData["default"]</span>
+                    }
+                }
+            </div>
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+                @Html.Partial("_RolesPartial")
+            </div>
+            @*<div id="nav">
+            @Html.Action("Tabs", "Menu")
+        </div>*@
+        </div>
+        <div id="left_nav">
+            @Html.Action("ListMenu", "Menu")
+        </div>
+        <div id="main">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            <span class="left">
+                <img src="@Url.Content("~/Content/footer-logo.png")" alt="@Shared.Layout_EPICResearch" />
+            </span>
+            <span class="right">@Shared.Layout_Phone
+                <br />
+                @String.Format(Shared.Layout_EmailLabel, Shared.Layout_Email)
+            </span>
+            <br class="clear" />
+            <span class="left">@Shared.Layout_EPICResearch<br />
+                @Shared.Layout_Address<br />
+                @Shared.Layout_CityStateZip
+            </span>
+            <br class="clear" />
+            <span>
+                @String.Format(Shared.Layout_Copyright, DateTime.Now.Year)
+            </span>
+        </div>
+    </body>
+</html>

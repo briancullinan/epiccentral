@@ -1,0 +1,27 @@
+﻿@using System.Globalization
+@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using ViewRes
+
+@model IQueryable<DeviceEntity>
+
+@{
+    var columns = new ColumnCollection<DeviceEntity>
+	                           	{
+	                           			{"SerialNumber", Device.ListLimitedControl_SerialNumber},
+	                           			{"RevisionLevel", Device.ListLimitedControl_RevisionLevel},
+	                           			{"DeviceState", Device.ListLimitedControl_State},
+	                           			{"ScansAvailable", Device.ListLimitedControl_ScansLeft},
+                                        {"ScansUsed", Device.ListLimitedControl_ScansDone},
+                                        {"DateIssued", Device.ListLimitedControl_Issued, m => TimeZoneInfo.ConvertTime(m.DateIssued, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToShortDateString()},
+                                        { "LastReportTime", Device.ListFull_LastReport, m => m.LastReportTime.HasValue ? TimeZoneInfo.ConvertTime(m.LastReportTime.Value, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture) : "" },
+	                           	};
+
+    if (Model.Select(d => d.LocationId).Distinct().Count() > 1)
+    {
+        columns.Insert(0, new DataTableColumn<DeviceEntity> { ColumnName = "Location.Name", Header = Device.ListLimitedControl_Location });
+    }
+}
+
+@Html.DataTableFor(Model, @columns )
+

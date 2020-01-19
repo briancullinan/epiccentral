@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D5E2712-EB47-4E8A-9475-D81017205B51}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPICCentral</RootNamespace>
+    <AssemblyName>EPICCentral</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>bin\EPICCentral.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DevTest|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\3rdPartyLibraries\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdPartyLibraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="mlformC">
+      <HintPath>..\3rdPartyLibraries\mlformC.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray, Version=2.9.0.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdPartyLibraries\MWArray.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\3rdPartyLibraries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SD.LLBLGen.Pro.LinqSupportClasses.NET35, Version=3.5.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL" />
+    <Reference Include="SD.LLBLGen.Pro.ORMSupportClasses.NET20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=ca73b74ba4e3ff27, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdPartyLibraries\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\jquery.lightbox-0.5.css" />
+    <Content Include="Content\jquery.multiselect.css" />
+    <Content Include="Content\jquery.password-strength-meter.css" />
+    <Content Include="Content\lightbox\lightbox-blank.gif" />
+    <Content Include="Content\lightbox\lightbox-btn-close.gif" />
+    <Content Include="Content\lightbox\lightbox-btn-next.gif" />
+    <Content Include="Content\lightbox\lightbox-btn-prev.gif" />
+    <Content Include="Content\lightbox\lightbox-ico-loading.gif" />
+    <Content Include="Content\treatment\blank.gif" />
+    <Content Include="Content\treatment\Cardio-button.jpg" />
+    <Content Include="Content\chart-dark.jpg" />
+    <Content Include="Content\chart-light.jpg" />
+    <Content Include="Content\close.png" />
+    <Content Include="Content\footer-logo.png" />
+    <Content Include="Content\treatment\check-orange.gif" />
+    <Content Include="Content\treatment\check-red.gif" />
+    <Content Include="Content\treatment\check-yellow.gif" />
+    <Content Include="Content\treatment\Clearview-background.jpg" />
+    <Content Include="Content\treatment\Clearview-blank-back.jpg" />
+    <Content Include="Content\treatment\female-left.gif" />
+    <Content Include="Content\treatment\female-right.gif" />
+    <Content Include="Content\treatment\female_front.gif" />
+    <Content Include="Content\treatment\female_hepatic.gif" />
+    <Content Include="Content\treatment\female_skel.gif" />
+    <Content Include="Content\treatment\female_cardio.gif" />
+    <Content Include="Content\treatment\female_gastro.gif" />
+    <Content Include="Content\treatment\female_renal.gif" />
+    <Content Include="Content\treatment\female_resp.gif" />
+    <Content Include="Content\treatment\Gastro_button.jpg" />
+    <Content Include="Content\treatment\Hepatic_button.jpg" />
+    <Content Include="Content\loading.gif" />
+    <Content Include="Content\logo-epic-200.png" />
+    <Content Include="Content\next.png" />
+    <Content Include="Content\prev.png" />
+    <Content Include="Content\treatment\male-left.gif" />
+    <Content Include="Content\treatment\male-right.gif" />
+    <Content Include="Content\treatment\male_resp.gif" />
+    <Content Include="Content\treatment\male_cardio.gif" />
+    <Content Include="Content\treatment\male_front.gif" />
+    <Content Include="Content\treatment\male_gastro.gif" />
+    <Content Include="Content\treatment\male_hepatic.gif" />
+    <Content Include="Content\treatment\male_renal.gif" />
+    <Content Include="Content\treatment\male_skel.gif" />
+    <Content Include="Content\treatment\NS_1600x660.gif" />
+    <Content Include="Content\treatment\Renal_button.jpg" />
+    <Content Include="Content\treatment\Respit_button.jpg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\treatment\Skel_button.jpg" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\windowsZones.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Content\GreenUp.gif" />
+    <Content Include="Content\grey_block_submit.jpg" />
+    <Content Include="Content\RedDown.gif" />
+    <Content Include="Content\spacer.gif" />
+    <Content Include="Scripts\DataTables\media\css\jquery.dataTables.css" />
+    <Content Include="Scripts\DataTables\media\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Scripts\DataTables\media\images\back_disabled.png" />
+    <Content Include="Scripts\DataTables\media\images\back_enabled.png" />
+    <Content Include="Scripts\DataTables\media\images\back_enabled_hover.png" />
+    <Content Include="Scripts\DataTables\media\images\favicon.ico" />
+    <Content Include="Scripts\DataTables\media\images\forward_disabled.png" />
+    <Content Include="Scripts\DataTables\media\images\forward_enabled.png" />
+    <Content Include="Scripts\DataTables\media\images\forward_enabled_hover.png" />
+    <Content Include="Scripts\DataTables\media\images\sort_asc.png" />
+    <Content Include="Scripts\DataTables\media\images\sort_asc_disabled.png" />
+    <Content Include="Scripts\DataTables\media\images\sort_both.png" />
+    <Content Include="Scripts\DataTables\media\images\sort_desc.png" />
+    <Content Include="Scripts\DataTables\media\images\sort_desc_disabled.png" />
+    <Content Include="Scripts\DataTables\media\js\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Scripts\DataTables\media\js\jquery.js" />
+    <Content Include="Scripts\epic.dataTables.js" />
+    <Content Include="Scripts\epic.devices.js" />
+    <Content Include="Scripts\epic.operationMap.js" />
+    <Content Include="Scripts\epic.supportCenter.js" />
+    <Content Include="Scripts\epic.treatment.js" />
+    <Content Include="Scripts\epic.username.js" />
+    <Content Include="Scripts\epic.validation.js" />
+    <Content Include="Scripts\excanvas.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\jquery.autoGrowInput.js" />
+    <Content Include="Scripts\jquery.ba-bbq.js" />
+    <Content Include="Scripts\jquery.dataTables.fnSearchHighlighting.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.jqplot.js" />
+    <Content Include="Scripts\jquery.jqplot.min.js" />
+    <Content Include="Scripts\jquery.layout-latest.js" />
+    <Content Include="Scripts\jquery.lightbox-0.5.js" />
+    <Content Include="Scripts\jquery.mousewheel.js" />
+    <Content Include="Scripts\jquery.multiselect.js" />
+    <Content Include="Scripts\jquery.password-strength-meter.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jstz.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\plugins\jqplot.canvasAxisTickRenderer.js" />
+    <Content Include="Scripts\plugins\jqplot.canvasTextRenderer.js" />
+    <Content Include="Scripts\plugins\jqplot.categoryAxisRenderer.js" />
+    <Content Include="Views\Shared\_MainMenuPartial.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConfigurationController.cs" />
+    <Compile Include="Controllers\DataTablesController.cs" />
+    <Compile Include="Controllers\DeviceController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ExceptionController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\OperationController.cs" />
+    <Compile Include="Controllers\OrganizationController.cs" />
+    <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\TreatmentController.cs" />
+    <Compile Include="Controllers\PurchaseController.cs" />
+    <Compile Include="Controllers\SupportController.cs" />
+    <Compile Include="Controllers\UpdateController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\Widgets\AlertController.cs" />
+    <Compile Include="Controllers\Widgets\DeviceStateController.cs" />
+    <Compile Include="Controllers\Widgets\RecentActivityController.cs" />
+    <Compile Include="Controllers\Widgets\WeatherController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ConfigurationModels.cs" />
+    <Compile Include="Models\GenericModels.cs" />
+    <Compile Include="Models\HomeModels.cs" />
+    <Compile Include="Models\LocationsModels.cs" />
+    <Compile Include="Models\MessageModels.cs" />
+    <Compile Include="Models\PurchaseModel.cs" />
+    <Compile Include="Models\SupportModels.cs" />
+    <Compile Include="Providers\EpicPermissionProvider.cs" />
+    <Compile Include="Providers\PermissionProvider.cs" />
+    <Compile Include="Resources\Controllers\Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\DataTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataTables.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Device.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Device.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Menu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Menu.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Operation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Patient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Patient.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Purchase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Support.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Support.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Controllers\Widgets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Widgets.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Configuration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Configuration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Device.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Device.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Location.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Location.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Purchase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Models\Support.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Support.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Countries.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Countries.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Cultures.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cultures.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Error.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Error.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\Formats.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Formats.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Shared\General.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>General.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Account.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Account.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Configuration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Configuration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Device.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Device.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Exception.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exception.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Home.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Home.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Location.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Location.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Operation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Operation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Organization.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Organization.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Purchase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Purchase.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Patient.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Patient.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Shared.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shared.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Support.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Support.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\Treatment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Treatment.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Views\User.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>User.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Attributes\ControllerMenuAttribute.cs" />
+    <Compile Include="Utilities\Attributes\EmailValidationAttribute.cs" />
+    <Compile Include="Utilities\Attributes\FieldLengthAttribute.cs" />
+    <Compile Include="Utilities\Attributes\FullYearAttribute.cs" />
+    <Compile Include="Utilities\Attributes\ActionMenuAttribute.cs" />
+    <Compile Include="Utilities\Attributes\MessageValidationAttribute.cs" />
+    <Compile Include="Utilities\Attributes\NotEqualAttribute.cs" />
+    <Compile Include="Utilities\Attributes\PasswordRegexAttribute.cs" />
+    <Compile Include="Utilities\Attributes\QuantityAttribute.cs" />
+    <Compile Include="Utilities\Attributes\RateLimitAttribute.cs" />
+    <Compile Include="Utilities\Attributes\RequiredIfAttribute.cs" />
+    <Compile Include="Utilities\Attributes\RequiredIfScansChangedAttribute.cs" />
+    <Compile Include="Utilities\Attributes\StartTimeAttribute.cs" />
+    <Compile Include="Utilities\Attributes\TransferQuantityAttribute.cs" />
+    <Compile Include="Utilities\Crypto\Rijndael.cs" />
+    <Compile Include="Utilities\DataLayer\OrganizationUtils.cs" />
+    <Compile Include="Utilities\DataLayer\UserUtils.cs" />
+    <Compile Include="Utilities\Extensions\ControllerExtensions.cs" />
+    <Compile Include="Utilities\Extensions\FormatExtensions.cs" />
+    <Compile Include="Utilities\Extensions\MembershipUserExtensions.cs" />
+    <Compile Include="Utilities\Extensions\RouteCollectionExtensions.cs" />
+    <Compile Include="Utilities\Extensions\UrlExtensions.cs" />
+    <Compile Include="Utilities\Extensions\WidgetExtensions.cs" />
+    <Compile Include="Utilities\Filters\ActionLog.cs" />
+    <Compile Include="Utilities\Filters\AuthorizeAttribute.cs" />
+    <Compile Include="Utilities\Extensions\LinqExtensions.cs" />
+    <Compile Include="Utilities\Extensions\MenuExtensions.cs" />
+    <Compile Include="Utilities\Extensions\HtmlExtensions.cs" />
+    <Compile Include="Models\DataTablesModels.cs" />
+    <Compile Include="Models\DeviceModel.cs" />
+    <Compile Include="Models\MenuItemModel.cs" />
+    <Compile Include="Models\PatientModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\BaseMembershipProvider.cs" />
+    <Compile Include="Providers\BaseRoleProvider.cs" />
+    <Compile Include="Providers\CombinedMembershipProvider.cs" />
+    <Compile Include="Providers\CombinedRoleProvider.cs" />
+    <Compile Include="Providers\DeviceMembershipProvider.cs" />
+    <Compile Include="Providers\DeviceMembershipUser.cs" />
+    <Compile Include="Providers\EpicMembershipProvider.cs" />
+    <Compile Include="Providers\EpicRoleProvider.cs" />
+    <Compile Include="REST\Core\Authenticator.cs" />
+    <Compile Include="REST\Core\Service.cs" />
+    <Compile Include="REST\Core\ServiceHost.cs" />
+    <Compile Include="REST\Core\ServiceRegistrar.cs" />
+    <Compile Include="REST\v0100\Logging\EventService.cs" />
+    <Compile Include="REST\v0100\Logging\ExceptionService.cs" />
+    <Compile Include="REST\v0100\Logging\PrototypeService.cs" />
+    <Compile Include="REST\v0100\Messaging\MessageService.cs" />
+    <Compile Include="REST\v0100\Registration\RegistrationService.cs" />
+    <Compile Include="REST\v0100\Scanning\CalibrationService.cs" />
+    <Compile Include="REST\v0100\Scanning\ImageService.cs" />
+    <Compile Include="REST\v0100\Scanning\PatientService.cs" />
+    <Compile Include="REST\v0100\Scanning\ScanService.cs" />
+    <Compile Include="REST\v0100\Scanning\TreatmentService.cs" />
+    <Compile Include="REST\v0100\VersionService.cs" />
+    <Compile Include="Utilities\Crypto\CryptoRand.cs" />
+    <Compile Include="Utilities\Crypto\Hash.cs" />
+    <Compile Include="Utilities\Crypto\KeyGen.cs" />
+    <Compile Include="Utilities\DataLayer\CalibrationUtils.cs" />
+    <Compile Include="Utilities\DataLayer\DeviceUtils.cs" />
+    <Compile Include="Utilities\DataLayer\ImageSetUtils.cs" />
+    <Compile Include="Utilities\DataLayer\LocationUtils.cs" />
+    <Compile Include="Utilities\DataLayer\PatientUtils.cs" />
+    <Compile Include="Utilities\DataLayer\TreatmentUtils.cs" />
+    <Compile Include="Utilities\Extensions\QueryableExtensions.cs" />
+    <Compile Include="Utilities\Extensions\RequestContextExtension.cs" />
+    <Compile Include="Utilities\Extensions\SelectListExtensions.cs" />
+    <Compile Include="Utilities\Extensions\StateExtensions.cs" />
+    <Compile Include="Utilities\Extensions\TypeExtensions.cs" />
+    <Compile Include="Utilities\Filters\EpicSqlAppender.cs" />
+    <Compile Include="Utilities\Google\GoogleMaps.cs" />
+    <Compile Include="Utilities\Virtual\MockRequest.cs" />
+    <Compile Include="Utilities\Virtual\VirtualHttpContext.cs" />
+    <Compile Include="Utilities\Information\Cultures.cs" />
+    <Compile Include="Utilities\Information\TimeZones.cs" />
+    <Compile Include="Utilities\Membership\EmailUtils.cs" />
+    <Compile Include="Utilities\Membership\Mailbox.cs" />
+    <Compile Include="Utilities\Membership\RoleUtils.cs" />
+    <Compile Include="Utilities\Treatment\ImageCompressionUtility.cs" />
+    <Compile Include="Utilities\Treatment\ImageManipulation.cs" />
+    <Compile Include="Utilities\Treatment\ImageRetrievalHelper.cs" />
+    <Compile Include="Controllers\Widgets\TreatmentsController.cs" />
+    <Compile Include="Controllers\Widgets\WidgetController.cs" />
+    <Compile Include="Utilities\Treatment\SystemComparison.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Authorize.NET\AuthorizeNET.csproj">
+      <Project>{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}</Project>
+      <Name>AuthorizeNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPICCentralDL\GeneratedCode\EPICCentralDL.csproj">
+      <Project>{CCED5904-771D-4AB9-B3D5-3CE29077EF6E}</Project>
+      <Name>EPICCentralDL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPICCentralServiceAPI\EPICCentralServiceAPI.csproj">
+      <Project>{CF069529-B004-4393-BBE8-CA0F3629D714}</Project>
+      <Name>EPICCentralServiceAPI</Name>
+      <Aliases>CurrentAPI</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\MvcApiActionFilter\MvcApiActionFilter.csproj">
+      <Project>{BAA8E7F2-55B8-4030-A903-1710F0E25B39}</Project>
+      <Name>MvcApiActionFilter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\andyedinborough-aenetmail-5d5a0b8\AE.Net.Mail.csproj">
+      <Project>{68E9CF8C-AB54-4CC7-A34F-C7F469E4EFE0}</Project>
+      <Name>AE.Net.Mail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\ClearviewLogo.gif" />
+    <Content Include="Content\EPICLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Controllers\Account.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Account.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Account.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Account.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\DataTables.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\DataTables.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\DataTables.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataTables.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Device.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Device.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Device.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Device.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Menu.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Menu.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Menu.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Menu.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Message.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Operation.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Operation.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Operation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Operation.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Patient.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Patient.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Patient.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Patient.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Purchase.blank.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Purchase.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Purchase.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Purchase.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Support.blank.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Support.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Support.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Support.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Widgets.blank.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Controllers\Widgets.de.resx" />
+    <EmbeddedResource Include="Resources\Controllers\Widgets.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Widgets.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ControllerRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Account.blank.resx" />
+    <EmbeddedResource Include="Resources\Models\Account.de.resx" />
+    <EmbeddedResource Include="Resources\Models\Account.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Account.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Configuration.blank.resx" />
+    <EmbeddedResource Include="Resources\Models\Configuration.de.resx" />
+    <EmbeddedResource Include="Resources\Models\Configuration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Configuration.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Device.blank.resx" />
+    <EmbeddedResource Include="Resources\Models\Device.de.resx" />
+    <EmbeddedResource Include="Resources\Models\Device.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Device.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Location.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Location.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Message.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Purchase.blank.resx" />
+    <EmbeddedResource Include="Resources\Models\Purchase.de.resx" />
+    <EmbeddedResource Include="Resources\Models\Purchase.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Purchase.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Models\Support.blank.resx" />
+    <EmbeddedResource Include="Resources\Models\Support.de.resx" />
+    <EmbeddedResource Include="Resources\Models\Support.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Support.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ModelRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Countries.blank.resx" />
+    <EmbeddedResource Include="Resources\Shared\Countries.de.resx" />
+    <EmbeddedResource Include="Resources\Shared\Countries.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Countries.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SharedRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Cultures.blank.resx" />
+    <EmbeddedResource Include="Resources\Shared\Cultures.de.resx" />
+    <EmbeddedResource Include="Resources\Shared\Cultures.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Cultures.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>SharedRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Error.blank.resx" />
+    <EmbeddedResource Include="Resources\Shared\Error.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Error.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Error.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SharedRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\Formats.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Formats.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SharedRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Shared\General.blank.resx" />
+    <EmbeddedResource Include="Resources\Shared\General.de.resx" />
+    <EmbeddedResource Include="Resources\Shared\General.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>General.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>SharedRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Account.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Account.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Account.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Account.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Configuration.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Configuration.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Configuration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Configuration.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Device.blank.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Device.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Device.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Device.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Exception.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Exception.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Exception.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exception.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Home.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Home.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Home.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Home.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Location.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Location.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Location.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Location.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Message.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Operation.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Operation.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Operation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Operation.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Organization.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Organization.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Organization.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Organization.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Patient.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Patient.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Purchase.blank.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Purchase.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Purchase.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Purchase.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Patient.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Patient.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Shared.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Shared.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Shared.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Shared.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Support.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\Support.de.resx" />
+    <EmbeddedResource Include="Resources\Views\Support.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Support.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\Treatment.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Treatment.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Views\User.blank.resx" />
+    <EmbeddedResource Include="Resources\Views\User.de.resx" />
+    <EmbeddedResource Include="Resources\Views\User.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>User.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>ViewRes</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.DevTest.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\LogOn.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Account\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\About.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LogOnPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_RolesPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Patient\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Treatment\View.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Treatment\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Organization\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Organization\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Location\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Location\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Organization\View.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\User\List.cshtml" />
+    <Content Include="Views\Device\Edit.cshtml" />
+    <Content Include="Views\Device\List.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config-connectionStrings.config" />
+    <Content Include="config-sqlServerCatalogNameOverwrites.config" />
+    <None Include="Scripts\DataTables\media\images\Sorting icons.psd" />
+    <Content Include="Views\Shared\_DataTablesPartial.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentSummaryPartial.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentSystemPartial.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentRawPartial.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentRawReportPartial.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentImagesPartial.cshtml" />
+    <Content Include="Views\Exception\List.cshtml" />
+    <Content Include="Views\Exception\View.cshtml" />
+    <Content Include="Views\Treatment\_TreatmentSummaryImagesPartial.cshtml" />
+    <Content Include="Views\Purchase\List.cshtml" />
+    <Content Include="Views\Device\View.cshtml" />
+    <Content Include="Views\Device\_ListFullControl.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Device\_ListLimitedControl.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Configuration\Index.cshtml" />
+    <Content Include="Views\Location\View.cshtml" />
+    <Content Include="Views\Treatments\Load.cshtml" />
+    <Content Include="Views\Shared\_UpdateAttachmentPartial.cshtml" />
+    <Content Include="Views\User\_AddEmailPartial.cshtml" />
+    <Content Include="Views\Account\_ResetEmailPartial.cshtml" />
+    <Content Include="Views\Purchase\Add.cshtml" />
+    <Content Include="Views\User\View.cshtml" />
+    <Content Include="Views\Shared\_EmailLayout.cshtml" />
+    <Content Include="Views\Purchase\AddCard.cshtml" />
+    <Content Include="Views\User\EditMe.cshtml" />
+    <Content Include="Views\Support\Message.cshtml" />
+    <Content Include="Views\Configuration\EditSetting.cshtml" />
+    <Content Include="Views\Purchase\New.cshtml" />
+    <Content Include="Views\Purchase\Checkout.cshtml" />
+    <Content Include="Views\Patient\View.cshtml" />
+    <Content Include="Views\Purchase\EditCard.cshtml" />
+    <Content Include="Views\Message\List.cshtml" />
+    <Content Include="Views\Message\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+    <Content Include="Views\Support\Index.cshtml" />
+    <Content Include="Views\Support\Compose.cshtml" />
+    <Content Include="Views\Organization\Summary.cshtml" />
+    <Content Include="Views\Configuration\EditRate.cshtml" />
+    <Content Include="Views\Operation\Index.cshtml" />
+    <Content Include="Views\User\Add.cshtml" />
+    <Content Include="Views\Account\Reset.cshtml" />
+    <Content Include="Views\Account\ResetSuccess.cshtml" />
+    <Content Include="Views\Account\ResetCompletion.cshtml" />
+    <Content Include="Views\Account\ResetCompletionSuccess.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>53360</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64762/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

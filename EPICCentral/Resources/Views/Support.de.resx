@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Compose_Error" xml:space="preserve">
+    <value>Senden Sie die Nachricht nicht erfolgreich war, korrigieren Sie bitte die nachfolgenden Fehler.</value>
+  </data>
+<data name="Compose_Title" xml:space="preserve">
+    <value>Nachricht verfassen</value>
+  </data>
+<data name="Compose_From" xml:space="preserve">
+    <value>Von (Sie )</value>
+  </data>
+<data name="Compose_To" xml:space="preserve">
+    <value>zu</value>
+  </data>
+<data name="Compose_Subject" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+<data name="Compose_Message" xml:space="preserve">
+    <value>Nachricht</value>
+  </data>
+<data name="Support_Title" xml:space="preserve">
+    <value>Support Center</value>
+  </data>
+<data name="Support_NotSetup" xml:space="preserve">
+    <value>Ihr Support Center -Konto ist noch nicht eingerichtet . </value>
+  </data>
+<data name="Support_MustWait" xml:space="preserve">
+    <value>Sie müssen warten, bis zu 2 Minuten , bevor Sie Ihre Support-Center -Konto zugreifen können .</value>
+  </data>
+<data name="Support_Sender" xml:space="preserve">
+    <value>Absender</value>
+  </data>
+<data name="Support_DateReceived" xml:space="preserve">
+    <value>Empfangs-Datum</value>
+  </data>
+<data name="Support_Empty" xml:space="preserve">
+    <value>&lt;leer&gt;</value>
+  </data>
+<data name="Support_Delete" xml:space="preserve">
+    <value>löschen</value>
+  </data>
+<data name="Support_Compose" xml:space="preserve">
+    <value>Verfassen einer neuen Nachricht</value>
+  </data>
+<data name="Support_Send" xml:space="preserve">
+    <value>senden</value>
+  </data>
+<data name="Message_Sender" xml:space="preserve">
+    <value>Absender</value>
+  </data>
+<data name="Message_Subject" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+<data name="Message_To" xml:space="preserve">
+    <value>zu</value>
+  </data>
+<data name="Support_Subject" xml:space="preserve">
+    <value>Thema</value>
+  </data>
+</root>

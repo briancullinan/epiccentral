@@ -1,0 +1,14 @@
+﻿Code version: 6.1.37.86
+Assembly name Microsoft.Exchange.PowerShell.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35 mvid {168a43c4-deeb-4cc3-9a17-8e644d318994}
+* ref mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {8d72cd66-3505-496d-9c29-6f5111d4d831}
+* ref System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {14939bc1-9cbd-44fe-a55f-aeafe03cb3d6}
+* ref Microsoft.Exchange.Management, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {4f3f8aac-3068-4adf-9051-2f8006dca170}
+* ref Microsoft.Exchange.UM.Management, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {158f729b-70a1-487a-a731-a300767a41c1}
+* ref Microsoft.Exchange.ContentIndexing.Tasks, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {833fc45f-deb5-4235-b7f5-6894aa796c2b}
+* ref Microsoft.Exchange.Data.Directory, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+  mvid {a23f4363-5a53-4795-ad5e-8e7954db43f0}

@@ -1,0 +1,146 @@
+﻿@using EPICCentral.Utilities.Membership
+@model EPICCentral.Models.EditUserModel
+
+@{
+    ViewBag.Title = ViewRes.User.Edit_Title;
+}
+
+@if (!Request.IsAjaxRequest() && !ViewContext.Controller.ControllerContext.IsChildAction)
+{
+    <h2>@ViewRes.User.Edit_Title</h2>
+}
+
+<link href="@Url.Content("/Content/jquery.multiselect.css")" rel="stylesheet" type="text/css" />
+@Html.Script(@<script type="text/javascript" src="@Url.Content("/Scripts/jquery.multiselect.js")"></script>)
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        
+        // Extension function to check if element exists.
+        // Usage: $(selector).exists()
+        $.fn.exists = function () {
+            return this.length !== 0;
+        };
+
+        // Initialize the multiselect control that displays the Role <select> as a
+        // radio button list.
+        $("#Role").multiselect(
+                {
+                    multiple: false,
+                    header: false,
+                    selectedText: function () { return $("#Role").multiselect("getChecked")[0].title; },
+                    noneSelectedText: "@ViewRes.User.Edit_SelectRole",
+                    minWidth: 262,
+                    height: 110
+                }
+            );
+
+        // If the Locations <select> is present in the page, initialize the mulitiselect
+        // control that displays it as a checkbox list.
+        if ($("select#Locations").exists()) {
+            $("#Locations").multiselect(
+                {
+                    selectedText: "@ViewRes.User.Edit_NumberSelected",
+                    noneSelectedText: "@ViewRes.User.Edit_SelectLocations",
+                    checkAllText: "@ViewRes.User.Edit_AllowAll",
+                    uncheckAllText: "@ViewRes.User.Edit_DisallowAll",
+                    minWidth: 262,
+                    height: 110
+                }
+            );
+
+            // Locations are only valid when the role is not an admin role. So when it's
+            // an admin role, disable the Locations <select>. Enable it when the role is
+            // set to a non-admin role.
+            $("#Role").bind("multiselectclick", function (event, ui) {
+                if (ui.checked === true) {
+                    $("#Locations").multiselect(ui.text === "@RoleUtils.SERVICE_ADMIN_NAME" || ui.text === "@RoleUtils.ORGANIZATION_ADMIN_NAME" ? "disable" : "enable");
+                }
+            });
+
+            // Initialize state of Locations <select> based on set role.
+            var role = $("#Role option:selected").text();
+            $("#Locations").multiselect(role === "@RoleUtils.SERVICE_ADMIN_NAME" || role === "@RoleUtils.ORGANIZATION_ADMIN_NAME" ? "disable" : "enable");
+        }
+
+    });
+
+</script>
+
+@using (Html.BeginForm())
+{
+	<fieldset>
+		
+		<legend>@ViewRes.User.Edit_UserInformation</legend>
+    @if (!Model.IsRegistrationPending)
+	{
+		<div class="editor-label">
+            @Html.LabelFor(m => m.UserName, ViewRes.User.Edit_Username)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.UserName)
+		</div>
+	}
+    else
+	{
+		@Html.HiddenFor(m => m.UserName)
+	}
+		<div class="editor-label">
+            @Html.LabelFor(m => m.EmailAddress, ViewRes.User.Edit_EmailAddress)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.EmailAddress)
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.FirstName, ViewRes.User.Edit_FirstName)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.FirstName)
+		</div>
+
+		<div class="editor-label">
+            @Html.LabelFor(m => m.LastName, ViewRes.User.Edit_LastName)
+        </div>
+		<div class="editor-field">
+			@Html.TextBoxFor(m => m.LastName)
+		</div>
+        
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Role, ViewRes.User.Edit_Role)
+        </div>
+		<div class="editor-field">
+			@Html.DropDownListFor(m => m.Role, Model.RoleList)
+		</div>
+        
+	@{ var locations = Model.LocationList; }
+	@if (locations.Count() != 1)
+	{
+		<div class="editor-label">
+            @Html.LabelFor(m => m.Locations, ViewRes.User.Edit_Locations)
+        </div>
+		<div class="editor-field">
+			@Html.ListBoxFor(m => m.Locations, locations, new {multiple = "multiple"})
+		</div>
+	}
+	else
+	{
+		@Html.HiddenFor(m => m.Locations, new { locations.First().Value })
+	}
+
+    @if (Roles.IsUserInRole("Service Administrator"))
+    {
+		<div class="editor-label">
+            @Html.LabelFor(m => m.IsActive, ViewRes.User.Edit_Active)
+        </div>
+		<div class="editor-field">
+			@Html.CheckBoxFor(m => m.IsActive)
+		</div>
+    }
+    
+        @Html.HiddenFor(m => m.OrganizationId)
+        @Html.HiddenFor(m => m.IsRegistrationPending)
+
+	</fieldset>
+}

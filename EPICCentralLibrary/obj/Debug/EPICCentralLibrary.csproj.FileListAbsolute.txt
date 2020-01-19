@@ -1,0 +1,16 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\EPICCentralLibrary.dll.config
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\EPICCentralLibrary.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\EPICCentralLibrary.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\EPICCentralDL.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\log4net.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.LinqSupportClasses.NET35.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.QuerySpec.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\EPICCentralDL.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.ORMSupportClasses.NET20.xml
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.QuerySpec.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\bin\Debug\SD.LLBLGen.Pro.DQE.SqlServer.NET20.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\obj\Debug\EPICCentralLibrary.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\EPICCentralLibrary\obj\Debug\EPICCentralLibrary.pdb

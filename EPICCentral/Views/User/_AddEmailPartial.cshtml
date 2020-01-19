@@ -1,0 +1,23 @@
+﻿@model EPICCentral.Models.KeyedEmailModel
+
+@{
+	Layout = "~/Views/Shared/_EmailLayout.cshtml";
+	ViewBag.Title = ViewRes.User.AddEmailPartial_Title;
+}
+
+<div style="clear: both; padding: 0 0 10px; color: #333333; font-size: 18px;">
+    @String.Format(ViewRes.User.AddEmailPartial_Greeting, Model.FirstName)
+</div>
+<p>
+    @ViewRes.User.AddEmailPartial_AccountCreated
+</p>
+<p>
+	<a href="@Url.AbsoluteAction("Register", "Account", new { RegistrationKey = Model.Key, Email = Model.EmailAddress })">@ViewRes.User.AddEmailPartial_CompleteRegistration</a>
+</p>
+<p>
+    @ViewRes.User.AddEmailPartial_Instructions
+</p>
+<p>
+    @ViewRes.User.AddEmailPartial_Salutation<br/>
+    @ViewRes.User.AddEmailPartial_SalutationName
+</p>

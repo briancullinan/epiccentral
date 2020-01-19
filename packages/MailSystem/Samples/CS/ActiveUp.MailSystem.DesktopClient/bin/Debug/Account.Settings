@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAccountInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AccountInfo>
+    <UserName>testuser</UserName>
+    <Password>password</Password>
+    <IncomingIsSSL>true</IncomingIsSSL>
+    <OutgoingIsSSL>true</OutgoingIsSSL>
+    <InPort>993</InPort>
+    <InPortEnabled>true</InPortEnabled>
+    <OutPortEnabled>true</OutPortEnabled>
+    <OutPort>25</OutPort>
+    <MailAccountType>IMAP</MailAccountType>
+    <EmailAddress>testuser@epicdiagnostics.com</EmailAddress>
+    <LoginName>testuser</LoginName>
+    <RememberPassword>true</RememberPassword>
+    <EncType>SSL</EncType>
+    <OutgoingServerNeedsAuthentication>true</OutgoingServerNeedsAuthentication>
+    <IncomingServerName>imap.epicdiagnostics.com</IncomingServerName>
+    <OutgoingServerName>smtp.epicdiagnostics.com</OutgoingServerName>
+    <ID>1fae7f09-ac68-47e4-8d63-ab6b1fd1c0b4</ID>
+  </AccountInfo>
+</ArrayOfAccountInfo>

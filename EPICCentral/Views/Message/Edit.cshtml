@@ -1,0 +1,153 @@
+﻿@model EPICCentral.Models.ComposeMessage
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        function split(val) {
+            return val.split(/[,;\n]\s*/);
+        }
+        function extractLast(term) {
+            return split(term).pop();
+        }
+
+        $("#StartTime").datetimepicker({
+            changeMonth: true,
+            changeYear: true,
+            minDate: new Date(),
+            ampm: true,
+            showSecond: true,
+            timeFormat: 'h:mm:ss TT',
+            dateFormat: 'm/d/yy',
+            monthNames: [
+                '@SharedRes.General.Month_Jan',
+                '@SharedRes.General.Month_Feb',
+                '@SharedRes.General.Month_Mar',
+                '@SharedRes.General.Month_Apr',
+                '@SharedRes.General.Month_May',
+                '@SharedRes.General.Month_Jun',
+                '@SharedRes.General.Month_Jul',
+                '@SharedRes.General.Month_Aug',
+                '@SharedRes.General.Month_Sep',
+                '@SharedRes.General.Month_Oct',
+                '@SharedRes.General.Month_Nov',
+                '@SharedRes.General.Month_Dec'
+            ]
+        }).change(function() {
+            var newDate = $(this).datetimepicker('getDate');
+            var oldEndDate = $("#EndTime").datetimepicker('getDate');
+            if (oldEndDate < newDate && $("#EndTime").val() != '') {
+                $("#EndTime").datetimepicker('setDate', newDate);
+                $("#EndTime").datetimepicker("option", "minDate", newDate);
+            }
+        });
+
+        $("#EndTime").datetimepicker({
+            changeMonth: true,
+            changeYear: true,
+            minDate: $("#StartTime").datetimepicker('getDate'),
+            ampm: true,
+            showSecond: true,
+            timeFormat: 'h:mm:ss TT',
+            dateFormat: 'm/d/yy',
+            monthNames: [
+                '@SharedRes.General.Month_Jan',
+                '@SharedRes.General.Month_Feb',
+                '@SharedRes.General.Month_Mar',
+                '@SharedRes.General.Month_Apr',
+                '@SharedRes.General.Month_May',
+                '@SharedRes.General.Month_Jun',
+                '@SharedRes.General.Month_Jul',
+                '@SharedRes.General.Month_Aug',
+                '@SharedRes.General.Month_Sep',
+                '@SharedRes.General.Month_Oct',
+                '@SharedRes.General.Month_Nov',
+                '@SharedRes.General.Month_Dec'
+            ]
+        });
+
+        if($("#EndTime").val() == '@(default(DateTime))')
+            $("#EndTime").val('');
+
+        $('#To')
+        // don't navigate away from the field on tab when selecting an item
+			.bind("keydown", function (event) {
+			    if (event.keyCode === $.ui.keyCode.TAB &&
+						$(this).data("autocomplete").menu.active) {
+			        event.preventDefault();
+			    }
+			})
+			.autocomplete({
+			    source: function (request, response) {
+			        $.getJSON('@Url.Action("GetTos", "Message")', {
+			            term: extractLast(request.term)
+			        }, response);
+			    },
+			    focus: function () {
+			        // prevent value inserted on focus
+			        return false;
+			    },
+			    select: function (event, ui) {
+			        var terms = split(this.value);
+			        // remove the current input
+			        terms.pop();
+			        // add the selected item
+			        terms.push(ui.item.value);
+			        // add placeholder to get the comma-and-space at the end
+			        terms.push("");
+			        this.value = terms.join(", ");
+			        return false;
+			    }
+			});
+    });
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, "There were some errors while sending the message:")
+
+    <fieldset id="compose">
+        <legend>@("Edit the Message")</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Type)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Type, Model.Type.ToSelectList())
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.StartTime)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.StartTime)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.EndTime)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.EndTime)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.To)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.To)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Title)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Title)
+        </div>
+    
+        <div class="editor-label">
+            @Html.LabelFor(m => m.Body)
+        </div>
+        <div class="editor-field">
+            @Html.TextAreaFor(m => m.Body)
+        </div>
+    
+    </fieldset>
+}

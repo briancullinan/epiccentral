@@ -1,0 +1,5 @@
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\packages\MailSystem\Class Library\ActiveUp.Net.Dns\bin\Debug\ActiveUp.Net.Dns.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\packages\MailSystem\Class Library\ActiveUp.Net.Dns\bin\Debug\ActiveUp.Net.Dns.pdb
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\packages\MailSystem\Class Library\ActiveUp.Net.Dns\obj\Debug\ResolveAssemblyReference.cache
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\packages\MailSystem\Class Library\ActiveUp.Net.Dns\obj\Debug\ActiveUp.Net.Dns.dll
+C:\EPICSource\developer1_ARIZONA21\EPIC Website\EPICCentral\packages\MailSystem\Class Library\ActiveUp.Net.Dns\obj\Debug\ActiveUp.Net.Dns.pdb

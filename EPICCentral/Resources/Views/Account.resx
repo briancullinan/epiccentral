@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResetEmailPartial_Title" xml:space="preserve">
+    <value>EPIC Central: Password Reset Email</value>
+  </data>
+  <data name="ResetEmailPartial_Greeting" xml:space="preserve">
+    <value>Hello {0},</value>
+  </data>
+  <data name="ResetEmailPartial_GreetingGeneric" xml:space="preserve">
+    <value>Hello EPIC Central User,</value>
+  </data>
+  <data name="ResetEmailPartial_Message" xml:space="preserve">
+    <value>Your password has been reset.
+Please click the link below to complete the password reset process:</value>
+  </data>
+  <data name="ResetEmailPartial_CompleteLink" xml:space="preserve">
+    <value>Complete Password Reset</value>
+  </data>
+  <data name="ResetEmailPartial_Instructions" xml:space="preserve">
+    <value>You will need to set a new password before you can log in.
+	If you have more that one account with this e-mail address, you will
+	be able to choose the account on which to set a new password.
+	Until you complete the reset process, you will not be able to log in
+	to any account.</value>
+  </data>
+  <data name="ResetEmailPartial_Instruction2" xml:space="preserve">
+    <value>If you did not reset your password on the EPIC Central site, please
+    contact EPIC Central support immediately.</value>
+  </data>
+  <data name="ResetEmailPartial_Salutation" xml:space="preserve">
+    <value>Sincerely,</value>
+  </data>
+  <data name="ResetEmailPartial_SalutationName" xml:space="preserve">
+    <value>The EPIC Central Team</value>
+  </data>
+  <data name="ChangePassword_Title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ChangePassword_Errors" xml:space="preserve">
+    <value>Password change was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="ChangePassword_ChangePasswordFor" xml:space="preserve">
+    <value>Change Password for {0}</value>
+  </data>
+  <data name="ChangePassword_MinimumLength" xml:space="preserve">
+    <value>New passwords are required to be a minimum of {0} characters in length.</value>
+  </data>
+  <data name="ChangePassword_CurrentPassword" xml:space="preserve">
+    <value>Current/New Password</value>
+  </data>
+  <data name="ChangePassword_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="ChangePassword_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ChangePasswordSuccess_Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="ChangePasswordSuccess_Message" xml:space="preserve">
+    <value>Your password has been changed successfully.</value>
+  </data>
+  <data name="ChangePasswordSuccess_Title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="LogOn_Title" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="LogOn_Message" xml:space="preserve">
+    <value>Please enter your user name and password to log in.</value>
+  </data>
+  <data name="LogOn_Errors" xml:space="preserve">
+    <value>Login was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="LogOn_AccountInformation" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="LogOn_IForgot" xml:space="preserve">
+    <value>I forgot!</value>
+  </data>
+  <data name="LogOn_Reset" xml:space="preserve">
+    <value>Reset ...</value>
+  </data>
+  <data name="LogOn_Submit" xml:space="preserve">
+    <value>Log On</value>
+  </data>
+  <data name="Register_Heading" xml:space="preserve">
+    <value>Complete New Account Registration</value>
+  </data>
+  <data name="Register_Title" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Register_Message" xml:space="preserve">
+    <value>Use the form below to complete your account registration.</value>
+  </data>
+  <data name="Register_MinimumLength" xml:space="preserve">
+    <value>Passwords are required to be a minimum of {0} characters in length.</value>
+  </data>
+  <data name="Register_Errors" xml:space="preserve">
+    <value>Account creation was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="Register_AccountInformation" xml:space="preserve">
+    <value>Account Information</value>
+  </data>
+  <data name="Register_Submit" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Reset_Remembered" xml:space="preserve">
+    <value>I remembered!</value>
+  </data>
+  <data name="Reset_LogOn" xml:space="preserve">
+    <value>Log on ...</value>
+  </data>
+  <data name="ResetCompletion_Title" xml:space="preserve">
+    <value>Account Reset Completion</value>
+  </data>
+  <data name="ResetCompletion_Message">
+    <value xml:space="preserve">Please reset the password on your account.</value>
+  </data>
+  <data name="ResetCompletion_Errors">
+    <value xml:space="preserve">Reset was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+  <data name="ResetCompletion_MultipleAccounts">
+    <value xml:space="preserve">You have multiple accounts with the same email address.  Please select the one to reset.</value>
+  </data>
+  <data name="ResetCompletion_SelectAccount">
+    <value xml:space="preserve">Select Account</value>
+  </data>
+  <data name="ResetCompletion_CreateNew">
+    <value xml:space="preserve">Create New Password</value>
+  </data>
+  <data name="ResetCompletion_Next">
+    <value xml:space="preserve">Next</value>
+  </data>
+  <data name="ResetCompletion_Reset">
+    <value xml:space="preserve">Reset</value>
+  </data>
+  <data name="ResetCompletionSuccess_Title">
+    <value xml:space="preserve">Complete Account Reset</value>
+  </data>
+  <data name="ResetCompletionSuccess_Message">
+    <value xml:space="preserve">Your password has been reset successfully.  You may now {0} using your new password.</value>
+  </data>
+  <data name="ResetSuccess_Title">
+    <value xml:space="preserve">Account Reset</value>
+  </data>
+  <data name="ResetSuccess_Message">
+    <value xml:space="preserve">Your account has been reset.
+An email has been sent to your email address.
+When you recieve the email, click the link provided to complete the reset process.
+Your account is current restricted and you cannot log in until you complete the process.</value>
+  </data>
+  <data name="Reset_Title">
+    <value xml:space="preserve">Reset Account</value>
+  </data>
+  <data name="Reset_Message">
+    <value xml:space="preserve">Please enter your user name and email address to reset your account.</value>
+  </data>
+  <data name="Reset_Errors">
+    <value xml:space="preserve">Reset was unsuccessful. Please correct the errors and try again.</value>
+  </data>
+</root>

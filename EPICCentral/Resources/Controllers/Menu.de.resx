@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="PatientTreatment_Overview" xml:space="preserve">
+    <value>Überblick</value>
+  </data>
+<data name="PatientTreatment_SystemComparison" xml:space="preserve">
+    <value>System- Vergleich</value>
+  </data>
+<data name="PatientTreatment_Definitions" xml:space="preserve">
+    <value>Definitionen</value>
+  </data>
+<data name="PatientTreatment_RawData" xml:space="preserve">
+    <value>Raw Data</value>
+  </data>
+<data name="PatientTreatment_RawReport" xml:space="preserve">
+    <value>Raw -Bericht</value>
+  </data>
+<data name="PatientTreatment_Images" xml:space="preserve">
+    <value>Images</value>
+  </data>
+<data name="PatientSearch_PatientSearch" xml:space="preserve">
+    <value>Patienten- Suche</value>
+  </data>
+<data name="PatientTreatments_TreatmentSearch" xml:space="preserve">
+    <value>Die Behandlung Suche</value>
+  </data>
+<data name="OrganizationEdit_OrganizationInformation" xml:space="preserve">
+    <value>Meine Organisation</value>
+  </data>
+<data name="LocationList_Locations" xml:space="preserve">
+    <value>Standorte</value>
+  </data>
+<data name="UserList_Users" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+<data name="LocationEdit_Edit" xml:space="preserve">
+    <value>bearbeiten</value>
+  </data>
+<data name="UserEdit_Edit" xml:space="preserve">
+    <value>bearbeiten</value>
+  </data>
+<data name="PurchasesList_Purchases" xml:space="preserve">
+    <value>Käufe</value>
+  </data>
+<data name="PatientTreatments_Treatments" xml:space="preserve">
+    <value>Behandlungen</value>
+  </data>
+<data name="OrganizationSummary_Summary" xml:space="preserve">
+    <value>Zusammenfassung</value>
+  </data>
+<data name="SupportIndex_SupportCenter" xml:space="preserve">
+    <value>Support Center</value>
+  </data>
+<data name="HomeIndex_Home" xml:space="preserve">
+    <value>nach Hause</value>
+  </data>
+<data name="PatientSearch_Patients" xml:space="preserve">
+    <value>Die Patienten</value>
+  </data>
+<data name="OrganizationList_Organizations" xml:space="preserve">
+    <value>Organisationen</value>
+  </data>
+<data name="DeviceList_Devices" xml:space="preserve">
+    <value>Geräte</value>
+  </data>
+<data name="OperationsIndex_Operations" xml:space="preserve">
+    <value>Operationen</value>
+  </data>
+<data name="ConfigurationIndex_Configuration" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+<data name="ExceptionList_Exceptions" xml:space="preserve">
+    <value>Ausnahmen</value>
+  </data>
+<data name="AccountLogOff_LogOff" xml:space="preserve">
+    <value>abmelden</value>
+  </data>
+<data name="MyAccount" xml:space="preserve">
+    <value>Ihr Konto</value>
+  </data>
+<data name="AccountLogOn_LogOn" xml:space="preserve">
+    <value>anmelden</value>
+  </data>
+</root>

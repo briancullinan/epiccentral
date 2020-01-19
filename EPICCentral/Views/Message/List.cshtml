@@ -1,0 +1,72 @@
+﻿@using System.Globalization
+@using EPICCentral.Models
+@using ViewRes
+@using EPICCentralDL.EntityClasses
+@model IQueryable<MessageEntity>
+
+@{
+    ViewBag.Title = Message.List_Title;
+}
+
+@section Head
+{
+    <script type="text/javascript">
+        function RemoveSuccess() {
+            $('#Message-List').dataTable().fnDraw();
+        }
+        
+        function RemoveFailed() {
+            
+        }
+    </script>
+}
+
+<h2>@Message.List_Title</h2>
+@{
+    var columns = new ColumnCollection<MessageEntity>
+                      {
+                          {x => x.Title, Message.List_TitleColumn},
+                          {x => x.CreateTime, Message.List_Created},
+                          {x => x.MessageType, Message.List_MessageType, x => x.MessageType.GetDisplayText()},
+                          {"DeviceMessages.Device.SerialNumber", Message.List_InvolvedDevices, x => String.Join(", ", x.DeviceMessages.Select(y => y.Device.SerialNumber))},
+                          {"DeviceMessages.Device.Location.Name", Message.List_InvolvedLocations, x => String.Join(", ", x.DeviceMessages.Select(y => y.Device.Location).Distinct().Select(y => y.Name))},
+                          {
+                              "Edit", "", x => x.DeviceMessages.All(y => y.DeliveryTime != null)
+                                                   ? MvcHtmlString.Create(Message.List_AlreadyDelivered)
+                                                   : Html.ActionLink(Message.List_Edit, "Edit", "Message", new {x.MessageId}, null)
+                              },
+                          {
+                              "Remove", "", x => x.DeviceMessages.All(y => y.DeliveryTime != null)
+                                                     ? MvcHtmlString.Create(Message.List_AlreadyDelivered)
+                                                     : Html.ActionLink(Message.List_Remove, "Remove", "Message", new {x.MessageId}, null)
+                              }
+                      };
+    if(Roles.IsUserInRole("Service Administrator"))
+    {
+        columns.Add(x => x.IsActive, Message.List_HideInactive, toggle: "IsActive:~False", visible:false);
+    }
+}
+@Html.DataTableFor(Model, columns, new DataTablesDialogModelCollection
+{
+    {"Edit", Message.List_EditMessage, 800, 600, true, Message.List_Send}
+}, add: new DataTablesAddModel
+{
+    Action = x => Html.ActionLink(Message.List_ComposeMessage, "Add", "Message"),
+    Height = 600,
+    Width = 800,
+    SaveText = Message.List_Send
+}, actions: new DataTablesDirectActionModelCollection
+{
+    new DataTablesDirectActionModel
+        {
+            ColumnName = "Remove",
+            ErrorFunc = "RemoveFailed",
+            SuccessFunc = "RemoveSuccess"
+        },
+    new DataTablesDirectActionModel
+        {
+            ColumnName = "IsActive",
+            ErrorFunc = "RemoveFailed",
+            SuccessFunc = "RemoveSuccess"
+        }
+}, htmlAttributes: new {@id = "Message-List"})

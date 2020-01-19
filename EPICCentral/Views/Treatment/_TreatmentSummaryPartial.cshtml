@@ -1,0 +1,113 @@
+﻿@using EPICCentralDL.Customization
+@using ViewRes
+@model EPICCentral.Models.Treatment
+
+<script src="@Url.Content("~/Scripts/epic.treatment.js")"type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        InitializeTreatment('@Url.Action("Sectors")', @Model.TreatmentId, '@(Model.Gender == Gender.Female ? "female" : "male")');
+    });
+</script>
+
+<div id="treatment-body">
+    <div id="body-view" class="@(Model.Gender == Gender.Female ? "female" : "male")"></div>
+    <ul id="treatment-menu" class="deselected">
+        @foreach (var system in Model.OrganSystems)
+        {
+            <li>
+                @{
+                    var nbAnalysisResult = system.NBAnalysisResults.SingleOrDefault(x => x.TreatmentId == Model.TreatmentId);
+                }
+                @if(nbAnalysisResult != null)
+                {
+                    <span class="physical">@String.Format("{0:N1}", nbAnalysisResult.ResultScoreFiltered)</span>
+                    <span class="autonomic">@String.Format("{0:N1}", nbAnalysisResult.ResultScoreUnfiltered)</span>
+                }
+                <a href="#" id="treatment-btn-@system.OrganSystemId">@system.Description</a>
+            </li>
+        }
+    </ul>
+</div>
+@if (Model.PatientPrescanQuestion != null && 
+    (Model.PatientPrescanQuestion.AlcoholQuestion || Model.PatientPrescanQuestion.CaffeineQuestion || Model.PatientPrescanQuestion.WheatQuestion))
+{
+    <div id="treatment-questions">
+        @if (Model.PatientPrescanQuestion.CaffeineQuestion && Model.PatientPrescanQuestion.WheatQuestion)
+        {
+            <span>@Treatment.TreatmentSummaryPartial_CaffeineAndWheat</span>
+        }
+        else if (Model.PatientPrescanQuestion.CaffeineQuestion)
+        {
+            <span>@Treatment.TreatmentSummaryPartial_Caffeine</span>
+        }
+        else if (Model.PatientPrescanQuestion.WheatQuestion)
+        {
+            <span>@Treatment.TreatmentSummaryPartial_Wheat</span>
+
+            if (Model.PatientPrescanQuestion.AlcoholQuestion)
+            {
+                <span>@Treatment.TreatmentSummaryPartial_Alcohol</span>
+            }
+        }
+    </div>
+}
+<div id="treatment-organs" style="display:none;">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2" id="physical">@Treatment.Summary_Physical</th>
+                <th colspan="2" id="autonomic">@Treatment.Summary_Autonomic</th>
+                <th></th>
+            </tr>
+            <tr>
+                <th class="organ"></th>
+                <th id="pl">@Treatment.Summary_L</th>
+                <th id="pr">@Treatment.Summary_R</th>
+                <th id="al">@Treatment.Summary_L</th>
+                <th id="ar">@Treatment.Summary_R</th>
+                <th class="scale"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                var even = false;
+                int organSystem = 0;
+            }
+            @foreach (var severity in Model.Severities)
+            {
+                // this is just used to keep track of where in the list the organ system changes so gray can be restarted
+                var thisOrganSystem = severity.Organ.OrganSystemOrgans.First(x => x.LicenseOrganSystem.LicenseMode == Model.License).LicenseOrganSystem.OrganSystemId;
+                if (organSystem != thisOrganSystem)
+                {
+                    organSystem = thisOrganSystem;
+                    even = false;
+                }
+                even = !even;
+                Func<int?, string> getIcon = (val) =>
+                {
+                    if (val >= 15 && val <= 18)
+                        return "check-yellow.gif";
+                    if (val >= 19 && val <= 21)
+                        return "check-orange.gif";
+                    if (val >= 22)
+                        return "check-red.gif";
+                    return "blank.gif";
+                };
+                <tr class="severity @(even ? "even" : "odd") organ-@organSystem">
+                    <td class="organ"><a href="#" id="organ-btn-@(severity.Organ.RComp)_@(severity.Organ.LComp)">@severity.Organ.Description.Replace(" - Left", "").Replace(" - Right", "")</a></td>
+                    <td><img src="@Url.Content("~/Content/treatment/" + getIcon(severity.PhysicalLeft))" alt=""/>@severity.PhysicalLeft</td>
+                    <td><img src="@Url.Content("~/Content/treatment/" + getIcon(severity.PhysicalRight))" alt=""/>@severity.PhysicalRight</td>
+                    <td><img src="@Url.Content("~/Content/treatment/" + getIcon(severity.MentalLeft))" alt=""/>@severity.MentalLeft</td>
+                    <td><img src="@Url.Content("~/Content/treatment/" + getIcon(severity.MentalRight))" alt=""/>@severity.MentalRight</td>
+                    <td class="scale">
+                        <div class="pl" style="width:@(severity.PhysicalLeft.HasValue ? (severity.PhysicalLeft.Value / (double)25 * 100) : 0)%;"></div>
+                        <div class="pr" style="width:@(severity.PhysicalRight.HasValue ? (severity.PhysicalRight.Value / (double)25 * 100) : 0)%"></div>
+                        <div class="al" style="width:@(severity.MentalLeft.HasValue ? (severity.MentalLeft.Value / (double)25 * 100) : 0)%"></div>
+                        <div class="ar" style="width:@(severity.MentalRight.HasValue ? (severity.MentalRight.Value / (double)25 * 100) : 0)%;"></div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

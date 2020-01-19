@@ -1,0 +1,47 @@
+@using EPICCentral.Controllers
+@model UpdatesModel
+
+<script type="text/javascript"> 
+    @foreach(var controller in Model)
+    {
+        foreach(var action in controller.Value)
+        {
+            @:function @(controller.Key)_@(action.Key)_Update()
+            <text>{
+                @action.Value
+            }</text>
+        }
+    }
+    
+    var updateUrl = '@Url.Action("CheckForUpdate", "Update")';
+    var request = '@Model.Request';
+    
+    function checkForUpdates() {
+        $.ajax({
+            url: updateUrl,
+            timeout: @UpdateController.UPDATE_INTERVAL,
+            data: {
+                request: request
+            }
+        }).done(function (data) {
+            request = data.request;
+            if(typeof(data.updates) != 'undefined')
+            {
+                for(var x in data.updates)
+                {
+                    var splitActions = data.updates[x].Actions.split(',');
+                    for(var y in splitActions)
+                    {
+                        var functionName = data.updates[x].Controller + '_' + splitActions[y] + '_Update';
+                        if(typeof(window[functionName]) == 'function')
+                            window[functionName]();
+                    }
+                }
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        setInterval(checkForUpdates, @(UpdateController.UPDATE_INTERVAL));
+    });
+</script>

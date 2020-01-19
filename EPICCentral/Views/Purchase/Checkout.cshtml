@@ -1,0 +1,58 @@
+﻿@using ViewRes
+@model EPICCentral.Models.NewPurchaseModel
+
+@{
+    ViewBag.Title = Purchase.Checkout_Title;
+}
+
+<h2>@Purchase.Checkout_Title</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Purchase.Checkout_Message
+
+    @Html.ValidationSummary(false, Purchase.Checkout_Errors)
+
+    <div class="editor-label">
+        @Html.LabelFor(m => m.CreditCardId)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.CreditCardId, Model.Cards.Select(x => x.CreditCard).ToSelectList())
+    </div>
+    		
+    <div class="editor-label">
+        @Html.LabelFor(m => m.PurchaseNotes)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(m => m.PurchaseNotes)
+        @Html.ValidationMessageFor(m => m.PurchaseNotes)
+    </div>
+
+    <br />
+    
+    <table>
+        <thead>
+            <tr>
+                <th>@Purchase.Checkout_Card</th>
+                <th>@Purchase.Checkout_Rate</th>
+                <th>@Purchase.Checkout_Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var purchase in Model.Cart)
+            {
+                <tr>
+                    <td>@SharedRes.Formats.Device.FormatWith(purchase.Device)</td>
+                    <td>@SharedRes.Formats.ScanRate.FormatWith(purchase.ScanRate)</td>
+                    <td>@purchase.Quantity</td>
+                </tr>
+            }            
+        </tbody>
+    </table>
+    
+    <h4>@String.Format(Purchase.Checkout_Total, Model.Cart.Sum(x => x.Price))</h4>
+    
+    <br class="clear" />
+    <button type="submit">@Purchase.Checkout_Purchase</button>
+}

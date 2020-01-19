@@ -1,0 +1,87 @@
+﻿@using EPICCentral.Models
+@using EPICCentral.Utilities.DataLayer
+@using EPICCentral.Utilities.Membership
+@using EPICCentralDL.EntityClasses
+@using ViewRes
+@model IQueryable<LocationEntity>
+
+@{
+    ViewBag.Title = Location.List_Title;
+
+	int editColumnIndex = 0;
+	DataTablesDialogModelCollection dialogModels = null;
+	DataTablesAddModel addModel = null;
+
+	ColumnCollection<LocationEntity> columns =
+        new ColumnCollection<LocationEntity>
+	            {
+	                    { "Name", Location.List_LocationName },
+	                    { "AddressLine1", Location.List_Address, o => string.IsNullOrWhiteSpace(o.AddressLine2) ? o.AddressLine1 : string.Join(", ", o.AddressLine1, o.AddressLine2) },
+	                    { "AddressLine2", null, null, false, null, false }, // no sort, hidden
+	                    { "City", Location.List_City },
+	                    { "State", Location.List_State },
+                        { "PhoneNumber", Location.List_Telephone, o => Html.GetPhoneDisplayText(o.PhoneNumber) },
+	                    /*{ "Users", "", o => Html.ActionLink(String.Format(Location.List_FormatUsers, LocationUtils.GetUserCount(o)),
+                                                            "List",
+                                                            "User",
+                                                            new {locationId = o.LocationId, organizationId = o.Organization.OrganizationId},
+                                                            null) }*/
+	            };
+    
+    if (RoleUtils.IsUserServiceAdmin())
+	{
+		columns.Insert(0, new DataTableColumn<LocationEntity> { ColumnName = "Organization.Name", Header = Location.List_Organization, CanSort = true, Visible = true });
+        columns.Insert(7, new DataTableColumn<LocationEntity> { ColumnName = "View", Header = "", Format = (o => Html.ActionLink(Location.List_View, "View", new { locationId = o.LocationId })), Visible = true });
+		editColumnIndex = 8;
+
+		dialogModels = new DataTablesDialogModelCollection
+		               	    {
+                                new DataTablesDialogModel { ColumnName = "View", Title = Location.List_LocationDetails, Width = 660, Edit = false },
+		               	    };
+    }
+	else
+	{
+        columns.Insert(5, new DataTableColumn<LocationEntity> { ColumnName = "Country", Header = Location.List_Country, CanSort = true, Visible = true });
+        columns.Insert(6, new DataTableColumn<LocationEntity> { ColumnName = "PostalCode", Header = Location.List_PostalCode, CanSort = true, Visible = true });
+    }
+
+    if (RoleUtils.IsUserOrgAdmin())
+	{
+        editColumnIndex = 8;
+    }
+    
+    if (editColumnIndex != 0)
+	{
+        columns.Insert(editColumnIndex,
+                       new DataTableColumn<LocationEntity>
+                            {
+                                ColumnName = "Edit",
+                                Header = "",
+                                Format = (o => Html.ActionLink(Location.List_Edit,
+                                                               "Edit",
+                                                               "Location",
+                                                               new { locationId = o.LocationId, organizationId = o.Organization.OrganizationId },
+                                                               null)),
+                                Visible = true
+                            });
+        
+        if (dialogModels == null)
+		{
+			dialogModels = new DataTablesDialogModelCollection();
+		}
+        dialogModels.Add(new DataTablesDialogModel { ColumnName = "Edit", Title = Location.List_EditLocation, Width = 620, Edit = true });
+
+		object routeValues = new {};
+        if (ViewData.ContainsKey("organizationId"))
+		{
+			routeValues = new {organizationId = ViewData["organizationId"]};
+		}
+        
+		addModel = new DataTablesAddModel { Action = o => Html.ActionLink(Location.List_AddLocation, "Edit", routeValues),
+                                            Width = 620 };
+	}
+}
+
+<h2>@Location.List_Title</h2>
+
+@Html.DataTableFor(Model, columns, dialogModels, add: addModel)

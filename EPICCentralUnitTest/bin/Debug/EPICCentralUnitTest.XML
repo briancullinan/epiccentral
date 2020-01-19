@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPICCentralUnitTest</name>
+    </assembly>
+    <members>
+        <member name="T:EPICCentralTest.AccountControllerTest">
+             <summary>
+            This is a test class for AccountControllerTest and is intended
+            to contain all AccountControllerTest Unit Tests
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ASPTest.TestInitialize">
+            <summary>
+            Force overriding classes to clean up their test
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ASPTest.TestCleanup">
+            <summary>
+            Force overriding classes to clean up their test
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ASPTest.ClassInitialize(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext)">
+            <summary>
+            Registers the routes for RouteTable
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ASPTest.ClassCleanup">
+            <summary>
+            Clear the routes
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.AccountControllerTest.User_Is_Not_Authenticated">
+            <summary>
+            Satisfies requirement 4.1.4.1
+            Satisfies requirement 4.2.1.1
+            Test if authentication works properly.
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.AccountControllerTest.Credentials_Not_Persisted_By_Browser">
+            <summary>
+            Satisfies requirement 4.1.4.1
+            Satisfies requirement 4.2.1.2
+            Test if authentication works properly.
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.AccountControllerTest.User_Can_Log_In">
+            <summary>
+            Satisfies requirement 4.1.4.1
+            Satisfies requirement 4.2.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.AccountControllerTest.User_Is_Authenticated">
+            <summary>
+            Satisfies requirement 4.2.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.AccountControllerTest.LogOff_Disposes_Of_Session">
+            <summary>
+            Satisfies requirement 4.2.1.3
+            Satisfies requirement 4.2.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.User_Can_Reset_Password">
+            <summary>
+            Satisfies requirement 4.2.6.2.1
+            Satisfies requirement 4.2.6.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.Password_Reset_Required_Fields">
+            <summary>
+            Satisfies requirement 4.2.6.2.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.Password_Reset_Email_Sent">
+            <summary>
+            Satisfies requirement 4.2.6.2.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.Account_Restricted_Until_Reset_Complete">
+            <summary>
+            Satisfies requirement 4.2.6.2.5
+            Satisfies requirement 4.2.6.2.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.All_Accounts_Restricted_When_Email_Provided">
+            <summary>
+            Satisfies requirement 4.2.6.2.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.User_Can_Enter_New_Password">
+            <summary>
+            Satisfies requirement 4.2.6.2.7
+            Satisfies requirement 4.2.6.2.8
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordResetTest.New_Password_Effective_Immediately">
+            <summary>
+            Satisfies requirement 4.2.6.2.9
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LoggingTest.Actions_Logged">
+            <summary>
+            Satisfies requirement 4.5.2.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LoggingTest.Exceptions_Logged">
+            <summary>
+            Satisfies requirement 4.5.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Service_Administrator_Can_Create_Devices">
+            <summary>
+            Satisfies requirement 4.1.3.1
+            Satisfies requirement 4.1.3.2
+            Satisfies requirement 4.1.3.3
+            Satisfies requirement 4.3.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Organization_Administrator_Cannot_Create_Devices">
+            <summary>
+            Satisfies requirement 4.1.3.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Users_Cannot_Create_Devices">
+            <summary>
+            Satisfies requirement 4.1.3.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Device_Requires_Location">
+            <summary>
+            Satisfies requirement 4.1.3.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Device_Requires_SerialNumber">
+            <summary>
+            Satisfies requirement 4.1.3.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Device_Requires_RevisionLevel">
+            <summary>
+            Satisfies requirement 4.1.3.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControllerTest.Service_Administrator_Can_Modify_Available_Scans">
+            <summary>
+            Satisfies requirement 4.1.3.6
+            Satisfies requirement 4.1.3.7
+            Satisfies requirement 4.1.3.8
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControlTest.Service_Administrator_Can_Set_State">
+            <summary>
+            Satisfies requirement 4.3.2.2
+            Satisfies requirement 4.3.2.3
+            Satisfies requirement 4.3.2.4
+            Satisfies requirement 4.3.2.6
+            Satisfies requirement 4.3.2.7
+            Satisfies requirement 4.6.1.4
+            Satisfies requirement 4.3.1.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceControlTest.Device_Can_Be_Taken_Out_Of_Service">
+            <summary>
+            Satisfies requirement 4.3.2.5
+            Satisfies requirement 4.3.2.8
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CompatibilityTest.Valid_Html">
+            <summary>
+            Satisfies requirement 4.8.2.1
+            Satisfies requirement 4.8.2.2
+            Satisfies requirement 4.8.2.3
+            Satisfies requirement 4.8.2.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CompatibilityTest.Valid_Css">
+            <summary>
+            Satisfies requirement 4.8.2.1
+            Satisfies requirement 4.8.2.2
+            Satisfies requirement 4.8.2.3
+            Satisfies requirement 4.8.2.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CompatibilityTest.Only_Available_Over_Https">
+            <summary>
+            Satisfies requirement 4.8.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CreditCardTest.Uses_External_Payment_Gateway">
+            <summary>
+            Satisfies requirement 4.2.5.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CreditCardTest.Does_Not_Store_Credit_Card_Numbers">
+            <summary>
+            Satisfies requirement 4.2.5.1.2
+            Satisfies requirement 4.2.5.1.3
+            Satisfies requirement 4.2.5.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CreditCardTest.Credit_Card_Required_Fields">
+            <summary>
+            Satisfies requirement 4.2.5.1.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.CreditCardTest.Credit_Card_Can_Be_Selected">
+            <summary>
+            Satisfies requirement 4.2.5.1.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.SupportControllerTest.User_Can_Create_Message">
+            <summary>
+            Satisfies requirement 4.4.1.1
+            Satisfies requirement 4.4.1.2
+            Satisfies requirement 4.4.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.SupportControllerTest.Message_Required_Fields">
+            <summary>
+            Satisfies requirement 4.4.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.SupportControllerTest.User_Can_View_Messages">
+            <summary>
+            Satisfies requirement 4.4.1.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.SupportControllerTest.User_Can_Delete_Message">
+            <summary>
+            Satisfies requirement 4.4.1.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ExceptionControllerTest.Only_Service_Administrator_Can_View_Exceptions">
+            <summary>
+            Satisfies requirement 4.5.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ExceptionControllerTest.Exception_View_Fields">
+            <summary>
+            Satisfies requirement 5.4.1.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ExceptionControllerTest.Exception_Search_Fields">
+            <summary>
+            Satisfies requirement 5.4.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.WSPatientTest.Web_Service_For_Adding_Patient">
+            <summary>
+            Satisfies requirement 4.6.1.7
+            Satisfies requirement 4.6.1.8
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordChangeTest.User_Can_Change_Password">
+            <summary>
+            Satisfies requirement 4.2.6.1.1
+            Satisfies requirement 4.2.6.1.3
+            Satisfies requirement 4.2.6.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PasswordChangeTest.Change_Password_Required_Fields">
+            <summary>
+            Satisfies requirement 4.2.6.1.2
+            Satisfies requirement 4.2.6.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MessageControllerTest.Messages_Can_Be_Sent">
+            <summary>
+            Satisfies requirement 4.4.2.1
+            Satisfies requirement 4.4.2.2
+            Satisfies requirement 4.4.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MessageControllerTest.Message_Delivered_Only_Once">
+            <summary>
+            Satisfies requirement 4.4.2.4
+            Satisfies requirement 4.6.1.11
+            Satisfies requirement 4.6.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MessageControllerTest.Message_Can_Be_Changed">
+            <summary>
+            Satisfies requirement 4.4.2.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MessageControllerTest.Message_Can_Be_Removed">
+            <summary>
+            Satisfies requirement 4.4.2.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MessageControllerTest.Users_Cannot_Create_Messages">
+            <summary>
+            Satisfies requirement 4.4.2.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.MenuTest.Link_To_Corporate_Site">
+            <summary>
+            Satisfies requirement 4.8.5.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.WSDeviceTest.Web_Service_For_Scans_Available">
+            <summary>
+            Satisfies requirement 4.6.1.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.WSDeviceTest.Web_Service_For_Scan_Completion">
+            <summary>
+            Satisfies requirement 4.6.1.6
+            Satisfies requirement 4.6.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.WSDeviceTest.Web_Service_For_Resetting_Authentication">
+            <summary>
+            Satisfies requirement 6.7.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.UserControllerTest.Administrator_Can_Create_Edit_Users">
+            <summary>
+            Satisfies requirement 4.1.4.2.1
+            Satisfies requirement 4.1.4.2.2
+            Satisfies requirement 4.1.5.3.2
+            Satisfies requirement 4.1.5.4.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.UserControllerTest.Organization_Administrator_Can_Create_Edit_Users">
+            <summary>
+            Satisfies requirement 4.1.4.2.3
+            Satisfies requirement 4.1.5.3.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.UserControllerTest.User_Creation_Requires_Fields">
+            <summary>
+            Satisfies requirement 4.1.4.2.4
+            Satisfies requirement 4.1.4.2.5
+            Satisfies requirement 4.1.4.4.1
+            Satisfies requirement 4.1.5.4.1
+            Satisfies requirement 4.1.5.4.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.UserControllerTest.User_Creation_Requires_Valid_Email">
+            <summary>
+            Satisfies requirement 4.1.4.2.6
+            Satisfies requirement 4.1.4.2.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.UserControllerTest.User_Creation_Sends_Email">
+            <summary>
+            Satisfies requirement 4.1.4.2.8
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PatientControllerTest.Users_Can_View_Patients_In_Organization">
+            <summary>
+            Satisfies requirement 4.2.3.1
+            Satisfies requirement 4.2.3.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PatientControllerTest.Users_Cannot_View_Patients_Outside_Organization">
+            <summary>
+            Satisfies requirement 4.2.3.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PatientControllerTest.Service_Administrator_Can_View_All_Patients">
+            <summary>
+            Satisfies requirement 4.2.3.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.InternationalizationTest.User_Can_Change_Languages">
+            <summary>
+            Satisfies requirement 4.8.3.1
+            Satisfies requirement 4.8.3.2
+            Satisfies requirement 4.8.3.3
+            Satisfies requirement 4.8.3.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Required_Fields">
+            <summary>
+            Satisfies requirement 4.1.4.3.3
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.9
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Requires_Valid_Username">
+            <summary>
+            Satisfies requirement 4.1.4.3.3
+            Satisfies requirement 4.1.4.3.6
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Username_Contains_No_Space">
+            <summary>
+            Satisfies requirement 4.1.4.3.3
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Requires_Unique_Username">
+            <summary>
+            Satisfies requirement 4.1.4.3.3
+            Satisfies requirement 4.1.4.3.9
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Minimum_Length">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Maximum_Length">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.7.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Contains_No_Space">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Contains_Lowercase">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Contains_Uppercase">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Contains_Digit">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Password_Contains_Symbol">
+            <summary>
+            Satisfies requirement 4.1.4.3.4
+            Satisfies requirement 4.1.4.3.7
+            Satisfies requirement 4.1.4.3.9
+            Satisfies requirement 4.7.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_ConfirmPassword_Password_Match">
+            <summary>
+            Satisfies requirement 4.1.4.3.5
+            Satisfies requirement 4.1.4.3.8
+            Satisfies requirement 4.1.4.3.9
+            </summary>
+        </member>
+        <member name="M:EPICCentralTest.RegistrationTest.Registration_Completes_Successfully">
+            <summary>
+            Satisfies requirement 4.1.4.3.1
+            Satisfies requirement 4.1.4.3.2
+            Satisfies requirement 4.1.4.3.3 (may use email for username)
+            Satisfies requirement 4.1.4.3.10
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OperationsControllerTest.Operations_Not_Accessible_By_Normal_User">
+            <summary>
+            Satifies requirement 4.2.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OperationsControllerTest.Operations_Is_Accessible_By_Administrator">
+            <summary>
+            Satisfies requirement 4.2.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OperationsControllerTest.Operations_Shows_Daily_Counts">
+            <summary>
+            Satisfies requirement 4.2.2.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OperationsControllerTest.Operations_Increments_Scans_Performed_Properly">
+            <summary>
+            Satisfies requirement 4.2.2.2
+            Satisfies requirement 4.2.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OperationsControllerTest.Operations_Shows_Aggragate_Counts">
+            <summary>
+            Satisfies requirement 4.2.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Access_To_Functions_Depends_On_Role">
+            <summary>
+            Satisfies requirement 4.1.5.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Users_Must_Have_One_Role">
+            <summary>
+            satisfies method 4.1.5.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Minimum_Of_Three_Roles">
+            <summary>
+            Satisfies requirement 4.1.5.3.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Simple_User_Cannot_Edit_Other_Users">
+            <summary>
+            Satisfies requirement 4.1.5.3.4
+            Satisfies requirement 4.1.5.4.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Service_Administrator_Can_Assign_Any_Role">
+            <summary>
+            Satisfies requirement 4.1.5.4.2
+            Satisfies requirement 4.1.5.4.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Organization_Administrator_Can_Assign_Roles">
+            <summary>
+            Satisfies requirement 4.1.5.4.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.RoleTests.Role_Change_Takes_Effect_Immediately">
+            <summary>
+            Satisfies requirement 4.1.5.4.7
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ConfigurationControllerTest.Administrator_Can_Disable_Reenable_Device_Access">
+            <summary>
+            Satisfies requirement 4.1.6.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ConfigurationControllerTest.Configuration_Only_Available_To_Administrators">
+            <summary>
+            Satisfies requirement 4.1.7.1
+            Satisfies requirement 4.1.7.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ConfigurationControllerTest.Administrator_Can_Create_Rates">
+            <summary>
+            Satisfies requirement 4.1.7.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ConfigurationControllerTest.Purchase_Rate_Required_Fields">
+            <summary>
+            Satisfies requirement 4.1.7.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.ConfigurationControllerTest.Effective_Date_Displayed_Rate_Properly">
+            <summary>
+            Satisfies requirement 4.1.7.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.TreatmentControllerTest.User_Can_View_Patient_Treatments">
+            <summary>
+            Satisfies requirement 4.2.3.4
+            Satisfies requirement 4.2.4.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.TreatmentControllerTest.User_Can_Search_Treatments">
+            <summary>
+            Satisfies requirement 4.2.4.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.TreatmentControllerTest.Service_Administrator_Can_View_All_Treatments">
+            <summary>
+            Satisfies requirement 4.2.4.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PurchaseControllerTest.Purchase_For_Organization_Devices">
+            <summary>
+            Satisfies requirement 4.2.5.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PurchaseControllerTest.Organization_Administrator_Purchase_For_Devices">
+            <summary>
+            Satisfies requirement 4.2.5.2.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PurchaseControllerTest.Scans_Increment_When_Purchase_Complete">
+            <summary>
+            Satisfies requirement 4.2.5.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PurchaseControllerTest.Scans_Available_Are_Transferrable">
+            <summary>
+            Satisfies requirement 4.2.5.2.4
+            Satisfies requirement 4.2.5.2.5
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.PurchaseControllerTest.Purchase_Log_Search_Requirements">
+            <summary>
+            Satisfies requirement 4.2.5.2.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.DeviceRegistrationTest.Device_Registration_Requires_User_Account">
+            <summary>
+            Satisfies requirement 4.3.1.3
+            Satisfies requirement 4.3.1.4
+            Satisfies requirement 4.3.1.5
+            Satisfies requirement 4.3.1.6
+            Satisfies requirement 4.3.1.7
+            Satisfies requirement 4.6.1.1
+            Satisfies requirement 4.6.1.2
+            Satisfies requirement 4.6.3
+            Satisfies requirement 4.6.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.Organizations_Have_Two_Types">
+            <summary>
+            Satisfies requirement 4.1.1.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.One_And_Only_One_Host_Organization">
+            <summary>
+            Satisfies requirement 4.1.1.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.User_Cannot_Create_Organization">
+            <summary>
+            Satisfies requirement 4.1.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.Administrator_Can_Create_Organization">
+            <summary>
+            Satisfies requirement 4.1.1.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.An_Organization_Administrator_Can_Change_Name">
+            <summary>
+            Satisfies requirement 4.1.1.5
+            Satisfies requirement 4.1.1.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.OrganizationControllerTest.Organization_Administrator_Can_Only_Edit_Their_Own">
+            <summary>
+            Satisfies requirement 4.1.1.6
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Location_Must_Have_A_Name">
+            <summary>
+            Satisfies requirement 4.1.2.1
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Location_Must_Have_Address_And_PhoneNumber">
+            <summary>
+            Satisfies requirement 4.1.2.2
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Service_Administrator_Can_Create_Edit_Locations">
+            <summary>
+            Satisfies requirement 4.1.2.3
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Organization_Administrator_Can_Create_Edit_Locations">
+            <summary>
+            Satisfies requirement 4.1.2.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Organization_Administrator_Cannot_Edit_Outside_Organization">
+            <summary>
+            Satisfies requirement 4.1.2.4
+            </summary>
+        </member>
+        <member name="M:EPICCentralUnitTest.LocationControllerTest.Service_Administrator_Can_Set_Geocode">
+            <summary>
+            Satisfies requirement 4.1.2.5
+            Satisfies requirement 4.1.2.6
+            </summary>
+        </member>
+    </members>
+</doc>

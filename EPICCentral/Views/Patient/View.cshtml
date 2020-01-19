@@ -1,0 +1,33 @@
+﻿@using ViewRes
+@model EPICCentralDL.EntityClasses.PatientEntity
+
+@{
+    ViewBag.Title = Patient.View_Patient;
+}
+
+@if (!Request.IsAjaxRequest() && !ViewContext.Controller.ControllerContext.IsChildAction)
+{
+    <h2>@Patient.View_Patient</h2>
+}
+
+<fieldset>
+    <legend>@Patient.View_PatientInformation</legend>
+    <div class="display-label">@Html.LabelFor(m => m.FirstName, Patient.View_FirstName)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.FirstName)</div>
+    <div class="display-label">@Html.LabelFor(m => m.LastName, Patient.View_LastName)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.LastName)</div>
+    <div class="display-label">@Html.LabelFor(m => m.MiddleInitial, Patient.View_MiddleInitial)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.MiddleInitial)</div>
+    <div class="display-label">@Html.LabelFor(m => m.PhoneNumber, Patient.View_PhoneNumber)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.PhoneNumber)</div>
+    <div class="display-label">@Html.LabelFor(m => m.EmailAddress, Patient.View_EmailAddress)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.EmailAddress)</div>
+    <div class="display-label">@Html.LabelFor(m => m.BirthDate, Patient.View_BirthDate)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.BirthDate)</div>
+    <div class="display-label">@Html.LabelFor(m => m.Gender, Patient.View_Gender)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.Gender)</div>
+    <div class="display-label">@Html.LabelFor(m => m.Location.Name, Patient.View_LocationName)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.Location.Name)</div>
+    <div class="display-label">@Html.LabelFor(m => m.ReceivedTime, Patient.View_ReceivedTime)</div>
+    <div class="display-field">@Html.DisplayTextFor(m => m.ReceivedTime)</div>
+</fieldset>

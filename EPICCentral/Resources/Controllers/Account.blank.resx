@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Email_SubjectPasswordReset" xml:space="preserve">
+    <value>----Email_SubjectPasswordReset----</value>
+  </data>
+<data name="Email_SubjectUserRegistration" xml:space="preserve">
+    <value>----Email_SubjectUserRegistration----</value>
+  </data>
+<data name="Error_AuthProvider" xml:space="preserve">
+    <value>----Error_AuthProvider----</value>
+  </data>
+<data name="Error_PasswordResetFailed" xml:space="preserve">
+    <value>----Error_PasswordResetFailed----</value>
+  </data>
+<data name="Error_UserCreateUnknown" xml:space="preserve">
+    <value>----Error_UserCreateUnknown----</value>
+  </data>
+<data name="Invalid_AccountAlreadyReset" xml:space="preserve">
+    <value>----Invalid_AccountAlreadyReset----</value>
+  </data>
+<data name="Invalid_AccountLocked" xml:space="preserve">
+    <value>----Invalid_AccountLocked----</value>
+  </data>
+<data name="Invalid_AccountRegistrationIncomplete" xml:space="preserve">
+    <value>----Invalid_AccountRegistrationIncomplete----</value>
+  </data>
+<data name="Invalid_AccountReset" xml:space="preserve">
+    <value>----Invalid_AccountReset----</value>
+  </data>
+<data name="Invalid_AccountsAlreadyReset" xml:space="preserve">
+    <value>----Invalid_AccountsAlreadyReset----</value>
+  </data>
+<data name="Invalid_AccountsRegistrationIncomplete" xml:space="preserve">
+    <value>----Invalid_AccountsRegistrationIncomplete----</value>
+  </data>
+<data name="Invalid_DuplicateUsername" xml:space="preserve">
+    <value>----Invalid_DuplicateUsername----</value>
+  </data>
+<data name="Invalid_EmailBad" xml:space="preserve">
+    <value>----Invalid_EmailBad----</value>
+  </data>
+<data name="Invalid_EmailNotMatched" xml:space="preserve">
+    <value>----Invalid_EmailNotMatched----</value>
+  </data>
+<data name="Invalid_EmailNotSpecified" xml:space="preserve">
+    <value>----Invalid_EmailNotSpecified----</value>
+  </data>
+<data name="Invalid_EmailUsernameMismatch" xml:space="preserve">
+    <value>----Invalid_EmailUsernameMismatch----</value>
+  </data>
+<data name="Invalid_InactiveAccount" xml:space="preserve">
+    <value>----Invalid_InactiveAccount----</value>
+  </data>
+<data name="Invalid_IncompleteRegistration" xml:space="preserve">
+    <value>----Invalid_IncompleteRegistration----</value>
+  </data>
+<data name="Invalid_PasswordBad" xml:space="preserve">
+    <value>----Invalid_PasswordBad----</value>
+  </data>
+<data name="Invalid_PasswordNotSpecified" xml:space="preserve">
+    <value>----Invalid_PasswordNotSpecified----</value>
+  </data>
+<data name="Invalid_RegistrationPIN" xml:space="preserve">
+    <value>----Invalid_RegistrationPIN----</value>
+  </data>
+<data name="Invalid_RoleSpecified" xml:space="preserve">
+    <value>----Invalid_RoleSpecified----</value>
+  </data>
+<data name="Invalid_UsernameBad" xml:space="preserve">
+    <value>----Invalid_UsernameBad----</value>
+  </data>
+<data name="Invalid_UsernamePassword" xml:space="preserve">
+    <value>----Invalid_UsernamePassword----</value>
+  </data>
+<data name="NotFound_PendingRegistration" xml:space="preserve">
+    <value>----NotFound_PendingRegistration----</value>
+  </data>
+<data name="Error_ChangePassword" xml:space="preserve">
+    <value>----Error_ChangePassword----</value>
+  </data>
+</root>

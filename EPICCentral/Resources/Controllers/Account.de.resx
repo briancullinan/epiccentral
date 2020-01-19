@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:element name="root" msdata:IsDataSet="true">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded">
+        <xsd:element name="metadata">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+            <xsd:attribute name="type" type="xsd:string" />
+            <xsd:attribute name="mimetype" type="xsd:string" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="assembly">
+          <xsd:complexType>
+            <xsd:attribute name="alias" type="xsd:string" />
+            <xsd:attribute name="name" type="xsd:string" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="data">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            <xsd:attribute ref="xml:space" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="resheader">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+            </xsd:sequence>
+            <xsd:attribute name="name" type="xsd:string" use="required" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
+<resheader name="resmimetype">
+  <value>text/microsoft-resx</value>
+</resheader>
+<resheader name="version">
+  <value>2.0</value>
+</resheader>
+<resheader name="reader">
+  <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<resheader name="writer">
+  <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+</resheader>
+<data name="Email_SubjectPasswordReset" xml:space="preserve">
+    <value>EPIC- Zentrale : Passwort Zurücksetzen</value>
+  </data>
+<data name="Email_SubjectUserRegistration" xml:space="preserve">
+    <value>EPIC Central: Neuen Benutzer anmelden</value>
+  </data>
+<data name="Error_AuthProvider" xml:space="preserve">
+    <value>Die Authentifizierungs-Provider hat einen Fehler zurückgegeben . </value>
+  </data>
+<data name="Error_PasswordResetFailed" xml:space="preserve">
+    <value>Passwort-Reset nicht ! </value>
+  </data>
+<data name="Error_UserCreateUnknown" xml:space="preserve">
+    <value>Ein unbekannter Fehler ist aufgetreten. </value>
+  </data>
+<data name="Invalid_AccountAlreadyReset" xml:space="preserve">
+    <value>Sie haben bereits zurückgesetzt Ihrem Konto. </value>
+  </data>
+<data name="Invalid_AccountLocked" xml:space="preserve">
+    <value>Ihr Benutzerkonto wurde gesperrt. </value>
+  </data>
+<data name="Invalid_AccountRegistrationIncomplete" xml:space="preserve">
+    <value>Ihr Konto ist neu, Sie haben nicht die Registrierung abgeschlossen.</value>
+  </data>
+<data name="Invalid_AccountReset" xml:space="preserve">
+    <value>Ihr Konto wurde zurückgesetzt. </value>
+  </data>
+<data name="Invalid_AccountsAlreadyReset" xml:space="preserve">
+    <value>Sie haben bereits Ihre Konten zurückgesetzt . </value>
+  </data>
+<data name="Invalid_AccountsRegistrationIncomplete" xml:space="preserve">
+    <value>Ihre Konten sind neu und haben Sie nicht die Registrierung abgeschlossen.</value>
+  </data>
+<data name="Invalid_DuplicateUsername" xml:space="preserve">
+    <value>Benutzername existiert bereits. </value>
+  </data>
+<data name="Invalid_EmailBad" xml:space="preserve">
+    <value>Die E-Mail -Adresse ist ungültig. </value>
+  </data>
+<data name="Invalid_EmailNotMatched" xml:space="preserve">
+    <value>Ihre E-Mail -Adresse stimmt mit keiner Rechnung .</value>
+  </data>
+<data name="Invalid_EmailNotSpecified" xml:space="preserve">
+    <value>Ihre E-Mail -Adresse ist erforderlich, um Ihr Konto zurücksetzen.</value>
+  </data>
+<data name="Invalid_EmailUsernameMismatch" xml:space="preserve">
+    <value>Ihre E-Mail -Adresse und den Benutzernamen nicht mit denen für jedes Konto.</value>
+  </data>
+<data name="Invalid_InactiveAccount" xml:space="preserve">
+    <value>Benutzer-Account ist nicht mehr aktiv.</value>
+  </data>
+<data name="Invalid_IncompleteRegistration" xml:space="preserve">
+    <value>Ihre Benutzer-Registrierung noch nicht abgeschlossen . </value>
+  </data>
+<data name="Invalid_PasswordBad" xml:space="preserve">
+    <value>Das Kennwort ist ungültig. </value>
+  </data>
+<data name="Invalid_PasswordNotSpecified" xml:space="preserve">
+    <value>Sie müssen ein neues Passwort.</value>
+  </data>
+<data name="Invalid_RegistrationPIN" xml:space="preserve">
+    <value>Die Registrierung eingegebene PIN ist ungültig.</value>
+  </data>
+<data name="Invalid_RoleSpecified" xml:space="preserve">
+    <value>Rolle angegeben ist nicht gültig.</value>
+  </data>
+<data name="Invalid_UsernameBad" xml:space="preserve">
+    <value>Der Benutzername ist ungültig. </value>
+  </data>
+<data name="Invalid_UsernamePassword" xml:space="preserve">
+    <value>Der Benutzername oder das Kennwort sind ungültig.</value>
+  </data>
+<data name="NotFound_PendingRegistration" xml:space="preserve">
+    <value>Der Benutzer hat keinen Eintrag anstehen .</value>
+  </data>
+<data name="Error_ChangePassword" xml:space="preserve">
+    <value>Das aktuelle Passwort ist falsch oder das neue Kennwort ist ungültig.</value>
+  </data>
+</root>

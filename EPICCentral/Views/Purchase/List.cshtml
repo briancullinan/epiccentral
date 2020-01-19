@@ -1,0 +1,65 @@
+﻿@using System.Globalization
+@using EPICCentral.Models
+@using EPICCentralDL.EntityClasses
+@using EPICCentralDL.Linq
+@using Purchase = ViewRes.Purchase
+@model EPICCentral.Models.PurchaseHistoryModel
+
+@{
+    ViewBag.Title = Purchase.List_Title;
+}
+
+<h2>@Purchase.List_TransferPurchases</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false, Purchase.List_Errors)
+
+	<div class="editor-label">
+        @Html.LabelFor(m => m.FromDeviceId)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.FromDeviceId, Model.Devices)
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.ToDeviceId)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.ToDeviceId, Model.Devices)
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Quantity)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Quantity, Model.Devices)
+    </div>
+
+    <br class="clear" />
+    <button type="submit">@Purchase.List_Transfer</button>
+    @Html.ActionLink(Purchase.List_NewPurchase, "New", "Purchase", null, new { @class = "button" })
+}
+
+<h2>@Purchase.List_Title</h2>
+
+@Html.DataTableFor(Model.Puchases, new ColumnCollection<PurchaseHistoryEntity>
+{
+{x => x.PurchaseTime, Purchase.List_PurchaseTime, x => TimeZoneInfo.ConvertTime(x.PurchaseTime, TimeZoneInfo.Utc, (TimeZoneInfo)HttpContext.Current.Items["TimeZoneInfo"]).ToString(CultureInfo.CurrentCulture)},
+{x => x.Device.SerialNumber, Purchase.List_Device, x => SharedRes.Formats.Device.FormatWith(x.Device)},
+{x => x.Device.DeviceState, "", null, false, null, false},
+{x => x.Location.Name, Purchase.List_LocationName},
+{x => x.ScansPurchased, Purchase.List_ScansPurchased},
+{x => x.AmountPaid, Purchase.List_AmountPaid, x => String.Format("{0:C}", x.AmountPaid)},
+{x => x.PurchaseNotes, Purchase.List_PurchaseNotes}
+},
+defaultSort: new List<DataTablesRequestModel.Sort>
+                 {
+                     new DataTablesRequestModel.Sort
+                         {
+                             iSortCol = 0,
+                             sSortDir = "desc"
+                         }
+                 })
+
+<div id="selectdevicedialog"></div>

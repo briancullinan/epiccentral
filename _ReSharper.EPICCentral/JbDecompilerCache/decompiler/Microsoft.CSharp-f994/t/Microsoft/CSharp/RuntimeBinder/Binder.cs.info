@@ -1,0 +1,10 @@
+﻿Code version: 6.1.37.86
+Assembly name Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a mvid {aa7c270c-6027-4e24-9777-493146fd7b65}
+* ref mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {9bfef7a4-3230-4675-88f1-e410b14d5490}
+* ref System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {f41a81b4-2d8c-4ebf-a26f-33ad20a48b9e}
+* ref System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {82529812-4452-45e6-9628-5063cb30b722}
+* ref System.Dynamic, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+  mvid {dbc4f2b1-ccd8-4e1f-b2a8-bd13753e7792}

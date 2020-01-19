@@ -1,0 +1,71 @@
+﻿@using EPICCentral.Models
+@using ViewRes
+@using Treatment = ViewRes.Treatment
+@model EPICCentral.Models.Treatment
+
+@*
+<table>
+    <tbody>
+        @for(int i = 0; i < 20; i++)
+        {
+        <tr>
+            <td>@((i % 5 + 1) + (i % 10 >= 5 ? "L" : "R"))</td>
+            <td>
+                <a href="@Url.Action("Flattened", "Patient", new {index = i, treatmentId = Model.TreatmentId})" rel="lightbox[images]" title="@i">
+                    <img src="@Url.Action("Flattened", "Patient", new { index = i, treatmentId = Model.TreatmentId})" alt="@i"/>
+                </a>
+            </td>
+        </tr>
+        }    
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        @for (int i = 0; i < 20; i++)
+        {
+        <tr>
+            <td>@((i % 5 + 1) + (i % 10 >= 5 ? "R" : "L"))</td>
+            <td>
+                <a href="@Url.Action("Flattened", "Patient", new { index = i, treatmentId = Model.TreatmentId, colored = true })" rel="lightbox[images]" title="@i">
+                    <img src="@Url.Action("Flattened", "Patient", new { index = i, treatmentId = Model.TreatmentId, colored = true })" alt="@i"/>
+                </a>
+            </td>
+        </tr>
+        }    
+    </tbody>
+</table>
+*@
+<div style="display:inline-block;">
+    <table id="finger-images-table">
+        <thead>
+            <tr>
+                <td>@Treatment.SummaryImages_PhysicalLeft</td>
+                <td>@Treatment.SummaryImages_PhysicalRight</td>
+                <td>@Treatment.SummaryImages_AutonomicLeft</td>
+                <td>@Treatment.SummaryImages_AutonomicRight</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+@if (Roles.IsUserInRole("Service Administrator"))
+{
+    <fieldset>
+        <legend>@Treatment.SummaryImages_AdministratorOptions</legend>
+        
+        @Html.RadioButton("colorized", "false", false, new { @id = "blackandwhite" })
+        <label for="blackandwhite">@Treatment.SummaryImages_BlackAndWhite</label>
+        <br />
+        @Html.RadioButton("colorized", "true", true, new { @id = "colored" })
+        <label for="colored">@Treatment.SummaryImages_ColorBiofield</label>
+    </fieldset>
+}
+</div>
